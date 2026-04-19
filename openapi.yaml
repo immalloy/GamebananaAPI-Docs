@@ -1,16 +1,26 @@
 openapi: 3.0.3
 info:
-  title: Gamebanana API (Unofficial)
+  title: GameBanana APIs (Unofficial Documentation)
   version: 0.1.0
-  description: Unofficial documentation based on Postman collections and live fetches.
+  description: Unofficial documentation of public GameBanana API endpoints and behaviors.
 servers:
 - url: https://gamebanana.com
+  description: GameBanana main host
+- url: https://api.gamebanana.com
+  description: GameBanana API host
+- url: https://dev.gamebanana.com
+  description: GameBanana development host
+- url: https://api.dev.gamebanana.com
+  description: GameBanana development API host
 paths:
   /apiv11/Member/UiConfig:
     get:
       operationId: get_apiv11_member_uiconfig
       summary: Get ui config
-      description: Returns data for Member / Ui Config.
+      description: 'Returns data for Member / Ui Config.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: query
         name: _sUrl
@@ -26,7 +36,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Member/UiCounts:
     get:
       operationId: get_apiv11_member_uicounts
@@ -126,7 +136,10 @@ paths:
     post:
       operationId: post_apiv11_member_authenticate
       summary: Create authenticate
-      description: Creates or submits data for Member / Authenticate.
+      description: 'Creates or submits data for Member / Authenticate.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       requestBody:
         required: false
         content:
@@ -155,7 +168,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Game/{id1}/ProfilePage:
     get:
       operationId: get_apiv11_game_id1_profilepage
@@ -167,7 +180,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -188,7 +201,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -209,7 +222,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -248,7 +261,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -283,7 +296,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -304,7 +317,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -325,7 +338,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -675,7 +688,10 @@ paths:
     get:
       operationId: get_apiv11_mod_index
       summary: Get index
-      description: Returns data for Mod / Index.
+      description: 'Returns data for Mod / Index.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: query
         name: _aFilters[Generic_Category]
@@ -721,12 +737,15 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Mod/Categories:
     get:
       operationId: get_apiv11_mod_categories
       summary: Get categories
-      description: Returns data for Mod / Categories.
+      description: 'Returns data for Mod / Categories.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: query
         name: _bShowEmpty
@@ -754,7 +773,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Mod/ListFilterConfig:
     get:
       operationId: get_apiv11_mod_listfilterconfig
@@ -964,7 +983,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1038,7 +1057,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1059,7 +1078,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1086,7 +1105,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: info
         required: false
@@ -1119,7 +1138,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1140,7 +1159,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: api
         required: false
@@ -1187,7 +1206,10 @@ paths:
     get:
       operationId: get_apiv11_util_search_results
       summary: Get results
-      description: Returns data for Util / Search / Results.
+      description: 'Returns data for Util / Search / Results.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: query
         name: _csvFields
@@ -1234,7 +1256,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Member/{id1}/ProfilePage:
     get:
       operationId: get_apiv11_member_id1_profilepage
@@ -1246,7 +1268,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1267,7 +1289,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1288,7 +1310,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1321,7 +1343,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1360,7 +1382,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1381,7 +1403,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1402,7 +1424,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1429,7 +1451,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1456,7 +1478,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       requestBody:
         required: false
         content:
@@ -1483,7 +1505,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1510,7 +1532,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1602,7 +1624,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: info
         required: false
@@ -1629,7 +1651,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1684,14 +1706,17 @@ paths:
     get:
       operationId: get_apiv11_mod_id1_profilepage
       summary: Get profile page
-      description: Returns data for Mod / {id1} / Profile Page.
+      description: 'Returns data for Mod / {id1} / Profile Page.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1700,7 +1725,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Mod/{id1}/Config:
     get:
       operationId: get_apiv11_mod_id1_config
@@ -1712,7 +1737,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       responses:
         '200':
           description: Observed response status 200
@@ -1733,7 +1758,7 @@ paths:
         required: true
         schema:
           type: integer
-        description: Path parameter observed in HAR
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1786,16 +1811,18 @@ paths:
     get:
       operationId: get_apiv11_util_game_namematch
       summary: Games by name
-      description: This endpoint returns a list of games containing the search query
+      description: 'This endpoint returns a list of games containing the search query
         in their names.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: query
         name: _sName
         required: true
         schema:
           type: string
-        description: 'Required. Enter the search query. Case insensitive. Allowed
-          values: string of 3 characters or more.'
+        description: Observed query parameter
       - in: query
         name: _nPage
         required: false
@@ -1818,7 +1845,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Util/Generic/Tags:
     get:
       operationId: get_apiv11_util_generic_tags
@@ -1831,8 +1858,7 @@ paths:
         required: true
         schema:
           type: string
-        description: 'Required. Enter the search query. Case insensitive. Allowed
-          values: string of 2 characters or more.'
+        description: Observed query parameter
       - in: query
         name: _idGameRow
         required: false
@@ -1852,8 +1878,11 @@ paths:
     get:
       operationId: get_apiv11_game_id_subfeed
       summary: Latest (game)
-      description: This endpoint returns a list of the latest submissions for the
+      description: 'This endpoint returns a list of the latest submissions for the
         specified Game ID.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: path
         name: id
@@ -1880,8 +1909,7 @@ paths:
         required: false
         schema:
           type: string
-        description: 'Enter the search query. Case insensitive. Allowed values: string
-          of 3 characters or more.'
+        description: Observed query parameter
       - in: query
         name: _csvModelInclusions
         required: false
@@ -1931,7 +1959,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/{model_name}/Index:
     get:
       operationId: get_apiv11_model_name_index
@@ -2114,8 +2142,11 @@ paths:
     get:
       operationId: get_apiv11_game_id_profilepage
       summary: Multiple Properties (1)
-      description: This endpoint returns multiple properties for the specified Game
+      description: 'This endpoint returns multiple properties for the specified Game
         ID.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: path
         name: id
@@ -2131,7 +2162,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Game/{id}:
     get:
       operationId: get_apiv11_game_id
@@ -2572,7 +2603,10 @@ paths:
     post:
       operationId: post_apiv11_member_emailauthenticate
       summary: 1. Request confirmation code
-      description: Creates or submits data for Member / Email Authenticate.
+      description: 'Creates or submits data for Member / Email Authenticate.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       requestBody:
         required: false
         content:
@@ -2591,7 +2625,29 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+    get:
+      operationId: get_apiv11_member_emailauthenticate
+      summary: Get email authenticate
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
   /apiv11/Util/Config/TrashReasons:
     get:
       operationId: get_apiv11_util_config_trashreasons
@@ -2643,7 +2699,10 @@ paths:
     get:
       operationId: get_apiv11_section_slug_submission_id_profilepage
       summary: Multiple Properties (Option 2)
-      description: Returns data for {section_slug} / {submission_id} / Profile Page.
+      description: 'Returns data for {section_slug} / {submission_id} / Profile Page.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: path
         name: section_slug
@@ -2665,7 +2724,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/{section_slug}/{submission_id}/DownloadPage:
     get:
       operationId: get_apiv11_section_slug_submission_id_downloadpage
@@ -2697,7 +2756,10 @@ paths:
     get:
       operationId: get_apiv11_file_file_id
       summary: File contents
-      description: Returns data for File / {file_id}.
+      description: 'Returns data for File / {file_id}.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: path
         name: file_id
@@ -2713,7 +2775,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/{section_slug}/{submission_id}/Collections:
     get:
       operationId: get_apiv11_section_slug_submission_id_collections
@@ -3864,7 +3926,10 @@ paths:
     get:
       operationId: get_apiv11_app_submission_id_customconfig_app_config_id
       summary: Custom config
-      description: Returns data for App / {submission_id} / Custom Config / {app_config_id}.
+      description: 'Returns data for App / {submission_id} / Custom Config / {app_config_id}.
+
+
+        Unofficial endpoint details include observed public usage and live fetch checks.'
       parameters:
       - in: path
         name: submission_id
@@ -3886,7 +3951,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
   /apiv11/Contest/{submission_id}/Winners:
     get:
       operationId: get_apiv11_contest_submission_id_winners
@@ -4224,3 +4289,3746 @@ paths:
                 type: object
                 additionalProperties: true
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
+  /apiv11/RemoteDL/{remoteDLId}:
+    get:
+      operationId: get_apiv11_remotedl_1382
+      summary: Get remote dl
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: remoteDLId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: key
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: H6J8D3V9M03K1F0X
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Mod/{modId}:
+    get:
+      operationId: get_apiv3_mod_607653
+      summary: Get mod
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/MOD_TYPE/MOD_ID/ProfilePage:
+    get:
+      operationId: get_apiv11_mod_type_mod_id_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/Mod/{modId}/ProfilePage:
+    get:
+      operationId: get_apiv10_mod_407638_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/Mod/{modId}/ReloadedConfig:
+    get:
+      operationId: get_apiv10_mod_123_reloadedconfig
+      summary: Get reloaded config
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/ModCategory/{modCategoryId}/ProfilePage:
+    get:
+      operationId: get_apiv10_modcategory_2543_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modCategoryId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Mod/Multi:
+    get:
+      operationId: get_apiv8_mod_multi
+      summary: Get multi
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aModManagerIntegrations,_sName,_bHasUpdates,_aLatestUpdates,_aFiles,_aPreviewMedia,_aAlternateFileSources
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '389764'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/ModCategory/ByGame:
+    get:
+      operationId: get_apiv3_modcategory_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Mod/ByGame:
+    get:
+      operationId: get_apiv3_mod_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Mod/ByCategory:
+    get:
+      operationId: get_apiv3_mod_bycategory
+      summary: Get by category
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _sRecordSchema
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: Olympus
+      - in: query
+        name: _aCategoryRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Tool/{toolId}:
+    get:
+      operationId: get_apiv3_tool_6969
+      summary: Get tool
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: toolId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/RemoteInstall/{memberid}/{secretkey}/PizzaOvenPlus:
+    get:
+      operationId: get_apiv11_remoteinstall_memberid_secretkey_pizzaovenplus
+      summary: Get pizza oven plus
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: memberid
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: path
+        name: secretkey
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/RemoteInstall/{secretkey}/{memberid}/TotkModManager:
+    get:
+      operationId: get_apiv11_remoteinstall_secretkey_memberid_totkmodmanager
+      summary: Get totk mod manager
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: secretkey
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: memberid
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/RemoteInstall/[member_id:
+    get:
+      operationId: get_apiv11_remoteinstall_member_id
+      summary: Get [member id
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Mod/ByGame:
+    get:
+      operationId: get_apiv8_mod_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _sOrderBy
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _tsDateUpdated,DESC
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/Tool/{toolId}:
+    get:
+      operationId: get_apiv10_tool_21754
+      summary: Get tool
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: toolId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: '@gbprofile'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/Mod/Index:
+    get:
+      operationId: get_apiv10_mod_index
+      summary: Get index
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '50'
+      - in: query
+        name: _aFilters[Generic_Category]
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: '{category'
+      - in: query
+        name: _aFilters[Generic_Category
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: api
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: SubmissionsListModule
+      - in: query
+        name: _aFilters[Generic_Game
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/ModCategory/ByGame:
+    get:
+      operationId: get_apiv8_modcategory_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Mod/ByCategory:
+    get:
+      operationId: get_apiv8_mod_bycategory
+      summary: Get by category
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aCategoryRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: nPerpage
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: '50'
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aFiles,_idRow,_sName,_aAlternateFileSources,_aLatestUpdates,_sText
+      - in: query
+        name: _csvFlags
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: FILE_METADATA
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv4/Mod/Index:
+    get:
+      operationId: get_apiv4_mod_index
+      summary: Get index
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Mod/Index:
+    get:
+      operationId: get_apiv3_mod_index
+      summary: Get index
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: _aArgs[
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: _sRecordSchema
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: RelatedSubmissions
+      - in: query
+        name: _bReturnMetadata
+        required: false
+        schema:
+          type: boolean
+        description: Observed query parameter in public API usage examples
+        example: 'true'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Mod/{modId}/ProfilePage:
+    get:
+      operationId: get_apiv8_mod_1_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv7/Mod/ByGame:
+    get:
+      operationId: get_apiv7_mod_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '50'
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '16'
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_aFiles,_aCredits,_aModManagerIntegrations,_sText,_aPreviewMedia,_aSubmitter,_sProfileUrl,_nViewCount,_nLikeCount,_nDownloadCount
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: _aGameRowIds[]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '8694'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Game/{gameId}/TopSubs:
+    get:
+      operationId: get_apiv8_game_6460_topsubs
+      summary: Get top subs
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: gameId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv6/Mod/Multi:
+    get:
+      operationId: get_apiv6_mod_multi
+      summary: Get multi
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aModManagerIntegrations,_sName,_bHasUpdates,_aLatestUpdates,_aFiles,_aPreviewMedia,_aAlternateFileSources
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: 9651,50891,50891,34011,34011,50935,250364,50932,250391,285496,50912,50934,50934,50910,50882,50882,50882,9647,50895,50893,50894,50903,50871,50930,33986,50931,9657,138058,50885,50885,50885,50885,33994,33990,293809,50908
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Mod/{modId}/Updates:
+    get:
+      operationId: get_apiv8_mod_375312_updates
+      summary: Get updates
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      - in: query
+        name: _nPerPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '5'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/File/{fileId}:
+    get:
+      operationId: get_apiv8_file_779741
+      summary: Get file
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: fileId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Mod/{modId}/DownloadPage:
+    get:
+      operationId: get_apiv8_mod_365869_downloadpage
+      summary: Get download page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Util/Game/Submissions:
+    put:
+      operationId: put_apiv8_util_game_submissions
+      summary: Replace submissions
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '6498'
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: super mario
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+    get:
+      operationId: get_apiv8_util_game_submissions
+      summary: Get submissions
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '6498'
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: mario
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv6/Mod/{modId}:
+    get:
+      operationId: get_apiv6_mod_1337
+      summary: Get mod
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aFiles
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv7/Mod/{modId}:
+    get:
+      operationId: get_apiv7_mod_1337
+      summary: Get mod
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aFiles._sDownloadUrl
+      - in: query
+        name: _csvFlags
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: FILE_METADATA
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv4/Mod/{modId}:
+    get:
+      operationId: get_apiv4_mod_333681
+      summary: Get mod
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv4/Gamefile/{gamefileId}:
+    get:
+      operationId: get_apiv4_gamefile_13572
+      summary: Get gamefile
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: gamefileId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv6/Gamefile/Multi:
+    get:
+      operationId: get_apiv6_gamefile_multi
+      summary: Get multi
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aModManagerIntegrations,_sName,_bHasUpdates,_aLatestUpdates,_aFiles,_aPreviewMedia,_aAlternateFileSources
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: 13051,13572,13084
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv5/Mod/ByName:
+    get:
+      operationId: get_apiv5_mod_byname
+      summary: Get by name
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_aFiles,_aGame,_aCategory,_sName,_aPreviewMedia,_aSubmitter
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: bhop_badges
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv5/Mod/{modId}:
+    get:
+      operationId: get_apiv5_mod_345225
+      summary: Get mod
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aCategory
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv7/Club/{clubId}:
+    get:
+      operationId: get_apiv7_club_1
+      summary: Get club
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: clubId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: '@gbprofile'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv6/Mod/ByName:
+    get:
+      operationId: get_apiv6_mod_byname
+      summary: Get by name
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_aFiles,_aGame
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: '*uwu*'
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '6498'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv6/Sound/ByGame:
+    get:
+      operationId: get_apiv6_sound_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv6/Mod/ByGame:
+    get:
+      operationId: get_apiv6_mod_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/Request/{requestId}/ProfilePage:
+    get:
+      operationId: get_apiv11_request_79334_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: requestId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/Mod/{modId}:
+    get:
+      operationId: get_apiv11_mod_150559
+      summary: Get mod
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aFiles
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/Mod/Multi:
+    get:
+      operationId: get_apiv11_mod_multi
+      summary: Get multi
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: 506678,547865,547860,490773,34283
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_aSubmitter,_tsDateAdded,_sVersion,_aRootCategory,_aPreviewMedia,_nLikeCount,_nViewCount,_aFiles,_sDescription,_sText,_nDownloadCount,_aModManagerIntegrations
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv5/Mod/ByGame:
+    get:
+      operationId: get_apiv5_mod_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv5/Mod/ByCategory:
+    get:
+      operationId: get_apiv5_mod_bycategory
+      summary: Get by category
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: '@gbprofile'
+      - in: query
+        name: _aCategoryRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv5/Mod/Index:
+    get:
+      operationId: get_apiv5_mod_index
+      summary: Get index
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aArgs[
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_sObsolescenceNotice
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv5/Mod/Multi:
+    get:
+      operationId: get_apiv5_mod_multi
+      summary: Get multi
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: 123,456
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_sObsolescenceNotice
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv4/Tool/{toolId}/Updates:
+    get:
+      operationId: get_apiv4_tool_7015_updates
+      summary: Get updates
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: toolId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '2'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv4/Mod/ByGame:
+    get:
+      operationId: get_apiv4_mod_bygame
+      summary: Get by game
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv4/Mod/{modId}/Likes:
+    get:
+      operationId: get_apiv4_mod_208161_likes
+      summary: Get likes
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv4/Mod/{modId}/Thanks:
+    get:
+      operationId: get_apiv4_mod_208161_thanks
+      summary: Get thanks
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv4/Tool/{toolId}/Issues:
+    get:
+      operationId: get_apiv4_tool_7015_issues
+      summary: Get issues
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: toolId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Request/{requestId}:
+    get:
+      operationId: get_apiv3_request_20653
+      summary: Get request
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: requestId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Mod/XXXXX:
+    get:
+      operationId: get_apiv3_mod_xxxxx
+      summary: Get xxxxx
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Skin/{skinId}:
+    get:
+      operationId: get_apiv3_skin_4543
+      summary: Get skin
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: skinId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/{apiv3Id}:
+    get:
+      operationId: get_apiv3_4543
+      summary: Get apiv3
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: apiv3Id
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/{itemtype}/{itemId:
+    get:
+      operationId: get_apiv3_itemtype_itemid
+      summary: Get apiv3
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: itemtype
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Tool/Index:
+    get:
+      operationId: get_apiv3_tool_index
+      summary: Get index
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _aArgs[
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Map/{mapId}:
+    get:
+      operationId: get_apiv3_map_216022
+      summary: Get map
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: mapId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+    options:
+      operationId: options_apiv3_map_215839
+      summary: List options for map
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: mapId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv7/{categorytype}/ByName:
+    get:
+      operationId: get_apiv7_categorytype_byname
+      summary: Get by name
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: categorytype
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/{section}/{id:
+    get:
+      operationId: get_apiv3_section_id
+      summary: Get apiv3
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: section
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv3/Member/{memberId}:
+    get:
+      operationId: get_apiv3_member_1737924
+      summary: Get member
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: memberId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/Update/{updateId}/ProfilePage:
+    get:
+      operationId: get_apiv11_update_222594_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: updateId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/Mod/{modId}/Updates:
+    get:
+      operationId: get_apiv11_mod_302016_updates
+      summary: Get updates
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: modId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '5'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/Mod/{mod_id}/DownloadPage:
+    get:
+      operationId: get_apiv11_mod_mod_id_downloadpage
+      summary: Get download page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: mod_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/Member/{memberId}/Buddies:
+    post:
+      operationId: post_apiv11_member_1169455_buddies
+      summary: Create buddies
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: memberId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11/Mods/Categories:
+    get:
+      operationId: get_apiv11_mods_categories
+      summary: Get categories
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: a_to_z
+      - in: query
+        name: _bShowEmpty
+        required: false
+        schema:
+          type: boolean
+        description: Observed query parameter in public API usage examples
+        example: 'true'
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '297'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv11:
+    get:
+      operationId: get_apiv11
+      summary: Get apiv11
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv6/Game/{gameId}/CommunitySpotlight:
+    get:
+      operationId: get_apiv6_game_4254_communityspotlight
+      summary: Get community spotlight
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: gameId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv7/Game/{gameId}/CommunitySpotlight:
+    get:
+      operationId: get_apiv7_game_4254_communityspotlight
+      summary: Get community spotlight
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: gameId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv8/Game/{gameId}/CommunitySpotlight:
+    get:
+      operationId: get_apiv8_game_4254_communityspotlight
+      summary: Get community spotlight
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: gameId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv9/Game/{gameId}/CommunitySpotlight:
+    get:
+      operationId: get_apiv9_game_4254_communityspotlight
+      summary: Get community spotlight
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: gameId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/Game/{gameId}/ProfilePage:
+    get:
+      operationId: get_apiv10_game_4254_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: gameId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/Post/_idRow/ProfilePage:
+    get:
+      operationId: get_apiv10_post_idrow_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/Member/Activity:
+    get:
+      operationId: get_apiv10_member_activity
+      summary: Get activity
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '50'
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /apiv10/Game/{gameId}/Subfeed:
+    get:
+      operationId: get_apiv10_game_34_subfeed
+      summary: Get subfeed
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage and validated with live fetch tests.
+      x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
+      parameters:
+      - in: path
+        name: gameId
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '20'
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: default
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: gold
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+  /Core/List/New:
+    get:
+      operationId: get_core_list_new
+      summary: Get new
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: itemtype
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Mod
+      - in: query
+        name: gameid
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+        example: '5547'
+      - in: query
+        name: page
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: '1'
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: include_updated
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: 'true'
+      - in: query
+        name: format
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: json_min
+      - in: query
+        name: max_age
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: '86400'
+  /Core/Item/Data:
+    get:
+      operationId: get_core_item_data
+      summary: Get data
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: itemtype
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Mod
+      - in: query
+        name: itemid
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+        example: '9902'
+      - in: query
+        name: fields
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Url(
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: itemtype[
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: itemtype[0
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: format
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: json_min
+      - in: query
+        name: return_keys
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: '1'
+      - in: query
+        name: flags
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: JSON_UNESCAPED_SLASHES
+  /Rss/Featured:
+    get:
+      operationId: get_rss_featured
+      summary: Get featured
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: gameid
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+        example: '6460'
+  /apiv11/File/fileid:
+    get:
+      operationId: get_apiv11_file_fileid
+      summary: Get fileid
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /apiv11/RemoteInstall/memberID/secretKey/PizzaOvenPlus:
+    get:
+      operationId: get_apiv11_remoteinstall_memberid_secretkey_pizzaovenplus
+      summary: Get pizza oven plus
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /docs/endpoints/Core/Item/Data:
+    get:
+      operationId: get_docs_endpoints_core_item_data
+      summary: Get data
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /Core/Item/Data/AllowedFields:
+    get:
+      operationId: get_core_item_data_allowedfields
+      summary: Get allowed fields
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: itemtype
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Skin
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+  /apiv11/RemoteInstall/member_id:
+    get:
+      operationId: get_apiv11_remoteinstall_member_id
+      summary: Get member id
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /Rss/New:
+    get:
+      operationId: get_rss_new
+      summary: Get new
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: itemtype
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Mod,Tool,Project
+      - in: query
+        name: gameid
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+        example: '23911'
+      - in: query
+        name: perpage
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: '50'
+      - in: query
+        name: include_updated
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: 'true'
+      - in: query
+        name: userid
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+        example: '243230'
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: studioid
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+        example: '35522'
+      - in: query
+        name: category
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: '9399'
+  /ideas/add:
+    get:
+      operationId: get_ideas_add
+      summary: Get add
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /j:
+    get:
+      operationId: get_j
+      summary: Get j
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /apiv10/Mod/MapId/ProfilePage:
+    get:
+      operationId: get_apiv10_mod_mapid_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /apiv5/Mod/ID:
+    get:
+      operationId: get_apiv5_mod_id
+      summary: Get id
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: _idRow,_sName,_aFiles,_aGame,_sName,_aPreviewMedia,_aSubmitter
+  /docs/endpoints/Rss/New:
+    get:
+      operationId: get_docs_endpoints_rss_new
+      summary: Get new
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /Core/List/Section:
+    get:
+      operationId: get_core_list_section
+      summary: Get section
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: itemtype
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Map
+      - in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: id
+      - in: query
+        name: direction
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: desc
+      - in: query
+        name: page
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: '1'
+      - in: query
+        name: filter
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: name
+      - in: query
+        name: filterval
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: bhop_anyyy
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: filterop
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: greater_than
+  /apiv3/itemType/itemId:
+    get:
+      operationId: get_apiv3_itemtype_itemid
+      summary: Get item id
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /apiv7/categoryType/ByName:
+    get:
+      operationId: get_apiv7_categorytype_byname
+      summary: Get by name
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /Core/Member/Identify:
+    get:
+      operationId: get_core_member_identify
+      summary: Get identify
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: username
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: tom
+      - in: query
+        name: return_object
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: '1'
+      - in: query
+        name: flags
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: JSON_UNESCAPED_SLASHES
+  /Core/List/Section/AllowedFilters:
+    get:
+      operationId: get_core_list_section_allowedfilters
+      summary: Get allowed filters
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: itemtype
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Map
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+  /docs/endpoints/Core/List/Like:
+    get:
+      operationId: get_docs_endpoints_core_list_like
+      summary: Get like
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /docs/endpoints/Rss/Featured:
+    get:
+      operationId: get_docs_endpoints_rss_featured
+      summary: Get featured
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /docs/endpoints/Core/List/Section:
+    get:
+      operationId: get_docs_endpoints_core_list_section
+      summary: Get section
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /apiv11/Game/gameId/Subfeed:
+    get:
+      operationId: get_apiv11_game_gameid_subfeed
+      summary: Get subfeed
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+        example: '{page}'
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: '{sort}'
+      - in: query
+        name: _csvModelInclusions
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Mod
+  /apiv11/Mod/modId/ProfilePage:
+    get:
+      operationId: get_apiv11_mod_modid_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /Core/List/Like/AllowedItemTypes:
+    get:
+      operationId: get_core_list_like_alloweditemtypes
+      summary: Get allowed item types
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+  /docs/endpoints/Core/Item/Data/AllowedItemTypes:
+    get:
+      operationId: get_docs_endpoints_core_item_data_alloweditemtypes
+      summary: Get allowed item types
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /docs/endpoints/Core/App/Authenticate:
+    get:
+      operationId: get_docs_endpoints_core_app_authenticate
+      summary: Get authenticate
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /apiv11/ItemType/ItemID/ProfilePage:
+    get:
+      operationId: get_apiv11_itemtype_itemid_profilepage
+      summary: Get profile page
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /Core/Item/Data/blablabla:
+    get:
+      operationId: get_core_item_data_blablabla
+      summary: Get blablabla
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+  /Core/List/Like:
+    get:
+      operationId: get_core_list_like
+      summary: Get like
+      description: Unofficial endpoint documented from observed public GameBanana
+        API usage.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
+      parameters:
+      - in: query
+        name: itemtype
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: Game
+      - in: query
+        name: field
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: name
+      - in: query
+        name: match
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+        example: 'The Legend of Zelda: Breath of the Wild'
