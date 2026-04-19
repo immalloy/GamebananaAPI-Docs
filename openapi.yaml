@@ -1,12 +1,8 @@
 openapi: 3.0.3
 info:
-  title: Gamebanana API (HAR-derived)
+  title: Gamebanana API (Unofficial)
   version: 0.1.0
-  description: 'Auto-generated from observed gamebanana.com traffic in two HAR captures.
-
-    This is observational documentation and may be incomplete.
-
-    '
+  description: Unofficial documentation based on Postman collections and live fetches.
 servers:
 - url: https://gamebanana.com
 paths:
