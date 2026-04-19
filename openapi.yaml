@@ -36,9 +36,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/UiConfig
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/UiCounts:
     get:
       operationId: get_apiv11_member_uicounts
@@ -52,9 +60,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/UiCounts
+        contentType: text/html; charset=UTF-8
   /apiv11/Util/Homepage/Features:
     get:
       operationId: get_apiv11_util_homepage_features
@@ -68,9 +84,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/Homepage/Features
+        contentType: text/html; charset=UTF-8
   /apiv11/Util/Homepage/TopGames:
     get:
       operationId: get_apiv11_util_homepage_topgames
@@ -84,9 +108,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/Homepage/TopGames
+        contentType: text/html; charset=UTF-8
   /apiv11/Util/Homepage/CommunitySpotlight:
     get:
       operationId: get_apiv11_util_homepage_communityspotlight
@@ -100,9 +132,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/Homepage/CommunitySpotlight
+        contentType: text/html; charset=UTF-8
   /apiv11/Util/Homepage/Submissions:
     get:
       operationId: get_apiv11_util_homepage_submissions
@@ -141,9 +181,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/Homepage/Submissions
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/Authenticate:
     post:
       operationId: post_apiv11_member_authenticate
@@ -180,9 +228,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Member/Authenticate
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/ProfilePage:
     get:
       operationId: get_apiv11_game_id1_profilepage
@@ -203,9 +259,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/TopSubs:
     get:
       operationId: get_apiv11_game_id1_topsubs
@@ -226,9 +290,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/TopSubs
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/Subfeed:
     get:
       operationId: get_apiv11_game_id1_subfeed
@@ -267,9 +339,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Subfeed
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/CommunitySpotlight:
     get:
       operationId: get_apiv11_game_id1_communityspotlight
@@ -290,9 +370,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/CommunitySpotlight
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/Navigator/Personal:
     get:
       operationId: get_apiv11_member_navigator_personal
@@ -306,9 +394,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Member/Navigator/Personal
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/AvatarTooltip:
     get:
       operationId: get_apiv11_member_id1_avatartooltip
@@ -329,9 +425,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/AvatarTooltip
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/GetStartedPage:
     get:
       operationId: get_apiv11_game_id1_getstartedpage
@@ -352,9 +456,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/GetStartedPage
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/CategoryTree:
     get:
       operationId: get_apiv11_game_id1_categorytree
@@ -375,9 +487,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/CategoryTree
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/ModCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_modcategory_nestedstructure
@@ -398,9 +518,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/ModCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/BlogCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_blogcategory_nestedstructure
@@ -421,9 +549,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/BlogCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/ContestCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_contestcategory_nestedstructure
@@ -444,9 +580,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/ContestCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/RequestCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_requestcategory_nestedstructure
@@ -467,9 +611,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/RequestCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/ScriptCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_scriptcategory_nestedstructure
@@ -490,9 +642,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/ScriptCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/ConceptCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_conceptcategory_nestedstructure
@@ -513,9 +673,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/ConceptCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/SoundCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_soundcategory_nestedstructure
@@ -536,9 +704,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/SoundCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/Forum/NestedStructure:
     get:
       operationId: get_apiv11_util_forum_nestedstructure
@@ -559,9 +735,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/Forum/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/EventCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_eventcategory_nestedstructure
@@ -582,9 +766,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/EventCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/JamCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_jamcategory_nestedstructure
@@ -605,9 +797,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/JamCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/ToolCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_toolcategory_nestedstructure
@@ -628,9 +828,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/ToolCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/TutorialCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_tutorialcategory_nestedstructure
@@ -651,9 +859,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/TutorialCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/NewsCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_newscategory_nestedstructure
@@ -674,9 +890,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/NewsCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/WipCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_wipcategory_nestedstructure
@@ -697,9 +921,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/WipCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/WareCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_warecategory_nestedstructure
@@ -720,9 +952,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/WareCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/QuestionCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_questioncategory_nestedstructure
@@ -743,9 +983,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/QuestionCategory/NestedStructure
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/Index:
     get:
       operationId: get_apiv11_mod_index
@@ -799,9 +1047,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/Index
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/Categories:
     get:
       operationId: get_apiv11_mod_categories
@@ -837,9 +1093,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/Categories
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/ListFilterConfig:
     get:
       operationId: get_apiv11_mod_listfilterconfig
@@ -853,9 +1117,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/ListFilterConfig
+        contentType: text/html; charset=UTF-8
   /apiv11/Wip/Index:
     get:
       operationId: get_apiv11_wip_index
@@ -907,9 +1179,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Wip'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Wip/Index
+        contentType: application/json; charset=UTF-8
   /apiv11/Wip/Categories:
     get:
       operationId: get_apiv11_wip_categories
@@ -942,9 +1222,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Wip'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Wip/Categories
+        contentType: application/json; charset=UTF-8
   /apiv11/Wip/ListFilterConfig:
     get:
       operationId: get_apiv11_wip_listfilterconfig
@@ -958,9 +1246,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Wip'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Wip/ListFilterConfig
+        contentType: text/html; charset=UTF-8
   /apiv11/Util/List/Featured:
     get:
       operationId: get_apiv11_util_list_featured
@@ -993,9 +1289,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/List/Featured
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/Generic/Discussions:
     get:
       operationId: get_apiv11_util_generic_discussions
@@ -1047,9 +1351,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/Generic/Discussions
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/Rules:
     get:
       operationId: get_apiv11_game_id1_rules
@@ -1070,9 +1382,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Rules
+        contentType: application/json; charset=UTF-8
   /apiv11/Collection/Index:
     get:
       operationId: get_apiv11_collection_index
@@ -1111,9 +1431,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Collection'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Collection/Index
+        contentType: application/json; charset=UTF-8
   /apiv11/Collection/ListFilterConfig:
     get:
       operationId: get_apiv11_collection_listfilterconfig
@@ -1127,9 +1455,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Collection'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Collection/ListFilterConfig
+        contentType: text/html; charset=UTF-8
   /apiv11/Game/{id1}/Keys/Summary:
     get:
       operationId: get_apiv11_game_id1_keys_summary
@@ -1150,9 +1486,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Keys/Summary
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/Keys/ForSale:
     get:
       operationId: get_apiv11_game_id1_keys_forsale
@@ -1179,9 +1523,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Keys/ForSale
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/Withhold:
     patch:
       operationId: patch_apiv11_game_id1_withhold
@@ -1214,9 +1566,24 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Game/1/Withhold
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id1}/Config:
     get:
       operationId: get_apiv11_game_id1_config
@@ -1237,9 +1604,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Config
+        contentType: application/json; charset=UTF-8
   /members/submissions/bitpit/{id1}:
     get:
       operationId: get_members_submissions_bitpit_id1
@@ -1266,9 +1641,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'other: members'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/members/submissions/bitpit/1
+        contentType: text/html; charset=utf-8
   /apiv11/Util/Search/Suggestions:
     get:
       operationId: get_apiv11_util_search_suggestions
@@ -1295,9 +1678,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/Search/Suggestions
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/Search/Results:
     get:
       operationId: get_apiv11_util_search_results
@@ -1352,9 +1743,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Util/Search/Results
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/ProfilePage:
     get:
       operationId: get_apiv11_member_id1_profilepage
@@ -1375,9 +1774,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/Config:
     get:
       operationId: get_apiv11_member_id1_config
@@ -1398,9 +1805,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Config
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/SubFeed:
     get:
       operationId: get_apiv11_member_id1_subfeed
@@ -1433,9 +1848,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/SubFeed
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/Posts:
     get:
       operationId: get_apiv11_member_id1_posts
@@ -1474,9 +1897,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Posts
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/Apps:
     get:
       operationId: get_apiv11_member_id1_apps
@@ -1497,9 +1928,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Apps
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/BuddiesSummary:
     get:
       operationId: get_apiv11_member_id1_buddiessummary
@@ -1520,9 +1959,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/BuddiesSummary
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/Buddies:
     get:
       operationId: get_apiv11_member_id1_buddies
@@ -1549,9 +1996,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Buddies
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/IncomingBuddyRequests:
     get:
       operationId: get_apiv11_member_id1_incomingbuddyrequests
@@ -1578,9 +2033,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/IncomingBuddyRequests
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/Buddy/{id1}/Accept:
     patch:
       operationId: patch_apiv11_member_buddy_id1_accept
@@ -1607,9 +2070,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Member/Buddy/1/Accept
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/OutgoingBuddyRequests:
     get:
       operationId: get_apiv11_member_id1_outgoingbuddyrequests
@@ -1636,9 +2107,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/OutgoingBuddyRequests
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/Submissions/Sublog:
     get:
       operationId: get_apiv11_member_id1_submissions_sublog
@@ -1683,9 +2162,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Submissions/Sublog
+        contentType: application/json; charset=UTF-8
   /apiv11/Tool/Index:
     get:
       operationId: get_apiv11_tool_index
@@ -1718,9 +2205,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Tool'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Tool/Index
+        contentType: application/json; charset=UTF-8
   /apiv11/Tool/ListFilterConfig:
     get:
       operationId: get_apiv11_tool_listfilterconfig
@@ -1734,9 +2229,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Tool'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Tool/ListFilterConfig
+        contentType: text/html; charset=UTF-8
   /apiv11/Member/{id1}/SettingsPortal:
     get:
       operationId: get_apiv11_member_id1_settingsportal
@@ -1763,9 +2266,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Member/1/SettingsPortal
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id1}/Admin/Tickets:
     get:
       operationId: get_apiv11_member_id1_admin_tickets
@@ -1792,9 +2303,24 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Member/1/Admin/Tickets
+        contentType: application/json; charset=UTF-8
   /apiv11/Support/ListFilterConfig:
     get:
       operationId: get_apiv11_support_listfilterconfig
@@ -1808,9 +2334,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Support'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Support/ListFilterConfig
+        contentType: text/html; charset=UTF-8
   /apiv11/Util/RecordInfo:
     get:
       operationId: get_apiv11_util_recordinfo
@@ -1831,9 +2365,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/RecordInfo
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/{id1}/ProfilePage:
     get:
       operationId: get_apiv11_mod_id1_profilepage
@@ -1857,9 +2399,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/{id1}/Config:
     get:
       operationId: get_apiv11_mod_id1_config
@@ -1880,9 +2430,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Config
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/{id1}/Posts:
     get:
       operationId: get_apiv11_mod_id1_posts
@@ -1921,9 +2479,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Posts
+        contentType: application/json; charset=UTF-8
   /apiv11/{model_name}/ListFilterConfig:
     get:
       operationId: get_apiv11_model_name_listfilterconfig
@@ -1944,9 +2510,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: ListFilterConfig'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/ListFilterConfig
+        contentType: text/html; charset=UTF-8
   /apiv11/Util/Game/NameMatch:
     get:
       operationId: get_apiv11_util_game_namematch
@@ -1985,9 +2559,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/Game/NameMatch?_sName=test
+        contentType: application/json; charset=UTF-8
   /apiv11/Util/Generic/Tags:
     get:
       operationId: get_apiv11_util_generic_tags
@@ -2015,9 +2597,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/Generic/Tags?_sTag=test
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id}/Subfeed:
     get:
       operationId: get_apiv11_game_id_subfeed
@@ -2103,9 +2693,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Subfeed
+        contentType: text/html; charset=UTF-8
   /apiv11/{model_name}/Index:
     get:
       operationId: get_apiv11_model_name_index
@@ -2153,9 +2751,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Index'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/Index
+        contentType: text/html; charset=UTF-8
   /apiv11/Member/{id}/SubFeed:
     get:
       operationId: get_apiv11_member_id_subfeed
@@ -2190,9 +2796,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/SubFeed
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id}/TopSubs:
     get:
       operationId: get_apiv11_game_id_topsubs
@@ -2215,9 +2829,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/TopSubs
+        contentType: text/html; charset=UTF-8
   /apiv11/Game/ListFilterConfig:
     get:
       operationId: get_apiv11_game_listfilterconfig
@@ -2231,9 +2853,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/ListFilterConfig
+        contentType: text/html; charset=UTF-8
   /apiv11/Game/Index:
     get:
       operationId: get_apiv11_game_index
@@ -2269,9 +2899,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/Index
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id}/CommunitySpotlight:
     get:
       operationId: get_apiv11_game_id_communityspotlight
@@ -2293,9 +2931,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/CommunitySpotlight
+        contentType: text/html; charset=UTF-8
   /apiv11/Game/{id}/ProfilePage:
     get:
       operationId: get_apiv11_game_id_profilepage
@@ -2320,9 +2966,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/ProfilePage
+        contentType: text/html; charset=UTF-8
   /apiv11/Game/{id}:
     get:
       operationId: get_apiv11_game_id
@@ -2351,9 +3005,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Game/1
+        contentType: application/json; charset=UTF-8
   /apiv11/Game/{id}/GetStartedPage:
     get:
       operationId: get_apiv11_game_id_getstartedpage
@@ -2375,9 +3037,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/GetStartedPage
+        contentType: text/html; charset=UTF-8
   /apiv11/Game/{id}/Rules:
     get:
       operationId: get_apiv11_game_id_rules
@@ -2399,9 +3069,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Rules
+        contentType: text/html; charset=UTF-8
   /apiv11/{sectionSlug}/Categories:
     get:
       operationId: get_apiv11_sectionslug_categories
@@ -2448,9 +3126,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Categories'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/Categories?_sSort=default
+        contentType: application/json; charset=UTF-8
   /apiv11/ModCategory/{rootCategoryId}/SubCategories:
     get:
       operationId: get_apiv11_modcategory_rootcategoryid_subcategories
@@ -2471,9 +3157,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: ModCategory'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/ModCategory/1/SubCategories
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/AwardedBounties:
     get:
       operationId: get_apiv11_member_id_awardedbounties
@@ -2501,9 +3195,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/AwardedBounties
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/ContributedBounties:
     get:
       operationId: get_apiv11_member_id_contributedbounties
@@ -2531,9 +3233,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/ContributedBounties
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/LikedSubmissions:
     get:
       operationId: get_apiv11_member_id_likedsubmissions
@@ -2560,9 +3270,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/LikedSubmissions
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/Medals:
     get:
       operationId: get_apiv11_member_id_medals
@@ -2583,9 +3301,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Medals
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/ParticipatedContests:
     get:
       operationId: get_apiv11_member_id_participatedcontests
@@ -2613,9 +3339,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/ParticipatedContests
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/RatedIdeas:
     get:
       operationId: get_apiv11_member_id_ratedideas
@@ -2642,9 +3376,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/RatedIdeas
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/SolvedQuestions:
     get:
       operationId: get_apiv11_member_id_solvedquestions
@@ -2671,9 +3413,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/SolvedQuestions
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/ThankedSubmissions:
     get:
       operationId: get_apiv11_member_id_thankedsubmissions
@@ -2700,9 +3450,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/ThankedSubmissions
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/VotedPolls:
     get:
       operationId: get_apiv11_member_id_votedpolls
@@ -2729,9 +3487,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/VotedPolls
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/Submissions/Contributions:
     get:
       operationId: get_apiv11_member_id_submissions_contributions
@@ -2759,9 +3525,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Submissions/Contributions
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/{id}/Submissions/Posts:
     get:
       operationId: get_apiv11_member_id_submissions_posts
@@ -2788,9 +3562,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Submissions/Posts
+        contentType: application/json; charset=UTF-8
   /apiv11/Member/EmailAuthenticate:
     post:
       operationId: post_apiv11_member_emailauthenticate
@@ -2817,9 +3599,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Member/EmailAuthenticate
+        contentType: application/json; charset=UTF-8
     get:
       operationId: get_apiv11_member_emailauthenticate
       summary: Get email authenticate
@@ -2842,8 +3632,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/EmailAuthenticate
+        contentType: text/html; charset=UTF-8
   /apiv11/Util/Config/TrashReasons:
     get:
       operationId: get_apiv11_util_config_trashreasons
@@ -2857,9 +3655,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Util/Config/TrashReasons
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}:
     get:
       operationId: get_apiv11_section_slug_submission_id
@@ -2892,9 +3698,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: General'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/ProfilePage:
     get:
       operationId: get_apiv11_section_slug_submission_id_profilepage
@@ -2924,9 +3738,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: ProfilePage'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/DownloadPage:
     get:
       operationId: get_apiv11_section_slug_submission_id_downloadpage
@@ -2953,9 +3775,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: DownloadPage'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/DownloadPage
+        contentType: application/json; charset=UTF-8
   /apiv11/File/{file_id}:
     get:
       operationId: get_apiv11_file_file_id
@@ -2979,9 +3809,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: File'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/File/1
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Collections:
     get:
       operationId: get_apiv11_section_slug_submission_id_collections
@@ -3014,9 +3852,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Collections'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Collections
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/AccessorCollections:
     get:
       operationId: get_apiv11_section_slug_submission_id_accessorcollections
@@ -3043,9 +3889,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: AccessorCollections'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/AccessorCollections
+        contentType: application/json; charset=UTF-8
   /apiv11/Collection/Add:
     post:
       operationId: post_apiv11_collection_add
@@ -3071,9 +3925,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Collection'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Collection/Add
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/AddToCollection:
     post:
       operationId: post_apiv11_section_slug_submission_id_addtocollection
@@ -3111,9 +3973,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: AddToCollection'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/AddToCollection
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/RemoveFromCollection:
     delete:
       operationId: delete_apiv11_section_slug_submission_id_removefromcollection
@@ -3141,9 +4011,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: RemoveFromCollection'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/RemoveFromCollection
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/EmbeddablesPage:
     get:
       operationId: get_apiv11_section_slug_submission_id_embeddablespage
@@ -3171,9 +4049,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: EmbeddablesPage'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/EmbeddablesPage
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Issues:
     get:
       operationId: get_apiv11_section_slug_submission_id_issues
@@ -3206,9 +4092,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Issues'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Issues
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Issue/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_issue_add
@@ -3250,9 +4144,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Issue'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Issue/Add
+        contentType: application/json; charset=UTF-8
   /apiv11/Issue/{issue_id}:
     patch:
       operationId: patch_apiv11_issue_issue_id
@@ -3287,9 +4189,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Issue'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Issue/1
+        contentType: application/json; charset=UTF-8
     delete:
       operationId: delete_apiv11_issue_issue_id
       summary: '[Auth] Trash an Issue'
@@ -3309,9 +4219,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Issue'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Issue/1
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Likes:
     get:
       operationId: get_apiv11_section_slug_submission_id_likes
@@ -3344,9 +4262,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Likes'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Likes
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Like:
     post:
       operationId: post_apiv11_section_slug_submission_id_like
@@ -3381,9 +4307,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Like'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Like
+        contentType: application/json; charset=UTF-8
     delete:
       operationId: delete_apiv11_section_slug_submission_id_like
       summary: '[Auth] Unlike'
@@ -3410,9 +4344,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Like'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Like
+        contentType: application/json; charset=UTF-8
   /apiv11/Post/{post_id}/ProfilePage:
     get:
       operationId: get_apiv11_post_post_id_profilepage
@@ -3433,9 +4375,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Post'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Post/1/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Posts:
     get:
       operationId: get_apiv11_section_slug_submission_id_posts
@@ -3480,9 +4430,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Posts'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Posts
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Post/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_post_add
@@ -3520,9 +4478,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Post'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Post/Add
+        contentType: application/json; charset=UTF-8
   /apiv11/Post/{post_id}:
     post:
       operationId: post_apiv11_post_post_id
@@ -3553,9 +4519,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Post'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Post/1
+        contentType: application/json; charset=UTF-8
     delete:
       operationId: delete_apiv11_post_post_id
       summary: '[Auth] Trash a Post / Reply'
@@ -3575,9 +4549,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Post'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Post/1
+        contentType: application/json; charset=UTF-8
   /apiv11/Post/{post_id}/Untrash:
     patch:
       operationId: patch_apiv11_post_post_id_untrash
@@ -3605,9 +4587,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Post'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Post/1/Untrash
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Subscribers:
     get:
       operationId: get_apiv11_section_slug_submission_id_subscribers
@@ -3640,9 +4630,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Subscribers'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Subscribers
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Subscription/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_subscription_add
@@ -3677,9 +4675,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Subscription'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Subscription/Add
+        contentType: application/json; charset=UTF-8
   /apiv11/Subscription/{subscription_id}:
     delete:
       operationId: delete_apiv11_subscription_subscription_id
@@ -3700,9 +4706,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Subscription'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Subscription/1
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Thanks:
     get:
       operationId: get_apiv11_section_slug_submission_id_thanks
@@ -3735,9 +4749,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Thanks'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Thanks
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Thank/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_thank_add
@@ -3775,9 +4797,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Thank'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Thank/Add
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Todos:
     get:
       operationId: get_apiv11_section_slug_submission_id_todos
@@ -3810,9 +4840,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Todos'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Todos
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Todo/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_todo_add
@@ -3860,9 +4898,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Todo'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Todo/Add
+        contentType: application/json; charset=UTF-8
   /apiv11/Todo/{todo_id}:
     patch:
       operationId: patch_apiv11_todo_todo_id
@@ -3903,9 +4949,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Todo'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Todo/1
+        contentType: application/json; charset=UTF-8
     delete:
       operationId: delete_apiv11_todo_todo_id
       summary: '[Auth] Trash a Todo'
@@ -3925,9 +4979,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Todo'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Todo/1
+        contentType: application/json; charset=UTF-8
   /apiv11/Todo/{todo_id}/Toggle:
     patch:
       operationId: patch_apiv11_todo_todo_id_toggle
@@ -3955,9 +5017,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Todo'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Todo/1/Toggle
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Updates:
     get:
       operationId: get_apiv11_section_slug_submission_id_updates
@@ -3996,9 +5066,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Updates'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Updates
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Files:
     get:
       operationId: get_apiv11_section_slug_submission_id_files
@@ -4025,9 +5103,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Files'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Files
+        contentType: application/json; charset=UTF-8
   /apiv11/{section_slug}/{submission_id}/Update:
     post:
       operationId: post_apiv11_section_slug_submission_id_update
@@ -4083,9 +5169,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Update'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/1/Update
+        contentType: application/json; charset=UTF-8
   /apiv11/Update/{update_id}:
     patch:
       operationId: patch_apiv11_update_update_id
@@ -4113,9 +5207,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Update'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv11/Update/1
+        contentType: application/json; charset=UTF-8
     delete:
       operationId: delete_apiv11_update_update_id
       summary: '[Auth] Trash an Update'
@@ -4135,9 +5237,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Update'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Update/1
+        contentType: application/json; charset=UTF-8
   /apiv11/Update/{update_id}/Untrash:
     patch:
       operationId: patch_apiv11_update_update_id_untrash
@@ -4168,9 +5278,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Update'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv11/Update/1/Untrash
+        contentType: application/json; charset=UTF-8
   /apiv11/App/{submission_id}/Users:
     get:
       operationId: get_apiv11_app_submission_id_users
@@ -4197,9 +5315,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: App'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/App/1/Users
+        contentType: application/json; charset=UTF-8
   /apiv11/App/{submission_id}/CustomConfig/{app_config_id}:
     get:
       operationId: get_apiv11_app_submission_id_customconfig_app_config_id
@@ -4229,9 +5355,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:24:11+00:00'
       tags:
       - 'v11: App'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/App/1/CustomConfig/1
+        contentType: application/json; charset=UTF-8
   /apiv11/Contest/{submission_id}/Winners:
     get:
       operationId: get_apiv11_contest_submission_id_winners
@@ -4252,9 +5386,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Contest'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Contest/1/Winners
+        contentType: application/json; charset=UTF-8
   /apiv11/Collection/{submission_id}/Items:
     get:
       operationId: get_apiv11_collection_submission_id_items
@@ -4287,9 +5429,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Collection'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Collection/1/Items
+        contentType: application/json; charset=UTF-8
   /apiv11/Idea/{submission_id}/Ratings:
     get:
       operationId: get_apiv11_idea_submission_id_ratings
@@ -4322,9 +5472,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Idea'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Idea/1/Ratings
+        contentType: application/json; charset=UTF-8
   /apiv11/Jam/{submission_id}/Bounty/Contributors:
     get:
       operationId: get_apiv11_jam_submission_id_bounty_contributors
@@ -4351,9 +5509,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Jam'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Jam/1/Bounty/Contributors
+        contentType: application/json; charset=UTF-8
   /apiv11/Jam/{submission_id}/Bounty/Recipients:
     get:
       operationId: get_apiv11_jam_submission_id_bounty_recipients
@@ -4380,9 +5546,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Jam'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Jam/1/Bounty/Recipients
+        contentType: application/json; charset=UTF-8
   /apiv11/Jam/{submission_id}/Entries:
     get:
       operationId: get_apiv11_jam_submission_id_entries
@@ -4409,9 +5583,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Jam'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Jam/1/Entries
+        contentType: application/json; charset=UTF-8
   /apiv11/Poll/{submission_id}/Votes:
     get:
       operationId: get_apiv11_poll_submission_id_votes
@@ -4444,9 +5626,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Poll'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Poll/1/Votes
+        contentType: application/json; charset=UTF-8
   /apiv11/Project/{submission_id}/FinishedWorks:
     get:
       operationId: get_apiv11_project_submission_id_finishedworks
@@ -4473,9 +5663,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Project'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Project/1/FinishedWorks
+        contentType: application/json; charset=UTF-8
   /apiv11/Project/{submission_id}/Wips:
     get:
       operationId: get_apiv11_project_submission_id_wips
@@ -4502,9 +5700,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Project'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Project/1/Wips
+        contentType: application/json; charset=UTF-8
   /apiv11/Request/{submission_id}/BountyRecipients:
     get:
       operationId: get_apiv11_request_submission_id_bountyrecipients
@@ -4531,9 +5737,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Request'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Request/1/BountyRecipients
+        contentType: application/json; charset=UTF-8
   /apiv11/Request/{submission_id}/Bounty/Contributors:
     get:
       operationId: get_apiv11_request_submission_id_bounty_contributors
@@ -4560,9 +5774,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Request'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Request/1/Bounty/Contributors
+        contentType: application/json; charset=UTF-8
   /apiv11/Ripe/Info:
     get:
       operationId: get_apiv11_ripe_info
@@ -4576,9 +5798,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Ripe'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Ripe/Info
+        contentType: text/html; charset=UTF-8
   /apiv11/Ripe/Purchasers:
     get:
       operationId: get_apiv11_ripe_purchasers
@@ -4592,9 +5822,17 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
       tags:
       - 'v11: Ripe'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Ripe/Purchasers
+        contentType: text/html; charset=UTF-8
   /apiv11/RemoteDL/{remoteDLId}:
     get:
       operationId: get_apiv11_remotedl_1382
@@ -4632,8 +5870,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: RemoteDL'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/RemoteDL/test?key=H6J8D3V9M03K1F0X
+        contentType: application/json; charset=UTF-8
   /apiv3/Mod/{modId}:
     get:
       operationId: get_apiv3_mod_607653
@@ -4664,8 +5910,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Mod/test
+        contentType: application/json; charset=utf-8
   /apiv11/MOD_TYPE/MOD_ID/ProfilePage:
     get:
       operationId: get_apiv11_mod_type_mod_id_profilepage
@@ -4689,8 +5943,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: MOD TYPE'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/MOD_TYPE/MOD_ID/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv10/Mod/{modId}/ProfilePage:
     get:
       operationId: get_apiv10_mod_407638_profilepage
@@ -4721,8 +5983,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv10/Mod/test/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv10/Mod/{modId}/ReloadedConfig:
     get:
       operationId: get_apiv10_mod_123_reloadedconfig
@@ -4753,8 +6023,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv10/Mod/test/ReloadedConfig
+        contentType: application/json; charset=UTF-8
   /apiv10/ModCategory/{modCategoryId}/ProfilePage:
     get:
       operationId: get_apiv10_modcategory_2543_profilepage
@@ -4785,8 +6063,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: ModCategory'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv10/ModCategory/test/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv8/Mod/Multi:
     get:
       operationId: get_apiv8_mod_multi
@@ -4825,8 +6111,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv8/Mod/Multi?_csvProperties=_aModManagerIntegrations%2C_sName%2C_bHasUpdates%2C_aLatestUpdates%2C_aFiles%2C_aPreviewMedia%2C_aAlternateFileSources&_csvRowIds=389764
+        contentType: application/json; charset=UTF-8
   /apiv3/ModCategory/ByGame:
     get:
       operationId: get_apiv3_modcategory_bygame
@@ -4857,8 +6151,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: ModCategory'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv3/ModCategory/ByGame
+        contentType: application/json; charset=utf-8
   /apiv3/Mod/ByGame:
     get:
       operationId: get_apiv3_mod_bygame
@@ -4895,8 +6197,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv3/Mod/ByGame
+        contentType: application/json; charset=utf-8
   /apiv3/Mod/ByCategory:
     get:
       operationId: get_apiv3_mod_bycategory
@@ -4940,8 +6250,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv3/Mod/ByCategory?_sRecordSchema=Olympus
+        contentType: application/json; charset=utf-8
   /apiv3/Tool/{toolId}:
     get:
       operationId: get_apiv3_tool_6969
@@ -4972,8 +6290,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Tool'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Tool/test
+        contentType: application/json; charset=utf-8
   /apiv11/RemoteInstall/{memberid}/{secretkey}/PizzaOvenPlus:
     get:
       operationId: get_apiv11_remoteinstall_memberid_secretkey_pizzaovenplus
@@ -5010,8 +6336,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/RemoteInstall/1/test/PizzaOvenPlus
+        contentType: application/json; charset=UTF-8
   /apiv11/RemoteInstall/{secretkey}/{memberid}/TotkModManager:
     get:
       operationId: get_apiv11_remoteinstall_secretkey_memberid_totkmodmanager
@@ -5048,8 +6382,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/RemoteInstall/test/1/TotkModManager
+        contentType: application/json; charset=UTF-8
   /apiv11/RemoteInstall/[member_id:
     get:
       operationId: get_apiv11_remoteinstall_member_id
@@ -5073,8 +6415,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/RemoteInstall/[member_id
+        contentType: application/json; charset=UTF-8
   /apiv8/Mod/ByGame:
     get:
       operationId: get_apiv8_mod_bygame
@@ -5112,8 +6462,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv8/Mod/ByGame?_sOrderBy=_tsDateUpdated%2CDESC
+        contentType: application/json; charset=UTF-8
   /apiv10/Tool/{toolId}:
     get:
       operationId: get_apiv10_tool_21754
@@ -5151,8 +6509,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: Tool'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv10/Tool/test?_csvProperties=%40gbprofile
+        contentType: application/json; charset=UTF-8
   /apiv10/Mod/Index:
     get:
       operationId: get_apiv10_mod_index
@@ -5217,8 +6583,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv10/Mod/Index?_nPage=1&_nPerpage=50&_aFilters%5BGeneric_Category%5D=%7Bcategory&api=SubmissionsListModule
+        contentType: application/json; charset=UTF-8
   /apiv8/ModCategory/ByGame:
     get:
       operationId: get_apiv8_modcategory_bygame
@@ -5249,8 +6623,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: ModCategory'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv8/ModCategory/ByGame
+        contentType: application/json; charset=UTF-8
   /apiv8/Mod/ByCategory:
     get:
       operationId: get_apiv8_mod_bycategory
@@ -5302,8 +6684,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv8/Mod/ByCategory?nPerpage=50&_csvProperties=_aFiles%2C_idRow%2C_sName%2C_aAlternateFileSources%2C_aLatestUpdates%2C_sText&_csvFlags=FILE_METADATA
+        contentType: application/json; charset=UTF-8
   /apiv4/Mod/Index:
     get:
       operationId: get_apiv4_mod_index
@@ -5334,8 +6724,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v4: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv4/Mod/Index
+        contentType: application/json; charset=utf-8
   /apiv3/Mod/Index:
     get:
       operationId: get_apiv3_mod_index
@@ -5386,8 +6784,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv3/Mod/Index?_sRecordSchema=RelatedSubmissions&_bReturnMetadata=true
+        contentType: application/json; charset=utf-8
   /apiv8/Mod/{modId}/ProfilePage:
     get:
       operationId: get_apiv8_mod_1_profilepage
@@ -5418,8 +6824,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv8/Mod/test/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv7/Mod/ByGame:
     get:
       operationId: get_apiv7_mod_bygame
@@ -5478,8 +6892,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v7: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv7/Mod/ByGame?_nPerpage=50&_nPage=16&_csvProperties=_idRow%2C_sName%2C_aFiles%2C_aCredits%2C_aModManagerIntegrations%2C_sText%2C_aPreviewMedia%2C_aSubmitter%2C_sProfileUrl%2C_nViewCount%2C_nLikeCount%2C_nDownloadCount&_aGameRowIds%5B%5D=8694
+        contentType: application/json; charset=UTF-8
   /apiv8/Game/{gameId}/TopSubs:
     get:
       operationId: get_apiv8_game_6460_topsubs
@@ -5510,8 +6932,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv8/Game/test/TopSubs
+        contentType: application/json; charset=UTF-8
   /apiv6/Mod/Multi:
     get:
       operationId: get_apiv6_mod_multi
@@ -5550,8 +6980,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v6: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv6/Mod/Multi?_csvProperties=_aModManagerIntegrations%2C_sName%2C_bHasUpdates%2C_aLatestUpdates%2C_aFiles%2C_aPreviewMedia%2C_aAlternateFileSources&_csvRowIds=9651%2C50891%2C50891%2C34011%2C34011%2C50935%2C250364%2C50932%2C250391%2C285496%2C50912%2C50934%2C50934%2C50910%2C50882%2C50882%2C50882%2C9647%2C50895%2C50893%2C50894%2C50903%2C50871%2C50930%2C33986%2C50931%2C9657%2C138058%2C50885%2C50885%2C50885%2C50885%2C33994%2C33990%2C293809%2C50908
+        contentType: application/json; charset=utf-8
   /apiv8/Mod/{modId}/Updates:
     get:
       operationId: get_apiv8_mod_375312_updates
@@ -5596,8 +7034,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv8/Mod/test/Updates?_nPage=1&_nPerPage=5
+        contentType: application/json; charset=UTF-8
   /apiv8/File/{fileId}:
     get:
       operationId: get_apiv8_file_779741
@@ -5628,8 +7074,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: File'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv8/File/test
+        contentType: application/json; charset=UTF-8
   /apiv8/Mod/{modId}/DownloadPage:
     get:
       operationId: get_apiv8_mod_365869_downloadpage
@@ -5660,8 +7114,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv8/Mod/test/DownloadPage
+        contentType: application/json; charset=UTF-8
   /apiv8/Util/Game/Submissions:
     put:
       operationId: put_apiv8_util_game_submissions
@@ -5714,8 +7176,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv8/Util/Game/Submissions?_idGameRow=6498&_nPage=1&_sName=super+mario
+        contentType: application/json; charset=UTF-8
     get:
       operationId: get_apiv8_util_game_submissions
       summary: Get submissions
@@ -5760,8 +7230,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv8/Util/Game/Submissions?_idGameRow=6498&_nPage=1&_sName=mario
+        contentType: application/json; charset=UTF-8
   /apiv6/Mod/{modId}:
     get:
       operationId: get_apiv6_mod_1337
@@ -5799,8 +7277,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v6: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv6/Mod/test?_csvProperties=_aFiles
+        contentType: application/json; charset=utf-8
   /apiv7/Mod/{modId}:
     get:
       operationId: get_apiv7_mod_1337
@@ -5845,8 +7331,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v7: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv7/Mod/test?_csvProperties=_aFiles._sDownloadUrl&_csvFlags=FILE_METADATA
+        contentType: application/json; charset=UTF-8
   /apiv4/Mod/{modId}:
     get:
       operationId: get_apiv4_mod_333681
@@ -5877,8 +7371,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v4: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv4/Mod/test
+        contentType: application/json; charset=utf-8
   /apiv4/Gamefile/{gamefileId}:
     get:
       operationId: get_apiv4_gamefile_13572
@@ -5909,8 +7411,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v4: Gamefile'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv4/Gamefile/test
+        contentType: application/json; charset=utf-8
   /apiv6/Gamefile/Multi:
     get:
       operationId: get_apiv6_gamefile_multi
@@ -5949,8 +7459,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v6: Gamefile'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv6/Gamefile/Multi?_csvProperties=_aModManagerIntegrations%2C_sName%2C_bHasUpdates%2C_aLatestUpdates%2C_aFiles%2C_aPreviewMedia%2C_aAlternateFileSources&_csvRowIds=13051%2C13572%2C13084
+        contentType: application/json; charset=utf-8
   /apiv5/Mod/ByName:
     get:
       operationId: get_apiv5_mod_byname
@@ -5989,8 +7507,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv5/Mod/ByName?_csvProperties=_idRow%2C_aFiles%2C_aGame%2C_aCategory%2C_sName%2C_aPreviewMedia%2C_aSubmitter&_sName=bhop_badges
+        contentType: application/json; charset=utf-8
   /apiv5/Mod/{modId}:
     get:
       operationId: get_apiv5_mod_345225
@@ -6028,8 +7554,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv5/Mod/test?_csvProperties=_aCategory
+        contentType: application/json; charset=utf-8
   /apiv7/Club/{clubId}:
     get:
       operationId: get_apiv7_club_1
@@ -6067,8 +7601,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v7: Club'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv7/Club/test?_csvProperties=%40gbprofile
+        contentType: application/json; charset=UTF-8
   /apiv6/Mod/ByName:
     get:
       operationId: get_apiv6_mod_byname
@@ -6114,8 +7656,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v6: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv6/Mod/ByName?_csvProperties=_idRow%2C_sName%2C_aFiles%2C_aGame&_sName=%2Auwu%2A&_idGameRow=6498
+        contentType: application/json; charset=utf-8
   /apiv6/Sound/ByGame:
     get:
       operationId: get_apiv6_sound_bygame
@@ -6146,8 +7696,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v6: Sound'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv6/Sound/ByGame
+        contentType: application/json; charset=utf-8
   /apiv6/Mod/ByGame:
     get:
       operationId: get_apiv6_mod_bygame
@@ -6178,8 +7736,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v6: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv6/Mod/ByGame
+        contentType: application/json; charset=utf-8
   /apiv11/Request/{requestId}/ProfilePage:
     get:
       operationId: get_apiv11_request_79334_profilepage
@@ -6210,8 +7776,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Request'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Request/test/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/{modId}:
     get:
       operationId: get_apiv11_mod_150559
@@ -6249,8 +7823,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/test?_csvProperties=_aFiles
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/Multi:
     get:
       operationId: get_apiv11_mod_multi
@@ -6289,8 +7871,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/Multi?_csvRowIds=506678%2C547865%2C547860%2C490773%2C34283&_csvProperties=_idRow%2C_sName%2C_aSubmitter%2C_tsDateAdded%2C_sVersion%2C_aRootCategory%2C_aPreviewMedia%2C_nLikeCount%2C_nViewCount%2C_aFiles%2C_sDescription%2C_sText%2C_nDownloadCount%2C_aModManagerIntegrations
+        contentType: application/json; charset=UTF-8
   /apiv5/Mod/ByGame:
     get:
       operationId: get_apiv5_mod_bygame
@@ -6321,8 +7911,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 400
+        result: http_error
+        url: https://gamebanana.com/apiv5/Mod/ByGame
+        contentType: application/json; charset=utf-8
   /apiv5/Mod/ByCategory:
     get:
       operationId: get_apiv5_mod_bycategory
@@ -6360,8 +7958,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv5/Mod/ByCategory?_csvProperties=%40gbprofile
+        contentType: application/json; charset=utf-8
   /apiv5/Mod/Index:
     get:
       operationId: get_apiv5_mod_index
@@ -6399,8 +8005,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv5/Mod/Index?_csvProperties=_idRow%2C_sName%2C_sObsolescenceNotice
+        contentType: application/json; charset=utf-8
   /apiv5/Mod/Multi:
     get:
       operationId: get_apiv5_mod_multi
@@ -6439,8 +8053,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv5/Mod/Multi?_csvRowIds=123%2C456&_csvProperties=_idRow%2C_sName%2C_sObsolescenceNotice
+        contentType: application/json; charset=utf-8
   /apiv4/Tool/{toolId}/Updates:
     get:
       operationId: get_apiv4_tool_7015_updates
@@ -6478,8 +8100,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v4: Tool'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv4/Tool/test/Updates?_nPage=2
+        contentType: application/json; charset=utf-8
   /apiv4/Mod/ByGame:
     get:
       operationId: get_apiv4_mod_bygame
@@ -6510,8 +8140,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v4: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv4/Mod/ByGame
+        contentType: application/json; charset=utf-8
   /apiv4/Mod/{modId}/Likes:
     get:
       operationId: get_apiv4_mod_208161_likes
@@ -6542,8 +8180,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v4: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv4/Mod/test/Likes
+        contentType: application/json; charset=utf-8
   /apiv4/Mod/{modId}/Thanks:
     get:
       operationId: get_apiv4_mod_208161_thanks
@@ -6574,8 +8220,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v4: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv4/Mod/test/Thanks
+        contentType: application/json; charset=utf-8
   /apiv4/Tool/{toolId}/Issues:
     get:
       operationId: get_apiv4_tool_7015_issues
@@ -6606,8 +8260,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v4: Tool'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv4/Tool/test/Issues
+        contentType: application/json; charset=utf-8
   /apiv3/Request/{requestId}:
     get:
       operationId: get_apiv3_request_20653
@@ -6638,8 +8300,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Request'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Request/test
+        contentType: application/json; charset=utf-8
   /apiv3/Mod/XXXXX:
     get:
       operationId: get_apiv3_mod_xxxxx
@@ -6663,8 +8333,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Mod/XXXXX
+        contentType: application/json; charset=utf-8
   /apiv3/Skin/{skinId}:
     get:
       operationId: get_apiv3_skin_4543
@@ -6695,8 +8373,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Skin'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Skin/test
+        contentType: application/json; charset=utf-8
   /apiv3/{apiv3Id}:
     get:
       operationId: get_apiv3_4543
@@ -6727,8 +8413,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: General'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/test
+        contentType: application/json; charset=utf-8
   /apiv3/{itemtype}/{itemId:
     get:
       operationId: get_apiv3_itemtype_itemid
@@ -6759,8 +8453,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: General'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Mod/{itemId
+        contentType: application/json; charset=utf-8
   /apiv3/Tool/Index:
     get:
       operationId: get_apiv3_tool_index
@@ -6791,8 +8493,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Tool'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv3/Tool/Index
+        contentType: application/json; charset=utf-8
   /apiv3/Map/{mapId}:
     get:
       operationId: get_apiv3_map_216022
@@ -6823,8 +8533,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Map'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Map/test
+        contentType: application/json; charset=utf-8
     options:
       operationId: options_apiv3_map_215839
       summary: List options for map
@@ -6854,8 +8572,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Map'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Map/test
+        contentType: application/json; charset=utf-8
   /apiv7/{categorytype}/ByName:
     get:
       operationId: get_apiv7_categorytype_byname
@@ -6886,8 +8612,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v7: ByName'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv7/test/ByName
+        contentType: application/json; charset=UTF-8
   /apiv3/{section}/{id:
     get:
       operationId: get_apiv3_section_id
@@ -6918,8 +8652,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: General'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/test/{id
+        contentType: application/json; charset=utf-8
   /apiv3/Member/{memberId}:
     get:
       operationId: get_apiv3_member_1737924
@@ -6950,8 +8692,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v3: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/Member/test
+        contentType: application/json; charset=utf-8
   /apiv11/Update/{updateId}/ProfilePage:
     get:
       operationId: get_apiv11_update_222594_profilepage
@@ -6982,8 +8732,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Update'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Update/test/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/{modId}/Updates:
     get:
       operationId: get_apiv11_mod_302016_updates
@@ -7028,8 +8786,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/test/Updates?_nPage=1&_nPerpage=5
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/{mod_id}/DownloadPage:
     get:
       operationId: get_apiv11_mod_mod_id_downloadpage
@@ -7060,8 +8826,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/DownloadPage
+        contentType: text/html; charset=UTF-8
   /apiv11/Member/{memberId}/Buddies:
     post:
       operationId: post_apiv11_member_1169455_buddies
@@ -7106,8 +8880,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Member/test/Buddies?_nPage=1
+        contentType: application/json; charset=UTF-8
   /apiv11/Mods/Categories:
     get:
       operationId: get_apiv11_mods_categories
@@ -7153,8 +8935,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: Mods'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mods/Categories?_sSort=a_to_z&_bShowEmpty=true&_idGameRow=297
+        contentType: application/json; charset=UTF-8
   /apiv11:
     get:
       operationId: get_apiv11
@@ -7178,8 +8968,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v11: General'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11
+        contentType: text/html; charset=UTF-8
   /apiv6/Game/{gameId}/CommunitySpotlight:
     get:
       operationId: get_apiv6_game_4254_communityspotlight
@@ -7210,8 +9008,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v6: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv6/Game/test/CommunitySpotlight
+        contentType: application/json; charset=utf-8
   /apiv7/Game/{gameId}/CommunitySpotlight:
     get:
       operationId: get_apiv7_game_4254_communityspotlight
@@ -7242,8 +9048,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v7: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv7/Game/test/CommunitySpotlight
+        contentType: application/json; charset=UTF-8
   /apiv8/Game/{gameId}/CommunitySpotlight:
     get:
       operationId: get_apiv8_game_4254_communityspotlight
@@ -7274,8 +9088,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v8: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv8/Game/test/CommunitySpotlight
+        contentType: application/json; charset=UTF-8
   /apiv9/Game/{gameId}/CommunitySpotlight:
     get:
       operationId: get_apiv9_game_4254_communityspotlight
@@ -7306,8 +9128,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v9: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv9/Game/test/CommunitySpotlight
+        contentType: application/json; charset=UTF-8
   /apiv10/Game/{gameId}/ProfilePage:
     get:
       operationId: get_apiv10_game_4254_profilepage
@@ -7338,8 +9168,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv10/Game/test/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv10/Post/_idRow/ProfilePage:
     get:
       operationId: get_apiv10_post_idrow_profilepage
@@ -7363,8 +9201,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: Post'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv10/Post/_idRow/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv10/Member/Activity:
     get:
       operationId: get_apiv10_member_activity
@@ -7403,8 +9249,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv10/Member/Activity?_nPerpage=50&_nPage=1
+        contentType: application/json; charset=UTF-8
   /apiv10/Game/{gameId}/Subfeed:
     get:
       operationId: get_apiv10_game_34_subfeed
@@ -7463,8 +9317,16 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       tags:
       - 'v10: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv10/Game/test/Subfeed?_nPage=1&_nPerpage=20&_sSort=default&_sName=gold
+        contentType: application/json; charset=UTF-8
   /Core/List/New:
     get:
       operationId: get_core_list_new
@@ -7487,6 +9349,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -7539,6 +9403,12 @@ paths:
         example: '86400'
       tags:
       - 'core: List'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Core/List/New?itemtype=Mod&gameid=5547&page=1&include_updated=true&format=json_min&max_age=86400
+        contentType: application/json
   /Core/Item/Data:
     get:
       operationId: get_core_item_data
@@ -7561,6 +9431,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -7625,6 +9497,12 @@ paths:
         example: JSON_UNESCAPED_SLASHES
       tags:
       - 'core: Item'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Core/Item/Data?itemtype=Mod&itemid=9902&fields=Url%28&format=json_min&return_keys=1&flags=JSON_UNESCAPED_SLASHES
+        contentType: application/json
   /Rss/Featured:
     get:
       operationId: get_rss_featured
@@ -7647,6 +9525,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -7658,6 +9538,12 @@ paths:
         example: '6460'
       tags:
       - 'rss: Featured'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Rss/Featured?gameid=6460
+        contentType: application/rss+xml
   /apiv11/File/fileid:
     get:
       operationId: get_apiv11_file_fileid
@@ -7680,9 +9566,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'v11: File'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/File/fileid
+        contentType: application/json; charset=UTF-8
   /apiv11/RemoteInstall/memberID/secretKey/PizzaOvenPlus:
     get:
       operationId: get_apiv11_remoteinstall_memberid_secretkey_pizzaovenplus
@@ -7705,9 +9599,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'v11: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/RemoteInstall/memberID/secretKey/PizzaOvenPlus
+        contentType: application/json; charset=UTF-8
   /docs/endpoints/Core/Item/Data:
     get:
       operationId: get_docs_endpoints_core_item_data
@@ -7730,9 +9632,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: docs'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/docs/endpoints/Core/Item/Data
+        contentType: text/html; charset=utf-8
   /Core/Item/Data/AllowedFields:
     get:
       operationId: get_core_item_data_allowedfields
@@ -7755,6 +9665,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -7772,6 +9684,12 @@ paths:
         description: Observed query parameter
       tags:
       - 'core: Item'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Core/Item/Data/AllowedFields?itemtype=Skin
+        contentType: application/json
   /apiv11/RemoteInstall/member_id:
     get:
       operationId: get_apiv11_remoteinstall_member_id
@@ -7794,9 +9712,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'v11: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/RemoteInstall/member_id
+        contentType: application/json; charset=UTF-8
   /Rss/New:
     get:
       operationId: get_rss_new
@@ -7819,6 +9745,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -7878,6 +9806,12 @@ paths:
         example: '9399'
       tags:
       - 'rss: New'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Rss/New?itemtype=Mod%2CTool%2CProject&gameid=23911&perpage=50&include_updated=true&userid=243230&studioid=35522&category=9399
+        contentType: application/rss+xml
   /ideas/add:
     get:
       operationId: get_ideas_add
@@ -7900,9 +9834,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: ideas'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/ideas/add
+        contentType: text/html; charset=UTF-8
   /j:
     get:
       operationId: get_j
@@ -7925,9 +9867,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: j'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/j
+        contentType: text/html; charset=UTF-8
   /apiv10/Mod/MapId/ProfilePage:
     get:
       operationId: get_apiv10_mod_mapid_profilepage
@@ -7950,9 +9900,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'v10: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv10/Mod/MapId/ProfilePage
+        contentType: application/json; charset=UTF-8
   /apiv5/Mod/ID:
     get:
       operationId: get_apiv5_mod_id
@@ -7975,6 +9933,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -7986,6 +9946,12 @@ paths:
         example: _idRow,_sName,_aFiles,_aGame,_sName,_aPreviewMedia,_aSubmitter
       tags:
       - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv5/Mod/ID?_csvProperties=_idRow%2C_sName%2C_aFiles%2C_aGame%2C_sName%2C_aPreviewMedia%2C_aSubmitter
+        contentType: application/json; charset=utf-8
   /docs/endpoints/Rss/New:
     get:
       operationId: get_docs_endpoints_rss_new
@@ -8008,9 +9974,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: docs'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/docs/endpoints/Rss/New
+        contentType: text/html; charset=utf-8
   /Core/List/Section:
     get:
       operationId: get_core_list_section
@@ -8033,6 +10007,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -8092,6 +10068,12 @@ paths:
         example: greater_than
       tags:
       - 'core: List'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Core/List/Section?itemtype=Map&sort=id&direction=desc&page=1&filter=name&filterval=bhop_anyyy&filterop=greater_than
+        contentType: application/json
   /apiv3/itemType/itemId:
     get:
       operationId: get_apiv3_itemtype_itemid
@@ -8114,9 +10096,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'v3: itemType'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv3/itemType/itemId
+        contentType: application/json; charset=utf-8
   /apiv7/categoryType/ByName:
     get:
       operationId: get_apiv7_categorytype_byname
@@ -8139,9 +10129,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'v7: categoryType'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv7/categoryType/ByName
+        contentType: application/json; charset=UTF-8
   /Core/Member/Identify:
     get:
       operationId: get_core_member_identify
@@ -8164,6 +10162,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -8189,6 +10189,12 @@ paths:
         example: JSON_UNESCAPED_SLASHES
       tags:
       - 'core: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Core/Member/Identify?username=tom&return_object=1&flags=JSON_UNESCAPED_SLASHES
+        contentType: application/json
   /Core/List/Section/AllowedFilters:
     get:
       operationId: get_core_list_section_allowedfilters
@@ -8211,6 +10217,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -8228,6 +10236,12 @@ paths:
         description: Observed query parameter
       tags:
       - 'core: List'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Core/List/Section/AllowedFilters?itemtype=Map
+        contentType: application/json
   /docs/endpoints/Core/List/Like:
     get:
       operationId: get_docs_endpoints_core_list_like
@@ -8250,9 +10264,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: docs'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/docs/endpoints/Core/List/Like
+        contentType: text/html; charset=utf-8
   /docs/endpoints/Rss/Featured:
     get:
       operationId: get_docs_endpoints_rss_featured
@@ -8275,9 +10297,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: docs'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/docs/endpoints/Rss/Featured
+        contentType: text/html; charset=utf-8
   /docs/endpoints/Core/List/Section:
     get:
       operationId: get_docs_endpoints_core_list_section
@@ -8300,9 +10330,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: docs'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/docs/endpoints/Core/List/Section
+        contentType: text/html; charset=utf-8
   /apiv11/Game/gameId/Subfeed:
     get:
       operationId: get_apiv11_game_gameid_subfeed
@@ -8325,6 +10363,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -8350,6 +10390,12 @@ paths:
         example: Mod
       tags:
       - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Game/gameId/Subfeed?_nPage=%7Bpage%7D&_sSort=%7Bsort%7D&_csvModelInclusions=Mod
+        contentType: application/json; charset=UTF-8
   /apiv11/Mod/modId/ProfilePage:
     get:
       operationId: get_apiv11_mod_modid_profilepage
@@ -8372,9 +10418,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/Mod/modId/ProfilePage
+        contentType: application/json; charset=UTF-8
   /Core/List/Like/AllowedItemTypes:
     get:
       operationId: get_core_list_like_alloweditemtypes
@@ -8397,6 +10451,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -8407,6 +10463,12 @@ paths:
         description: Observed query parameter
       tags:
       - 'core: List'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Core/List/Like/AllowedItemTypes
+        contentType: application/json
   /docs/endpoints/Core/Item/Data/AllowedItemTypes:
     get:
       operationId: get_docs_endpoints_core_item_data_alloweditemtypes
@@ -8429,9 +10491,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: docs'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/docs/endpoints/Core/Item/Data/AllowedItemTypes
+        contentType: text/html; charset=utf-8
   /docs/endpoints/Core/App/Authenticate:
     get:
       operationId: get_docs_endpoints_core_app_authenticate
@@ -8454,9 +10524,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'other: docs'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/docs/endpoints/Core/App/Authenticate
+        contentType: text/html; charset=utf-8
   /apiv11/ItemType/ItemID/ProfilePage:
     get:
       operationId: get_apiv11_itemtype_itemid_profilepage
@@ -8479,9 +10557,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'v11: ItemType'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://gamebanana.com/apiv11/ItemType/ItemID/ProfilePage
+        contentType: application/json; charset=UTF-8
   /Core/Item/Data/blablabla:
     get:
       operationId: get_core_item_data_blablabla
@@ -8504,9 +10590,17 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       tags:
       - 'core: Item'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 404
+        result: http_error
+        url: https://api.gamebanana.com/Core/Item/Data/blablabla
+        contentType: text/html; charset=UTF-8
   /Core/List/Like:
     get:
       operationId: get_core_list_like
@@ -8529,6 +10623,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        default:
+          description: Unexpected response
       x-doc-last-reviewed: '2026-04-19T17:31:47+00:00'
       parameters:
       - in: query
@@ -8554,6 +10650,12 @@ paths:
         example: 'The Legend of Zelda: Breath of the Wild'
       tags:
       - 'core: List'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://api.gamebanana.com/Core/List/Like?itemtype=Game&field=name&match=The+Legend+of+Zelda%3A+Breath+of+the+Wild
+        contentType: application/json
 tags:
 - name: 'core: Item'
   description: Endpoints grouped under CORE.
