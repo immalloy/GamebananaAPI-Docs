@@ -13,8 +13,8 @@ paths:
   /apiv11/Member/UiConfig:
     get:
       operationId: get_apiv11_member_uiconfig
-      summary: Observed endpoint from HAR
-      description: 'Observed 48 call(s); statuses: 200.'
+      summary: Get ui config
+      description: Returns data for Member / Ui Config.
       parameters:
       - in: query
         name: _sUrl
@@ -30,11 +30,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/UiCounts:
     get:
       operationId: get_apiv11_member_uicounts
-      summary: Observed endpoint from HAR
-      description: 'Observed 47 call(s); statuses: 200.'
+      summary: Get ui counts
+      description: Returns data for Member / Ui Counts.
       responses:
         '200':
           description: Observed response status 200
@@ -43,11 +44,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Homepage/Features:
     get:
       operationId: get_apiv11_util_homepage_features
-      summary: Observed endpoint from HAR
-      description: 'Observed 5 call(s); statuses: 200.'
+      summary: Get features
+      description: Returns data for Util / Homepage / Features.
       responses:
         '200':
           description: Observed response status 200
@@ -56,11 +58,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Homepage/TopGames:
     get:
       operationId: get_apiv11_util_homepage_topgames
-      summary: Observed endpoint from HAR
-      description: 'Observed 5 call(s); statuses: 200.'
+      summary: Get top games
+      description: Returns data for Util / Homepage / Top Games.
       responses:
         '200':
           description: Observed response status 200
@@ -69,11 +72,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Homepage/CommunitySpotlight:
     get:
       operationId: get_apiv11_util_homepage_communityspotlight
-      summary: Observed endpoint from HAR
-      description: 'Observed 5 call(s); statuses: 200.'
+      summary: Get community spotlight
+      description: Returns data for Util / Homepage / Community Spotlight.
       responses:
         '200':
           description: Observed response status 200
@@ -82,11 +86,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Homepage/Submissions:
     get:
       operationId: get_apiv11_util_homepage_submissions
-      summary: Observed endpoint from HAR
-      description: 'Observed 5 call(s); statuses: 200.'
+      summary: Get submissions
+      description: Returns data for Util / Homepage / Submissions.
       parameters:
       - in: query
         name: _bFilterBySubscribedGames
@@ -120,11 +125,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/Authenticate:
     post:
       operationId: post_apiv11_member_authenticate
-      summary: Observed endpoint from HAR
-      description: 'Observed 2 call(s); statuses: 200, 400.'
+      summary: Create authenticate
+      description: Creates or submits data for Member / Authenticate.
       requestBody:
         required: false
         content:
@@ -153,11 +159,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/ProfilePage:
     get:
       operationId: get_apiv11_game_id1_profilepage
-      summary: Observed endpoint from HAR
-      description: 'Observed 5 call(s); statuses: 200.'
+      summary: Get profile page
+      description: Returns data for Game / {id1} / Profile Page.
       parameters:
       - in: path
         name: id1
@@ -173,11 +180,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/TopSubs:
     get:
       operationId: get_apiv11_game_id1_topsubs
-      summary: Observed endpoint from HAR
-      description: 'Observed 4 call(s); statuses: 200.'
+      summary: Get top subs
+      description: Returns data for Game / {id1} / Top Subs.
       parameters:
       - in: path
         name: id1
@@ -193,11 +201,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/Subfeed:
     get:
       operationId: get_apiv11_game_id1_subfeed
-      summary: Observed endpoint from HAR
-      description: 'Observed 22 call(s); statuses: 200.'
+      summary: Get subfeed
+      description: Returns data for Game / {id1} / Subfeed.
       parameters:
       - in: path
         name: id1
@@ -231,11 +240,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/CommunitySpotlight:
     get:
       operationId: get_apiv11_game_id1_communityspotlight
-      summary: Observed endpoint from HAR
-      description: 'Observed 4 call(s); statuses: 200.'
+      summary: Get community spotlight
+      description: Returns data for Game / {id1} / Community Spotlight.
       parameters:
       - in: path
         name: id1
@@ -251,11 +261,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/Navigator/Personal:
     get:
       operationId: get_apiv11_member_navigator_personal
-      summary: Observed endpoint from HAR
-      description: 'Observed 2 call(s); statuses: 200.'
+      summary: Get personal
+      description: Returns data for Member / Navigator / Personal.
       responses:
         '200':
           description: Observed response status 200
@@ -264,11 +275,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/AvatarTooltip:
     get:
       operationId: get_apiv11_member_id1_avatartooltip
-      summary: Observed endpoint from HAR
-      description: 'Observed 5 call(s); statuses: 200.'
+      summary: Get avatar tooltip
+      description: Returns data for Member / {id1} / Avatar Tooltip.
       parameters:
       - in: path
         name: id1
@@ -284,11 +296,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/GetStartedPage:
     get:
       operationId: get_apiv11_game_id1_getstartedpage
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get get started page
+      description: Returns data for Game / {id1} / Get Started Page.
       parameters:
       - in: path
         name: id1
@@ -304,11 +317,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/CategoryTree:
     get:
       operationId: get_apiv11_game_id1_categorytree
-      summary: Observed endpoint from HAR
-      description: 'Observed 3 call(s); statuses: 200.'
+      summary: Get category tree
+      description: Returns data for Game / {id1} / Category Tree.
       parameters:
       - in: path
         name: id1
@@ -324,11 +338,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/ModCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_modcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 3 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Mod Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -344,11 +359,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/BlogCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_blogcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Blog Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -364,11 +380,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/ContestCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_contestcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Contest Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -384,11 +401,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/RequestCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_requestcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Request Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -404,11 +422,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/ScriptCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_scriptcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Script Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -424,11 +443,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/ConceptCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_conceptcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Concept Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -444,11 +464,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/SoundCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_soundcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Sound Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -464,11 +485,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Forum/NestedStructure:
     get:
       operationId: get_apiv11_util_forum_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Forum / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -484,11 +506,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/EventCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_eventcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Event Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -504,11 +527,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/JamCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_jamcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Jam Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -524,11 +548,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/ToolCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_toolcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Tool Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -544,11 +569,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/TutorialCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_tutorialcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 2 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Tutorial Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -564,11 +590,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/NewsCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_newscategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / News Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -584,11 +611,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/WipCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_wipcategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Wip Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -604,11 +632,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/WareCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_warecategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Ware Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -624,11 +653,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/QuestionCategory/NestedStructure:
     get:
       operationId: get_apiv11_util_questioncategory_nestedstructure
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get nested structure
+      description: Returns data for Util / Question Category / Nested Structure.
       parameters:
       - in: query
         name: _idGameRow
@@ -644,11 +674,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Mod/Index:
     get:
       operationId: get_apiv11_mod_index
-      summary: Observed endpoint from HAR
-      description: 'Observed 8 call(s); statuses: 200.'
+      summary: Get index
+      description: Returns data for Mod / Index.
       parameters:
       - in: query
         name: _aFilters[Generic_Category]
@@ -694,11 +725,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Mod/Categories:
     get:
       operationId: get_apiv11_mod_categories
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get categories
+      description: Returns data for Mod / Categories.
       parameters:
       - in: query
         name: _bShowEmpty
@@ -726,11 +758,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Mod/ListFilterConfig:
     get:
       operationId: get_apiv11_mod_listfilterconfig
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get list filter config
+      description: Returns data for Mod / List Filter Config.
       responses:
         '200':
           description: Observed response status 200
@@ -739,11 +772,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Wip/Index:
     get:
       operationId: get_apiv11_wip_index
-      summary: Observed endpoint from HAR
-      description: 'Observed 6 call(s); statuses: 0, 200.'
+      summary: Get index
+      description: Returns data for Wip / Index.
       parameters:
       - in: query
         name: _aFilters[Generic_Game]
@@ -790,11 +824,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Wip/Categories:
     get:
       operationId: get_apiv11_wip_categories
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get categories
+      description: Returns data for Wip / Categories.
       parameters:
       - in: query
         name: _bShowEmpty
@@ -822,11 +857,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Wip/ListFilterConfig:
     get:
       operationId: get_apiv11_wip_listfilterconfig
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get list filter config
+      description: Returns data for Wip / List Filter Config.
       responses:
         '200':
           description: Observed response status 200
@@ -835,11 +871,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/List/Featured:
     get:
       operationId: get_apiv11_util_list_featured
-      summary: Observed endpoint from HAR
-      description: 'Observed 7 call(s); statuses: 200.'
+      summary: Get featured
+      description: Returns data for Util / List / Featured.
       parameters:
       - in: query
         name: _idGameRow
@@ -867,11 +904,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Generic/Discussions:
     get:
       operationId: get_apiv11_util_generic_discussions
-      summary: Observed endpoint from HAR
-      description: 'Observed 35 call(s); statuses: 0, 200.'
+      summary: Get discussions
+      description: Returns data for Util / Generic / Discussions.
       parameters:
       - in: query
         name: _idGameRow
@@ -918,11 +956,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/Rules:
     get:
       operationId: get_apiv11_game_id1_rules
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get rules
+      description: Returns data for Game / {id1} / Rules.
       parameters:
       - in: path
         name: id1
@@ -938,11 +977,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Collection/Index:
     get:
       operationId: get_apiv11_collection_index
-      summary: Observed endpoint from HAR
-      description: 'Observed 4 call(s); statuses: 200.'
+      summary: Get index
+      description: Returns data for Collection / Index.
       parameters:
       - in: query
         name: _aFilters[Collection_Privacy]
@@ -976,11 +1016,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Collection/ListFilterConfig:
     get:
       operationId: get_apiv11_collection_listfilterconfig
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get list filter config
+      description: Returns data for Collection / List Filter Config.
       responses:
         '200':
           description: Observed response status 200
@@ -989,11 +1030,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/Keys/Summary:
     get:
       operationId: get_apiv11_game_id1_keys_summary
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get summary
+      description: Returns data for Game / {id1} / Keys / Summary.
       parameters:
       - in: path
         name: id1
@@ -1009,11 +1051,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/Keys/ForSale:
     get:
       operationId: get_apiv11_game_id1_keys_forsale
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get for sale
+      description: Returns data for Game / {id1} / Keys / For Sale.
       parameters:
       - in: path
         name: id1
@@ -1035,11 +1078,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/Withhold:
     patch:
       operationId: patch_apiv11_game_id1_withhold
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 400.'
+      summary: Update withhold
+      description: Partially updates data for Game / {id1} / Withhold.
       parameters:
       - in: path
         name: id1
@@ -1067,11 +1111,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id1}/Config:
     get:
       operationId: get_apiv11_game_id1_config
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get config
+      description: Returns data for Game / {id1} / Config.
       parameters:
       - in: path
         name: id1
@@ -1087,11 +1132,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /members/submissions/bitpit/{id1}:
     get:
       operationId: get_members_submissions_bitpit_id1
-      summary: Observed endpoint from HAR
-      description: 'Observed 17 call(s); statuses: 200.'
+      summary: Get bitpit
+      description: Returns data for members / submissions / bitpit / {id1}.
       parameters:
       - in: path
         name: id1
@@ -1113,11 +1159,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Search/Suggestions:
     get:
       operationId: get_apiv11_util_search_suggestions
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get suggestions
+      description: Returns data for Util / Search / Suggestions.
       parameters:
       - in: query
         name: _idGameRow
@@ -1139,11 +1186,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Search/Results:
     get:
       operationId: get_apiv11_util_search_results
-      summary: Observed endpoint from HAR
-      description: 'Observed 4 call(s); statuses: 0, 200.'
+      summary: Get results
+      description: Returns data for Util / Search / Results.
       parameters:
       - in: query
         name: _csvFields
@@ -1190,11 +1238,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/ProfilePage:
     get:
       operationId: get_apiv11_member_id1_profilepage
-      summary: Observed endpoint from HAR
-      description: 'Observed 3 call(s); statuses: 200.'
+      summary: Get profile page
+      description: Returns data for Member / {id1} / Profile Page.
       parameters:
       - in: path
         name: id1
@@ -1210,11 +1259,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/Config:
     get:
       operationId: get_apiv11_member_id1_config
-      summary: Observed endpoint from HAR
-      description: 'Observed 3 call(s); statuses: 200.'
+      summary: Get config
+      description: Returns data for Member / {id1} / Config.
       parameters:
       - in: path
         name: id1
@@ -1230,11 +1280,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/SubFeed:
     get:
       operationId: get_apiv11_member_id1_subfeed
-      summary: Observed endpoint from HAR
-      description: 'Observed 3 call(s); statuses: 200.'
+      summary: Get sub feed
+      description: Returns data for Member / {id1} / Sub Feed.
       parameters:
       - in: path
         name: id1
@@ -1262,11 +1313,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/Posts:
     get:
       operationId: get_apiv11_member_id1_posts
-      summary: Observed endpoint from HAR
-      description: 'Observed 3 call(s); statuses: 200.'
+      summary: Get posts
+      description: Returns data for Member / {id1} / Posts.
       parameters:
       - in: path
         name: id1
@@ -1300,11 +1352,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/Apps:
     get:
       operationId: get_apiv11_member_id1_apps
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get apps
+      description: Returns data for Member / {id1} / Apps.
       parameters:
       - in: path
         name: id1
@@ -1320,11 +1373,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/BuddiesSummary:
     get:
       operationId: get_apiv11_member_id1_buddiessummary
-      summary: Observed endpoint from HAR
-      description: 'Observed 13 call(s); statuses: 200.'
+      summary: Get buddies summary
+      description: Returns data for Member / {id1} / Buddies Summary.
       parameters:
       - in: path
         name: id1
@@ -1340,11 +1394,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/Buddies:
     get:
       operationId: get_apiv11_member_id1_buddies
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get buddies
+      description: Returns data for Member / {id1} / Buddies.
       parameters:
       - in: path
         name: id1
@@ -1366,11 +1421,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/IncomingBuddyRequests:
     get:
       operationId: get_apiv11_member_id1_incomingbuddyrequests
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get incoming buddy requests
+      description: Returns data for Member / {id1} / Incoming Buddy Requests.
       parameters:
       - in: path
         name: id1
@@ -1392,11 +1448,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/Buddy/{id1}/Accept:
     patch:
       operationId: patch_apiv11_member_buddy_id1_accept
-      summary: Observed endpoint from HAR
-      description: 'Observed 12 call(s); statuses: 200.'
+      summary: Update accept
+      description: Partially updates data for Member / Buddy / {id1} / Accept.
       parameters:
       - in: path
         name: id1
@@ -1418,11 +1475,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/OutgoingBuddyRequests:
     get:
       operationId: get_apiv11_member_id1_outgoingbuddyrequests
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get outgoing buddy requests
+      description: Returns data for Member / {id1} / Outgoing Buddy Requests.
       parameters:
       - in: path
         name: id1
@@ -1444,11 +1502,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/Submissions/Sublog:
     get:
       operationId: get_apiv11_member_id1_submissions_sublog
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get sublog
+      description: Returns data for Member / {id1} / Submissions / Sublog.
       parameters:
       - in: path
         name: id1
@@ -1488,11 +1547,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Tool/Index:
     get:
       operationId: get_apiv11_tool_index
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get index
+      description: Returns data for Tool / Index.
       parameters:
       - in: query
         name: _aFilters[Generic_Submitter]
@@ -1520,11 +1580,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Tool/ListFilterConfig:
     get:
       operationId: get_apiv11_tool_listfilterconfig
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get list filter config
+      description: Returns data for Tool / List Filter Config.
       responses:
         '200':
           description: Observed response status 200
@@ -1533,11 +1594,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/SettingsPortal:
     get:
       operationId: get_apiv11_member_id1_settingsportal
-      summary: Observed endpoint from HAR
-      description: 'Observed 2 call(s); statuses: 200.'
+      summary: Get settings portal
+      description: Returns data for Member / {id1} / Settings Portal.
       parameters:
       - in: path
         name: id1
@@ -1559,11 +1621,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id1}/Admin/Tickets:
     get:
       operationId: get_apiv11_member_id1_admin_tickets
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 400.'
+      summary: Get tickets
+      description: Returns data for Member / {id1} / Admin / Tickets.
       parameters:
       - in: path
         name: id1
@@ -1585,11 +1648,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Support/ListFilterConfig:
     get:
       operationId: get_apiv11_support_listfilterconfig
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get list filter config
+      description: Returns data for Support / List Filter Config.
       responses:
         '200':
           description: Observed response status 200
@@ -1598,11 +1662,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/RecordInfo:
     get:
       operationId: get_apiv11_util_recordinfo
-      summary: Observed endpoint from HAR
-      description: 'Observed 2 call(s); statuses: 200.'
+      summary: Get record info
+      description: Returns data for Util / Record Info.
       parameters:
       - in: query
         name: s
@@ -1618,11 +1683,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Mod/{id1}/ProfilePage:
     get:
       operationId: get_apiv11_mod_id1_profilepage
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get profile page
+      description: Returns data for Mod / {id1} / Profile Page.
       parameters:
       - in: path
         name: id1
@@ -1638,11 +1704,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Mod/{id1}/Config:
     get:
       operationId: get_apiv11_mod_id1_config
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get config
+      description: Returns data for Mod / {id1} / Config.
       parameters:
       - in: path
         name: id1
@@ -1658,11 +1725,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Mod/{id1}/Posts:
     get:
       operationId: get_apiv11_mod_id1_posts
-      summary: Observed endpoint from HAR
-      description: 'Observed 1 call(s); statuses: 200.'
+      summary: Get posts
+      description: Returns data for Mod / {id1} / Posts.
       parameters:
       - in: path
         name: id1
@@ -1696,6 +1764,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{model_name}/ListFilterConfig:
     get:
       operationId: get_apiv11_model_name_listfilterconfig
@@ -1716,6 +1785,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Game/NameMatch:
     get:
       operationId: get_apiv11_util_game_namematch
@@ -1752,6 +1822,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Generic/Tags:
     get:
       operationId: get_apiv11_util_generic_tags
@@ -1780,6 +1851,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id}/Subfeed:
     get:
       operationId: get_apiv11_game_id_subfeed
@@ -1863,6 +1935,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{model_name}/Index:
     get:
       operationId: get_apiv11_model_name_index
@@ -1910,6 +1983,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/SubFeed:
     get:
       operationId: get_apiv11_member_id_subfeed
@@ -1944,6 +2018,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id}/TopSubs:
     get:
       operationId: get_apiv11_game_id_topsubs
@@ -1966,6 +2041,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/ListFilterConfig:
     get:
       operationId: get_apiv11_game_listfilterconfig
@@ -1979,6 +2055,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/Index:
     get:
       operationId: get_apiv11_game_index
@@ -2014,6 +2091,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id}/CommunitySpotlight:
     get:
       operationId: get_apiv11_game_id_communityspotlight
@@ -2035,6 +2113,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id}/ProfilePage:
     get:
       operationId: get_apiv11_game_id_profilepage
@@ -2056,6 +2135,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id}:
     get:
       operationId: get_apiv11_game_id
@@ -2084,6 +2164,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id}/GetStartedPage:
     get:
       operationId: get_apiv11_game_id_getstartedpage
@@ -2105,6 +2186,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Game/{id}/Rules:
     get:
       operationId: get_apiv11_game_id_rules
@@ -2126,6 +2208,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{sectionSlug}/Categories:
     get:
       operationId: get_apiv11_sectionslug_categories
@@ -2172,6 +2255,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/ModCategory/{rootCategoryId}/SubCategories:
     get:
       operationId: get_apiv11_modcategory_rootcategoryid_subcategories
@@ -2192,6 +2276,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/AwardedBounties:
     get:
       operationId: get_apiv11_member_id_awardedbounties
@@ -2219,6 +2304,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/ContributedBounties:
     get:
       operationId: get_apiv11_member_id_contributedbounties
@@ -2246,6 +2332,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/LikedSubmissions:
     get:
       operationId: get_apiv11_member_id_likedsubmissions
@@ -2272,6 +2359,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/Medals:
     get:
       operationId: get_apiv11_member_id_medals
@@ -2292,6 +2380,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/ParticipatedContests:
     get:
       operationId: get_apiv11_member_id_participatedcontests
@@ -2319,6 +2408,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/RatedIdeas:
     get:
       operationId: get_apiv11_member_id_ratedideas
@@ -2345,6 +2435,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/SolvedQuestions:
     get:
       operationId: get_apiv11_member_id_solvedquestions
@@ -2371,6 +2462,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/ThankedSubmissions:
     get:
       operationId: get_apiv11_member_id_thankedsubmissions
@@ -2397,6 +2489,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/VotedPolls:
     get:
       operationId: get_apiv11_member_id_votedpolls
@@ -2423,6 +2516,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/Submissions/Contributions:
     get:
       operationId: get_apiv11_member_id_submissions_contributions
@@ -2450,6 +2544,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/{id}/Submissions/Posts:
     get:
       operationId: get_apiv11_member_id_submissions_posts
@@ -2476,11 +2571,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Member/EmailAuthenticate:
     post:
       operationId: post_apiv11_member_emailauthenticate
       summary: 1. Request confirmation code
-      description: Imported from Postman collection.
+      description: Creates or submits data for Member / Email Authenticate.
       requestBody:
         required: false
         content:
@@ -2499,11 +2595,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Util/Config/TrashReasons:
     get:
       operationId: get_apiv11_util_config_trashreasons
       summary: Trash reasons
-      description: Imported from Postman collection.
+      description: Returns data for Util / Config / Trash Reasons.
       responses:
         '200':
           description: Successful response
@@ -2512,11 +2609,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}:
     get:
       operationId: get_apiv11_section_slug_submission_id
       summary: Multiple Properties (Option 1)
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id}.
       parameters:
       - in: path
         name: section_slug
@@ -2544,11 +2642,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/ProfilePage:
     get:
       operationId: get_apiv11_section_slug_submission_id_profilepage
       summary: Multiple Properties (Option 2)
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Profile Page.
       parameters:
       - in: path
         name: section_slug
@@ -2570,11 +2669,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/DownloadPage:
     get:
       operationId: get_apiv11_section_slug_submission_id_downloadpage
       summary: Files list (Option 2)
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Download Page.
       parameters:
       - in: path
         name: section_slug
@@ -2596,11 +2696,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/File/{file_id}:
     get:
       operationId: get_apiv11_file_file_id
       summary: File contents
-      description: Imported from Postman collection.
+      description: Returns data for File / {file_id}.
       parameters:
       - in: path
         name: file_id
@@ -2616,11 +2717,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Collections:
     get:
       operationId: get_apiv11_section_slug_submission_id_collections
       summary: Collections added to
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Collections.
       parameters:
       - in: path
         name: section_slug
@@ -2648,11 +2750,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/AccessorCollections:
     get:
       operationId: get_apiv11_section_slug_submission_id_accessorcollections
       summary: Accessor collections
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Accessor Collections.
       parameters:
       - in: path
         name: section_slug
@@ -2674,11 +2777,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Collection/Add:
     post:
       operationId: post_apiv11_collection_add
       summary: '[Auth] Create a Collection'
-      description: Imported from Postman collection.
+      description: Creates or submits data for Collection / Add.
       requestBody:
         required: false
         content:
@@ -2699,11 +2803,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/AddToCollection:
     post:
       operationId: post_apiv11_section_slug_submission_id_addtocollection
       summary: '[Auth] Add to Collection'
-      description: Imported from Postman collection.
+      description: Creates or submits data for {section_slug} / {submission_id} /
+        Add To Collection.
       parameters:
       - in: path
         name: section_slug
@@ -2735,11 +2841,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/RemoveFromCollection:
     delete:
       operationId: delete_apiv11_section_slug_submission_id_removefromcollection
       summary: '[Auth] Remove from Collection'
-      description: Imported from Postman collection.
+      description: Removes or trashes data for {section_slug} / {submission_id} /
+        Remove From Collection.
       parameters:
       - in: path
         name: section_slug
@@ -2761,11 +2869,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/EmbeddablesPage:
     get:
       operationId: get_apiv11_section_slug_submission_id_embeddablespage
       summary: Embeds list
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Embeddables
+        Page.
       parameters:
       - in: path
         name: section_slug
@@ -2787,11 +2897,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Issues:
     get:
       operationId: get_apiv11_section_slug_submission_id_issues
       summary: Issues list
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Issues.
       parameters:
       - in: path
         name: section_slug
@@ -2819,11 +2930,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Issue/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_issue_add
       summary: '[Auth] Add an Issue'
-      description: Imported from Postman collection.
+      description: Creates or submits data for {section_slug} / {submission_id} /
+        Issue / Add.
       parameters:
       - in: path
         name: section_slug
@@ -2859,11 +2972,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Issue/{issue_id}:
     patch:
       operationId: patch_apiv11_issue_issue_id
       summary: '[Auth] Edit an Issue'
-      description: Imported from Postman collection.
+      description: Partially updates data for Issue / {issue_id}.
       parameters:
       - in: path
         name: issue_id
@@ -2893,10 +3007,11 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
     delete:
       operationId: delete_apiv11_issue_issue_id
       summary: '[Auth] Trash an Issue'
-      description: Imported from Postman collection.
+      description: Removes or trashes data for Issue / {issue_id}.
       parameters:
       - in: path
         name: issue_id
@@ -2912,11 +3027,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Likes:
     get:
       operationId: get_apiv11_section_slug_submission_id_likes
       summary: Users who liked
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Likes.
       parameters:
       - in: path
         name: section_slug
@@ -2944,11 +3060,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Like:
     post:
       operationId: post_apiv11_section_slug_submission_id_like
       summary: '[Auth] Like'
-      description: Imported from Postman collection.
+      description: Creates or submits data for {section_slug} / {submission_id} /
+        Like.
       parameters:
       - in: path
         name: section_slug
@@ -2977,10 +3095,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
     delete:
       operationId: delete_apiv11_section_slug_submission_id_like
       summary: '[Auth] Unlike'
-      description: Imported from Postman collection.
+      description: Removes or trashes data for {section_slug} / {submission_id} /
+        Like.
       parameters:
       - in: path
         name: section_slug
@@ -3002,11 +3122,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Post/{post_id}/ProfilePage:
     get:
       operationId: get_apiv11_post_post_id_profilepage
       summary: Post / Reply properties
-      description: Imported from Postman collection.
+      description: Returns data for Post / {post_id} / Profile Page.
       parameters:
       - in: path
         name: post_id
@@ -3022,11 +3143,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Posts:
     get:
       operationId: get_apiv11_section_slug_submission_id_posts
       summary: Posts feed
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Posts.
       parameters:
       - in: path
         name: section_slug
@@ -3066,11 +3188,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Post/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_post_add
       summary: '[Auth] Add a Post'
-      description: Imported from Postman collection.
+      description: Creates or submits data for {section_slug} / {submission_id} /
+        Post / Add.
       parameters:
       - in: path
         name: section_slug
@@ -3102,11 +3226,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Post/{post_id}:
     post:
       operationId: post_apiv11_post_post_id
       summary: '[Auth] Add a Reply'
-      description: Imported from Postman collection.
+      description: Creates or submits data for Post / {post_id}.
       parameters:
       - in: path
         name: post_id
@@ -3132,10 +3257,11 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
     delete:
       operationId: delete_apiv11_post_post_id
       summary: '[Auth] Trash a Post / Reply'
-      description: Imported from Postman collection.
+      description: Removes or trashes data for Post / {post_id}.
       parameters:
       - in: path
         name: post_id
@@ -3151,11 +3277,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Post/{post_id}/Untrash:
     patch:
       operationId: patch_apiv11_post_post_id_untrash
       summary: '[Auth] Untrash a Post / Reply'
-      description: Imported from Postman collection.
+      description: Partially updates data for Post / {post_id} / Untrash.
       parameters:
       - in: path
         name: post_id
@@ -3178,11 +3305,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Subscribers:
     get:
       operationId: get_apiv11_section_slug_submission_id_subscribers
       summary: Users who subscribed
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Subscribers.
       parameters:
       - in: path
         name: section_slug
@@ -3210,11 +3338,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Subscription/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_subscription_add
       summary: '[Auth] Subscribe'
-      description: Imported from Postman collection.
+      description: Creates or submits data for {section_slug} / {submission_id} /
+        Subscription / Add.
       parameters:
       - in: path
         name: section_slug
@@ -3243,11 +3373,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Subscription/{subscription_id}:
     delete:
       operationId: delete_apiv11_subscription_subscription_id
       summary: '[Auth] Unsubscribe'
-      description: Imported from Postman collection.
+      description: Removes or trashes data for Subscription / {subscription_id}.
       parameters:
       - in: path
         name: subscription_id
@@ -3263,11 +3394,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Thanks:
     get:
       operationId: get_apiv11_section_slug_submission_id_thanks
       summary: Users who thanked
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Thanks.
       parameters:
       - in: path
         name: section_slug
@@ -3295,11 +3427,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Thank/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_thank_add
       summary: '[Auth] Thank'
-      description: Imported from Postman collection.
+      description: Creates or submits data for {section_slug} / {submission_id} /
+        Thank / Add.
       parameters:
       - in: path
         name: section_slug
@@ -3331,11 +3465,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Todos:
     get:
       operationId: get_apiv11_section_slug_submission_id_todos
       summary: Todos list
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Todos.
       parameters:
       - in: path
         name: section_slug
@@ -3363,11 +3498,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Todo/Add:
     post:
       operationId: post_apiv11_section_slug_submission_id_todo_add
       summary: '[Auth] Add a Todo'
-      description: Imported from Postman collection.
+      description: Creates or submits data for {section_slug} / {submission_id} /
+        Todo / Add.
       parameters:
       - in: path
         name: section_slug
@@ -3409,11 +3546,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Todo/{todo_id}:
     patch:
       operationId: patch_apiv11_todo_todo_id
       summary: '[Auth] Edit a Todo'
-      description: Imported from Postman collection.
+      description: Partially updates data for Todo / {todo_id}.
       parameters:
       - in: path
         name: todo_id
@@ -3449,10 +3587,11 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
     delete:
       operationId: delete_apiv11_todo_todo_id
       summary: '[Auth] Trash a Todo'
-      description: Imported from Postman collection.
+      description: Removes or trashes data for Todo / {todo_id}.
       parameters:
       - in: path
         name: todo_id
@@ -3468,11 +3607,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Todo/{todo_id}/Toggle:
     patch:
       operationId: patch_apiv11_todo_todo_id_toggle
       summary: '[Auth] Toggle state'
-      description: Imported from Postman collection.
+      description: Partially updates data for Todo / {todo_id} / Toggle.
       parameters:
       - in: path
         name: todo_id
@@ -3495,11 +3635,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Updates:
     get:
       operationId: get_apiv11_section_slug_submission_id_updates
       summary: Updates list
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Updates.
       parameters:
       - in: path
         name: section_slug
@@ -3533,11 +3674,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Files:
     get:
       operationId: get_apiv11_section_slug_submission_id_files
       summary: Files
-      description: Imported from Postman collection.
+      description: Returns data for {section_slug} / {submission_id} / Files.
       parameters:
       - in: path
         name: section_slug
@@ -3559,11 +3701,13 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/{section_slug}/{submission_id}/Update:
     post:
       operationId: post_apiv11_section_slug_submission_id_update
       summary: '[Auth] Add an Update'
-      description: Imported from Postman collection.
+      description: Creates or submits data for {section_slug} / {submission_id} /
+        Update.
       parameters:
       - in: path
         name: section_slug
@@ -3613,11 +3757,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Update/{update_id}:
     patch:
       operationId: patch_apiv11_update_update_id
       summary: '[Auth] Edit an Update'
-      description: Imported from Postman collection.
+      description: Partially updates data for Update / {update_id}.
       parameters:
       - in: path
         name: update_id
@@ -3640,10 +3785,11 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
     delete:
       operationId: delete_apiv11_update_update_id
       summary: '[Auth] Trash an Update'
-      description: Imported from Postman collection.
+      description: Removes or trashes data for Update / {update_id}.
       parameters:
       - in: path
         name: update_id
@@ -3659,11 +3805,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Update/{update_id}/Untrash:
     patch:
       operationId: patch_apiv11_update_update_id_untrash
       summary: '[Auth] Untrash an Update'
-      description: Imported from Postman collection.
+      description: Partially updates data for Update / {update_id} / Untrash.
       parameters:
       - in: path
         name: update_id
@@ -3689,11 +3836,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/App/{submission_id}/Users:
     get:
       operationId: get_apiv11_app_submission_id_users
       summary: Users
-      description: Imported from Postman collection.
+      description: Returns data for App / {submission_id} / Users.
       parameters:
       - in: path
         name: submission_id
@@ -3715,11 +3863,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/App/{submission_id}/CustomConfig/{app_config_id}:
     get:
       operationId: get_apiv11_app_submission_id_customconfig_app_config_id
       summary: Custom config
-      description: Imported from Postman collection.
+      description: Returns data for App / {submission_id} / Custom Config / {app_config_id}.
       parameters:
       - in: path
         name: submission_id
@@ -3741,11 +3890,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Contest/{submission_id}/Winners:
     get:
       operationId: get_apiv11_contest_submission_id_winners
       summary: Winners
-      description: Imported from Postman collection.
+      description: Returns data for Contest / {submission_id} / Winners.
       parameters:
       - in: path
         name: submission_id
@@ -3761,11 +3911,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Collection/{submission_id}/Items:
     get:
       operationId: get_apiv11_collection_submission_id_items
       summary: Items
-      description: Imported from Postman collection.
+      description: Returns data for Collection / {submission_id} / Items.
       parameters:
       - in: path
         name: submission_id
@@ -3793,11 +3944,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Idea/{submission_id}/Ratings:
     get:
       operationId: get_apiv11_idea_submission_id_ratings
       summary: Ratings list
-      description: Imported from Postman collection.
+      description: Returns data for Idea / {submission_id} / Ratings.
       parameters:
       - in: path
         name: submission_id
@@ -3825,11 +3977,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Jam/{submission_id}/Bounty/Contributors:
     get:
       operationId: get_apiv11_jam_submission_id_bounty_contributors
       summary: Bounty contributors
-      description: Imported from Postman collection.
+      description: Returns data for Jam / {submission_id} / Bounty / Contributors.
       parameters:
       - in: path
         name: submission_id
@@ -3851,11 +4004,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Jam/{submission_id}/Bounty/Recipients:
     get:
       operationId: get_apiv11_jam_submission_id_bounty_recipients
       summary: Bounty recipients
-      description: Imported from Postman collection.
+      description: Returns data for Jam / {submission_id} / Bounty / Recipients.
       parameters:
       - in: path
         name: submission_id
@@ -3877,11 +4031,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Jam/{submission_id}/Entries:
     get:
       operationId: get_apiv11_jam_submission_id_entries
       summary: Entries list
-      description: Imported from Postman collection.
+      description: Returns data for Jam / {submission_id} / Entries.
       parameters:
       - in: path
         name: submission_id
@@ -3903,11 +4058,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Poll/{submission_id}/Votes:
     get:
       operationId: get_apiv11_poll_submission_id_votes
       summary: Votes
-      description: Imported from Postman collection.
+      description: Returns data for Poll / {submission_id} / Votes.
       parameters:
       - in: path
         name: submission_id
@@ -3935,11 +4091,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Project/{submission_id}/FinishedWorks:
     get:
       operationId: get_apiv11_project_submission_id_finishedworks
       summary: Finished works list
-      description: Imported from Postman collection.
+      description: Returns data for Project / {submission_id} / Finished Works.
       parameters:
       - in: path
         name: submission_id
@@ -3961,11 +4118,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Project/{submission_id}/Wips:
     get:
       operationId: get_apiv11_project_submission_id_wips
       summary: Wips list
-      description: Imported from Postman collection.
+      description: Returns data for Project / {submission_id} / Wips.
       parameters:
       - in: path
         name: submission_id
@@ -3987,11 +4145,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Request/{submission_id}/BountyRecipients:
     get:
       operationId: get_apiv11_request_submission_id_bountyrecipients
       summary: Bounty recipients
-      description: Imported from Postman collection.
+      description: Returns data for Request / {submission_id} / Bounty Recipients.
       parameters:
       - in: path
         name: submission_id
@@ -4013,11 +4172,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Request/{submission_id}/Bounty/Contributors:
     get:
       operationId: get_apiv11_request_submission_id_bounty_contributors
       summary: Bounty contributors
-      description: Imported from Postman collection.
+      description: Returns data for Request / {submission_id} / Bounty / Contributors.
       parameters:
       - in: path
         name: submission_id
@@ -4039,6 +4199,7 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Ripe/Info:
     get:
       operationId: get_apiv11_ripe_info
@@ -4052,11 +4213,12 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
   /apiv11/Ripe/Purchasers:
     get:
       operationId: get_apiv11_ripe_purchasers
       summary: Latest purchasers
-      description: Imported from Postman collection.
+      description: Returns data for Ripe / Purchasers.
       responses:
         '200':
           description: Successful response
@@ -4065,3 +4227,4 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+      x-doc-last-reviewed: '2026-04-19T16:24:43+00:00'
