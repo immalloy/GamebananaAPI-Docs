@@ -33,76 +33,6 @@
       display: none;
     }
 
-    .tools-wrap {
-      max-width: 1100px;
-      margin: 18px auto 10px;
-      background: #fff8e2;
-      border: 1px solid #efd27b;
-      border-radius: 12px;
-      box-shadow: 0 8px 22px rgba(92, 63, 10, 0.08);
-      padding: 10px;
-      position: sticky;
-      top: 10px;
-      z-index: 30;
-    }
-
-    .tools-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    #endpoint-jump {
-      flex: 1 1 320px;
-      min-width: 260px;
-      border: 1px solid #d8bb64;
-      border-radius: 8px;
-      padding: 8px 10px;
-      background: #fffdf3;
-      color: var(--ink);
-    }
-
-    .tool-btn {
-      border: 1px solid #d2af4f;
-      background: #fff5d3;
-      color: #4f3e08;
-      border-radius: 8px;
-      padding: 8px 10px;
-      cursor: pointer;
-      font-size: 13px;
-      line-height: 1;
-    }
-
-    .tool-btn:hover {
-      background: #ffefbf;
-    }
-
-    .chip {
-      border: 1px solid #dbbd63;
-      background: #fff3ca;
-      color: #58460b;
-      border-radius: 999px;
-      padding: 6px 10px;
-      cursor: pointer;
-      font-size: 12px;
-      line-height: 1;
-    }
-
-    .chip.active {
-      border-color: #be8a12;
-      background: linear-gradient(90deg, #f0c752, #dfab2f);
-      color: #3f2e02;
-      font-weight: 700;
-    }
-
-    .chips-wrap {
-      margin-top: 8px;
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
     #swagger-ui {
       max-width: 1100px;
       margin: 0 auto 24px;
@@ -137,31 +67,9 @@
       background: linear-gradient(90deg, var(--accent), var(--accent-2));
       border-color: var(--accent);
     }
-
-    .swagger-ui .opblock.jump-hit {
-      box-shadow: 0 0 0 3px rgba(207, 155, 36, 0.36) inset;
-      border-color: #ba8614;
-    }
   </style>
 </head>
 <body>
-  <div class="tools-wrap">
-    <div class="tools-row">
-      <input id="endpoint-jump" type="text" placeholder="Jump to endpoint (example: /apiv11/Member/Authenticate)" />
-      <button class="tool-btn" id="jump-btn" type="button">Go</button>
-      <button class="tool-btn" id="clear-filter" type="button">Reset</button>
-    </div>
-    <div class="chips-wrap" id="quick-chips">
-      <button class="chip active" data-filter="">All</button>
-      <button class="chip" data-filter="v11:">v11</button>
-      <button class="chip" data-filter="v10:">v10</button>
-      <button class="chip" data-filter="v9:">v9</button>
-      <button class="chip" data-filter="v8:">v8</button>
-      <button class="chip" data-filter="v7:">v7</button>
-      <button class="chip" data-filter="core:">core</button>
-      <button class="chip" data-filter="rss:">rss</button>
-    </div>
-  </div>
   <div id="swagger-ui"></div>
 
   <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
@@ -195,114 +103,6 @@
         EnumNamesPlugin.EnumNamesPlugin
       ],
       layout: "BaseLayout"
-    });
-
-    function getBuiltInFilterInput() {
-      return document.querySelector(".swagger-ui .filter input");
-    }
-
-    function setBuiltInFilter(value) {
-      const input = getBuiltInFilterInput();
-      if (!input) {
-        return;
-      }
-      input.value = value;
-      input.dispatchEvent(new Event("input", { bubbles: true }));
-    }
-
-    function clearJumpHighlights() {
-      document.querySelectorAll(".swagger-ui .opblock.jump-hit").forEach(function (el) {
-        el.classList.remove("jump-hit");
-      });
-    }
-
-    function jumpToEndpoint(raw) {
-      const query = (raw || "").trim().toLowerCase();
-      if (!query) {
-        return;
-      }
-
-      setBuiltInFilter(query);
-
-      window.setTimeout(function () {
-        clearJumpHighlights();
-        const opblocks = Array.from(document.querySelectorAll(".swagger-ui .opblock"));
-        if (opblocks.length === 0) {
-          return;
-        }
-
-        const scored = opblocks
-          .map(function (block) {
-            const pathNode = block.querySelector(".opblock-summary-path");
-            const text = (pathNode ? pathNode.textContent : "").trim().toLowerCase();
-            if (!text) {
-              return null;
-            }
-            if (text === query) {
-              return { block: block, score: 0 };
-            }
-            if (text.indexOf(query) >= 0) {
-              return { block: block, score: 1 };
-            }
-            return null;
-          })
-          .filter(Boolean)
-          .sort(function (a, b) {
-            return a.score - b.score;
-          });
-
-        if (scored.length === 0) {
-          return;
-        }
-
-        const target = scored[0].block;
-        const summary = target.querySelector(".opblock-summary");
-        if (summary && !target.classList.contains("is-open")) {
-          summary.click();
-        }
-
-        target.classList.add("jump-hit");
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 120);
-    }
-
-    document.getElementById("jump-btn").addEventListener("click", function () {
-      jumpToEndpoint(document.getElementById("endpoint-jump").value);
-    });
-
-    document.getElementById("endpoint-jump").addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-        jumpToEndpoint(event.target.value);
-      }
-    });
-
-    document.getElementById("clear-filter").addEventListener("click", function () {
-      document.getElementById("endpoint-jump").value = "";
-      setBuiltInFilter("");
-      clearJumpHighlights();
-      document.querySelectorAll("#quick-chips .chip").forEach(function (chip, idx) {
-        chip.classList.toggle("active", idx === 0);
-      });
-    });
-
-    document.querySelectorAll("#quick-chips .chip").forEach(function (chip) {
-      chip.addEventListener("click", function () {
-        const filterValue = chip.getAttribute("data-filter") || "";
-        setBuiltInFilter(filterValue);
-        document.querySelectorAll("#quick-chips .chip").forEach(function (c) {
-          c.classList.remove("active");
-        });
-        chip.classList.add("active");
-      });
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
-        event.preventDefault();
-        const input = document.getElementById("endpoint-jump");
-        input.focus();
-        input.select();
-      }
     });
   </script>
 </body>
