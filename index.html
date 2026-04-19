@@ -103,6 +103,21 @@
       flex-wrap: wrap;
     }
 
+    .host-wrap {
+      margin-top: 8px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .host-label {
+      font-size: 12px;
+      color: #6e5a17;
+      font-weight: 700;
+      margin-right: 2px;
+    }
+
     #swagger-ui {
       max-width: 1100px;
       margin: 0 auto 24px;
@@ -161,12 +176,21 @@
       <button class="chip" data-filter="core:">core</button>
       <button class="chip" data-filter="rss:">rss</button>
     </div>
+    <div class="host-wrap" id="host-chips">
+      <span class="host-label">Host</span>
+      <button class="chip active" data-host="all">All Hosts</button>
+      <button class="chip" data-host="gamebanana.com">gamebanana.com</button>
+      <button class="chip" data-host="api.gamebanana.com">api.gamebanana.com</button>
+      <button class="chip" data-host="dev.gamebanana.com">dev.gamebanana.com</button>
+      <button class="chip" data-host="api.dev.gamebanana.com">api.dev.gamebanana.com</button>
+    </div>
   </div>
   <div id="swagger-ui"></div>
 
   <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
   <script src="https://unpkg.com/swagger-ui-plugin-hierarchical-tags"></script>
   <script src="https://unpkg.com/swagger-ui-plugin-enum-names"></script>
+  <script src="https://unpkg.com/js-yaml@4/dist/js-yaml.min.js"></script>
   <script>
     window.ui = SwaggerUIBundle({
       url: "./openapi.yaml",
@@ -201,6 +225,11 @@
       return document.querySelector(".swagger-ui .filter input");
     }
 
+    const methodPattern = /\bopblock-(get|post|put|patch|delete|head|options|trace)\b/i;
+    const viabilityStatuses = new Set([200, 400, 401, 403, 405]);
+    let selectedHost = "all";
+    let availabilityByOperation = new Map();
+
     function setBuiltInFilter(value) {
       const input = getBuiltInFilterInput();
       if (!input) {
@@ -208,6 +237,84 @@
       }
       input.value = value;
       input.dispatchEvent(new Event("input", { bubbles: true }));
+      window.setTimeout(applyHostFilter, 80);
+    }
+
+    function parseStatus(value) {
+      const n = Number(value);
+      return Number.isFinite(n) ? n : -1;
+    }
+
+    function operationKey(method, path) {
+      return method.toUpperCase() + " " + path;
+    }
+
+    function loadAvailabilityMap() {
+      return fetch("./openapi.yaml")
+        .then(function (res) {
+          return res.text();
+        })
+        .then(function (yamlText) {
+          const doc = window.jsyaml.load(yamlText) || {};
+          const paths = doc.paths || {};
+          const nextMap = new Map();
+
+          Object.keys(paths).forEach(function (path) {
+            const pathItem = paths[path] || {};
+            Object.keys(pathItem).forEach(function (method) {
+              const low = method.toLowerCase();
+              if (!["get", "post", "put", "patch", "delete", "head", "options", "trace"].includes(low)) {
+                return;
+              }
+              const op = pathItem[method] || {};
+              const availability = op["x-server-availability"];
+              if (!availability || typeof availability !== "object") {
+                return;
+              }
+              nextMap.set(operationKey(low, path), availability);
+            });
+          });
+
+          availabilityByOperation = nextMap;
+          applyHostFilter();
+        })
+        .catch(function () {
+          availabilityByOperation = new Map();
+          applyHostFilter();
+        });
+    }
+
+    function getOpMethod(block) {
+      const className = block.className || "";
+      const match = className.match(methodPattern);
+      return match ? match[1].toLowerCase() : "get";
+    }
+
+    function getOpPath(block) {
+      const pathNode = block.querySelector(".opblock-summary-path");
+      return pathNode ? pathNode.textContent.trim() : "";
+    }
+
+    function isVisibleForSelectedHost(method, path) {
+      if (selectedHost === "all") {
+        return true;
+      }
+      const key = operationKey(method, path);
+      const availability = availabilityByOperation.get(key);
+      if (!availability) {
+        return true;
+      }
+      return viabilityStatuses.has(parseStatus(availability[selectedHost]));
+    }
+
+    function applyHostFilter() {
+      const blocks = document.querySelectorAll(".swagger-ui .opblock");
+      blocks.forEach(function (block) {
+        const method = getOpMethod(block);
+        const path = getOpPath(block);
+        const visible = path ? isVisibleForSelectedHost(method, path) : true;
+        block.style.display = visible ? "" : "none";
+      });
     }
 
     function clearJumpHighlights() {
@@ -283,6 +390,11 @@
       document.querySelectorAll("#quick-chips .chip").forEach(function (chip, idx) {
         chip.classList.toggle("active", idx === 0);
       });
+      selectedHost = "all";
+      document.querySelectorAll("#host-chips .chip").forEach(function (chip, idx) {
+        chip.classList.toggle("active", idx === 0);
+      });
+      applyHostFilter();
     });
 
     document.querySelectorAll("#quick-chips .chip").forEach(function (chip) {
@@ -296,6 +408,17 @@
       });
     });
 
+    document.querySelectorAll("#host-chips .chip").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        selectedHost = chip.getAttribute("data-host") || "all";
+        document.querySelectorAll("#host-chips .chip").forEach(function (c) {
+          c.classList.remove("active");
+        });
+        chip.classList.add("active");
+        applyHostFilter();
+      });
+    });
+
     document.addEventListener("keydown", function (event) {
       if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
@@ -304,6 +427,13 @@
         input.select();
       }
     });
+
+    const observer = new MutationObserver(function () {
+      applyHostFilter();
+    });
+    observer.observe(document.getElementById("swagger-ui"), { childList: true, subtree: true });
+
+    loadAvailabilityMap();
   </script>
 </body>
 </html>
