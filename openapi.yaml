@@ -1,0 +1,1696 @@
+openapi: 3.0.3
+info:
+  title: Gamebanana API (HAR-derived)
+  version: 0.1.0
+  description: |
+    Auto-generated from observed gamebanana.com traffic in two HAR captures.
+    This is observational documentation and may be incomplete.
+servers:
+  - url: https://gamebanana.com
+paths:
+  /apiv11/Member/UiConfig:
+    get:
+      operationId: get_apiv11_member_uiconfig
+      summary: Observed endpoint from HAR
+      description: "Observed 48 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_sUrl"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/UiCounts:
+    get:
+      operationId: get_apiv11_member_uicounts
+      summary: Observed endpoint from HAR
+      description: "Observed 47 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Homepage/Features:
+    get:
+      operationId: get_apiv11_util_homepage_features
+      summary: Observed endpoint from HAR
+      description: "Observed 5 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Homepage/TopGames:
+    get:
+      operationId: get_apiv11_util_homepage_topgames
+      summary: Observed endpoint from HAR
+      description: "Observed 5 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Homepage/CommunitySpotlight:
+    get:
+      operationId: get_apiv11_util_homepage_communityspotlight
+      summary: Observed endpoint from HAR
+      description: "Observed 5 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Homepage/Submissions:
+    get:
+      operationId: get_apiv11_util_homepage_submissions
+      summary: Observed endpoint from HAR
+      description: "Observed 5 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_bFilterBySubscribedGames"
+          required: false
+          schema:
+            type: boolean
+          description: Observed query parameter
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sSort"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/Authenticate:
+    post:
+      operationId: post_apiv11_member_authenticate
+      summary: Observed endpoint from HAR
+      description: "Observed 2 call(s); statuses: 200, 400."
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _sGTMToken:
+                  type: string
+                _sPassword:
+                  type: string
+                _sUsername:
+                  type: string
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        "400":
+          description: Observed response status 400
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/ProfilePage:
+    get:
+      operationId: get_apiv11_game_id1_profilepage
+      summary: Observed endpoint from HAR
+      description: "Observed 5 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/TopSubs:
+    get:
+      operationId: get_apiv11_game_id1_topsubs
+      summary: Observed endpoint from HAR
+      description: "Observed 4 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/Subfeed:
+    get:
+      operationId: get_apiv11_game_id1_subfeed
+      summary: Observed endpoint from HAR
+      description: "Observed 22 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sName"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+        - in: query
+          name: "_sSort"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/CommunitySpotlight:
+    get:
+      operationId: get_apiv11_game_id1_communityspotlight
+      summary: Observed endpoint from HAR
+      description: "Observed 4 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/Navigator/Personal:
+    get:
+      operationId: get_apiv11_member_navigator_personal
+      summary: Observed endpoint from HAR
+      description: "Observed 2 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/AvatarTooltip:
+    get:
+      operationId: get_apiv11_member_id1_avatartooltip
+      summary: Observed endpoint from HAR
+      description: "Observed 5 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/GetStartedPage:
+    get:
+      operationId: get_apiv11_game_id1_getstartedpage
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/CategoryTree:
+    get:
+      operationId: get_apiv11_game_id1_categorytree
+      summary: Observed endpoint from HAR
+      description: "Observed 3 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/ModCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_modcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 3 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/BlogCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_blogcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/ContestCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_contestcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/RequestCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_requestcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/ScriptCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_scriptcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/ConceptCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_conceptcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/SoundCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_soundcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Forum/NestedStructure:
+    get:
+      operationId: get_apiv11_util_forum_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/EventCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_eventcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/JamCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_jamcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/ToolCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_toolcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/TutorialCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_tutorialcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 2 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/NewsCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_newscategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/WipCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_wipcategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/WareCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_warecategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/QuestionCategory/NestedStructure:
+    get:
+      operationId: get_apiv11_util_questioncategory_nestedstructure
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Mod/Index:
+    get:
+      operationId: get_apiv11_mod_index
+      summary: Observed endpoint from HAR
+      description: "Observed 8 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_aFilters[Generic_Category]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_aFilters[Generic_Game]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_aFilters[Generic_Studio]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_aFilters[Generic_Submitter]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Mod/Categories:
+    get:
+      operationId: get_apiv11_mod_categories
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_bShowEmpty"
+          required: false
+          schema:
+            type: boolean
+          description: Observed query parameter
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sSort"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Mod/ListFilterConfig:
+    get:
+      operationId: get_apiv11_mod_listfilterconfig
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Wip/Index:
+    get:
+      operationId: get_apiv11_wip_index
+      summary: Observed endpoint from HAR
+      description: "Observed 6 call(s); statuses: 0, 200."
+      parameters:
+        - in: query
+          name: "_aFilters[Generic_Game]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_aFilters[Generic_Studio]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_aFilters[Generic_Submitter]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "0":
+          description: Observed response status 0
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Wip/Categories:
+    get:
+      operationId: get_apiv11_wip_categories
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_bShowEmpty"
+          required: false
+          schema:
+            type: boolean
+          description: Observed query parameter
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sSort"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Wip/ListFilterConfig:
+    get:
+      operationId: get_apiv11_wip_listfilterconfig
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/List/Featured:
+    get:
+      operationId: get_apiv11_util_list_featured
+      summary: Observed endpoint from HAR
+      description: "Observed 7 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_idMemberRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Generic/Discussions:
+    get:
+      operationId: get_apiv11_util_generic_discussions
+      summary: Observed endpoint from HAR
+      description: "Observed 35 call(s); statuses: 0, 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_idMemberRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sModelName"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "0":
+          description: Observed response status 0
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/Rules:
+    get:
+      operationId: get_apiv11_game_id1_rules
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Collection/Index:
+    get:
+      operationId: get_apiv11_collection_index
+      summary: Observed endpoint from HAR
+      description: "Observed 4 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_aFilters[Collection_Privacy]"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+        - in: query
+          name: "_aFilters[Generic_Game]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Collection/ListFilterConfig:
+    get:
+      operationId: get_apiv11_collection_listfilterconfig
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/Keys/Summary:
+    get:
+      operationId: get_apiv11_game_id1_keys_summary
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/Keys/ForSale:
+    get:
+      operationId: get_apiv11_game_id1_keys_forsale
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/Withhold:
+    patch:
+      operationId: patch_apiv11_game_id1_withhold
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 400."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "info"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "400":
+          description: Observed response status 400
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id1}/Config:
+    get:
+      operationId: get_apiv11_game_id1_config
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /members/submissions/bitpit/{id1}:
+    get:
+      operationId: get_members_submissions_bitpit_id1
+      summary: Observed endpoint from HAR
+      description: "Observed 17 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "api"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Search/Suggestions:
+    get:
+      operationId: get_apiv11_util_search_suggestions
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sSearchString"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Search/Results:
+    get:
+      operationId: get_apiv11_util_search_results
+      summary: Observed endpoint from HAR
+      description: "Observed 4 call(s); statuses: 0, 200."
+      parameters:
+        - in: query
+          name: "_csvFields"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+        - in: query
+          name: "_idGameRow"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sOrder"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+        - in: query
+          name: "_sSearchString"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "0":
+          description: Observed response status 0
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/ProfilePage:
+    get:
+      operationId: get_apiv11_member_id1_profilepage
+      summary: Observed endpoint from HAR
+      description: "Observed 3 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/Config:
+    get:
+      operationId: get_apiv11_member_id1_config
+      summary: Observed endpoint from HAR
+      description: "Observed 3 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/SubFeed:
+    get:
+      operationId: get_apiv11_member_id1_subfeed
+      summary: Observed endpoint from HAR
+      description: "Observed 3 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/Posts:
+    get:
+      operationId: get_apiv11_member_id1_posts
+      summary: Observed endpoint from HAR
+      description: "Observed 3 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sSort"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/Apps:
+    get:
+      operationId: get_apiv11_member_id1_apps
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/BuddiesSummary:
+    get:
+      operationId: get_apiv11_member_id1_buddiessummary
+      summary: Observed endpoint from HAR
+      description: "Observed 13 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/Buddies:
+    get:
+      operationId: get_apiv11_member_id1_buddies
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/IncomingBuddyRequests:
+    get:
+      operationId: get_apiv11_member_id1_incomingbuddyrequests
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/Buddy/{id1}/Accept:
+    patch:
+      operationId: patch_apiv11_member_buddy_id1_accept
+      summary: Observed endpoint from HAR
+      description: "Observed 12 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/OutgoingBuddyRequests:
+    get:
+      operationId: get_apiv11_member_id1_outgoingbuddyrequests
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/Submissions/Sublog:
+    get:
+      operationId: get_apiv11_member_id1_submissions_sublog
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sDirection"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+        - in: query
+          name: "_sNameOperator"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+        - in: query
+          name: "_sSort"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Tool/Index:
+    get:
+      operationId: get_apiv11_tool_index
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "_aFilters[Generic_Submitter]"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Tool/ListFilterConfig:
+    get:
+      operationId: get_apiv11_tool_listfilterconfig
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/SettingsPortal:
+    get:
+      operationId: get_apiv11_member_id1_settingsportal
+      summary: Observed endpoint from HAR
+      description: "Observed 2 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "info"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id1}/Admin/Tickets:
+    get:
+      operationId: get_apiv11_member_id1_admin_tickets
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 400."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+      responses:
+        "400":
+          description: Observed response status 400
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Support/ListFilterConfig:
+    get:
+      operationId: get_apiv11_support_listfilterconfig
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/RecordInfo:
+    get:
+      operationId: get_apiv11_util_recordinfo
+      summary: Observed endpoint from HAR
+      description: "Observed 2 call(s); statuses: 200."
+      parameters:
+        - in: query
+          name: "s"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Mod/{id1}/ProfilePage:
+    get:
+      operationId: get_apiv11_mod_id1_profilepage
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Mod/{id1}/Config:
+    get:
+      operationId: get_apiv11_mod_id1_config
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Mod/{id1}/Posts:
+    get:
+      operationId: get_apiv11_mod_id1_posts
+      summary: Observed endpoint from HAR
+      description: "Observed 1 call(s); statuses: 200."
+      parameters:
+        - in: path
+          name: "id1"
+          required: true
+          schema:
+            type: integer
+          description: Path parameter observed in HAR
+        - in: query
+          name: "_nPage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_nPerpage"
+          required: false
+          schema:
+            type: integer
+          description: Observed query parameter
+        - in: query
+          name: "_sSort"
+          required: false
+          schema:
+            type: string
+          description: Observed query parameter
+      responses:
+        "200":
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
