@@ -2,26 +2,28 @@ openapi: 3.0.3
 info:
   title: Gamebanana API (HAR-derived)
   version: 0.1.0
-  description: |
-    Auto-generated from observed gamebanana.com traffic in two HAR captures.
+  description: 'Auto-generated from observed gamebanana.com traffic in two HAR captures.
+
     This is observational documentation and may be incomplete.
+
+    '
 servers:
-  - url: https://gamebanana.com
+- url: https://gamebanana.com
 paths:
   /apiv11/Member/UiConfig:
     get:
       operationId: get_apiv11_member_uiconfig
       summary: Observed endpoint from HAR
-      description: "Observed 48 call(s); statuses: 200."
+      description: 'Observed 48 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_sUrl"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: query
+        name: _sUrl
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -32,9 +34,9 @@ paths:
     get:
       operationId: get_apiv11_member_uicounts
       summary: Observed endpoint from HAR
-      description: "Observed 47 call(s); statuses: 200."
+      description: 'Observed 47 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -45,9 +47,9 @@ paths:
     get:
       operationId: get_apiv11_util_homepage_features
       summary: Observed endpoint from HAR
-      description: "Observed 5 call(s); statuses: 200."
+      description: 'Observed 5 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -58,9 +60,9 @@ paths:
     get:
       operationId: get_apiv11_util_homepage_topgames
       summary: Observed endpoint from HAR
-      description: "Observed 5 call(s); statuses: 200."
+      description: 'Observed 5 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -71,9 +73,9 @@ paths:
     get:
       operationId: get_apiv11_util_homepage_communityspotlight
       summary: Observed endpoint from HAR
-      description: "Observed 5 call(s); statuses: 200."
+      description: 'Observed 5 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -84,34 +86,34 @@ paths:
     get:
       operationId: get_apiv11_util_homepage_submissions
       summary: Observed endpoint from HAR
-      description: "Observed 5 call(s); statuses: 200."
+      description: 'Observed 5 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_bFilterBySubscribedGames"
-          required: false
-          schema:
-            type: boolean
-          description: Observed query parameter
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sSort"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: query
+        name: _bFilterBySubscribedGames
+        required: false
+        schema:
+          type: boolean
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -122,7 +124,7 @@ paths:
     post:
       operationId: post_apiv11_member_authenticate
       summary: Observed endpoint from HAR
-      description: "Observed 2 call(s); statuses: 200, 400."
+      description: 'Observed 2 call(s); statuses: 200, 400.'
       requestBody:
         required: false
         content:
@@ -137,14 +139,14 @@ paths:
                 _sUsername:
                   type: string
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-        "400":
+        '400':
           description: Observed response status 400
           content:
             application/json:
@@ -155,16 +157,16 @@ paths:
     get:
       operationId: get_apiv11_game_id1_profilepage
       summary: Observed endpoint from HAR
-      description: "Observed 5 call(s); statuses: 200."
+      description: 'Observed 5 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -175,16 +177,16 @@ paths:
     get:
       operationId: get_apiv11_game_id1_topsubs
       summary: Observed endpoint from HAR
-      description: "Observed 4 call(s); statuses: 200."
+      description: 'Observed 4 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -195,34 +197,34 @@ paths:
     get:
       operationId: get_apiv11_game_id1_subfeed
       summary: Observed endpoint from HAR
-      description: "Observed 22 call(s); statuses: 200."
+      description: 'Observed 22 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sName"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
-        - in: query
-          name: "_sSort"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -233,16 +235,16 @@ paths:
     get:
       operationId: get_apiv11_game_id1_communityspotlight
       summary: Observed endpoint from HAR
-      description: "Observed 4 call(s); statuses: 200."
+      description: 'Observed 4 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -253,9 +255,9 @@ paths:
     get:
       operationId: get_apiv11_member_navigator_personal
       summary: Observed endpoint from HAR
-      description: "Observed 2 call(s); statuses: 200."
+      description: 'Observed 2 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -266,16 +268,16 @@ paths:
     get:
       operationId: get_apiv11_member_id1_avatartooltip
       summary: Observed endpoint from HAR
-      description: "Observed 5 call(s); statuses: 200."
+      description: 'Observed 5 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -286,16 +288,16 @@ paths:
     get:
       operationId: get_apiv11_game_id1_getstartedpage
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -306,16 +308,16 @@ paths:
     get:
       operationId: get_apiv11_game_id1_categorytree
       summary: Observed endpoint from HAR
-      description: "Observed 3 call(s); statuses: 200."
+      description: 'Observed 3 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -326,16 +328,16 @@ paths:
     get:
       operationId: get_apiv11_util_modcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 3 call(s); statuses: 200."
+      description: 'Observed 3 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -346,16 +348,16 @@ paths:
     get:
       operationId: get_apiv11_util_blogcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -366,16 +368,16 @@ paths:
     get:
       operationId: get_apiv11_util_contestcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -386,16 +388,16 @@ paths:
     get:
       operationId: get_apiv11_util_requestcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -406,16 +408,16 @@ paths:
     get:
       operationId: get_apiv11_util_scriptcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -426,16 +428,16 @@ paths:
     get:
       operationId: get_apiv11_util_conceptcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -446,16 +448,16 @@ paths:
     get:
       operationId: get_apiv11_util_soundcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -466,16 +468,16 @@ paths:
     get:
       operationId: get_apiv11_util_forum_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -486,16 +488,16 @@ paths:
     get:
       operationId: get_apiv11_util_eventcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -506,16 +508,16 @@ paths:
     get:
       operationId: get_apiv11_util_jamcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -526,16 +528,16 @@ paths:
     get:
       operationId: get_apiv11_util_toolcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -546,16 +548,16 @@ paths:
     get:
       operationId: get_apiv11_util_tutorialcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 2 call(s); statuses: 200."
+      description: 'Observed 2 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -566,16 +568,16 @@ paths:
     get:
       operationId: get_apiv11_util_newscategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -586,16 +588,16 @@ paths:
     get:
       operationId: get_apiv11_util_wipcategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -606,16 +608,16 @@ paths:
     get:
       operationId: get_apiv11_util_warecategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -626,16 +628,16 @@ paths:
     get:
       operationId: get_apiv11_util_questioncategory_nestedstructure
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -646,46 +648,46 @@ paths:
     get:
       operationId: get_apiv11_mod_index
       summary: Observed endpoint from HAR
-      description: "Observed 8 call(s); statuses: 200."
+      description: 'Observed 8 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_aFilters[Generic_Category]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_aFilters[Generic_Game]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_aFilters[Generic_Studio]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_aFilters[Generic_Submitter]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Category]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Game]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Studio]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Submitter]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -696,28 +698,28 @@ paths:
     get:
       operationId: get_apiv11_mod_categories
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_bShowEmpty"
-          required: false
-          schema:
-            type: boolean
-          description: Observed query parameter
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sSort"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: query
+        name: _bShowEmpty
+        required: false
+        schema:
+          type: boolean
+        description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -728,9 +730,9 @@ paths:
     get:
       operationId: get_apiv11_mod_listfilterconfig
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -741,47 +743,47 @@ paths:
     get:
       operationId: get_apiv11_wip_index
       summary: Observed endpoint from HAR
-      description: "Observed 6 call(s); statuses: 0, 200."
+      description: 'Observed 6 call(s); statuses: 0, 200.'
       parameters:
-        - in: query
-          name: "_aFilters[Generic_Game]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_aFilters[Generic_Studio]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_aFilters[Generic_Submitter]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Game]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Studio]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Submitter]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "0":
+        '0':
           description: Observed response status 0
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -792,28 +794,28 @@ paths:
     get:
       operationId: get_apiv11_wip_categories
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_bShowEmpty"
-          required: false
-          schema:
-            type: boolean
-          description: Observed query parameter
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sSort"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: query
+        name: _bShowEmpty
+        required: false
+        schema:
+          type: boolean
+        description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -824,9 +826,9 @@ paths:
     get:
       operationId: get_apiv11_wip_listfilterconfig
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -837,28 +839,28 @@ paths:
     get:
       operationId: get_apiv11_util_list_featured
       summary: Observed endpoint from HAR
-      description: "Observed 7 call(s); statuses: 200."
+      description: 'Observed 7 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_idMemberRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _idMemberRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -869,47 +871,47 @@ paths:
     get:
       operationId: get_apiv11_util_generic_discussions
       summary: Observed endpoint from HAR
-      description: "Observed 35 call(s); statuses: 0, 200."
+      description: 'Observed 35 call(s); statuses: 0, 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_idMemberRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sModelName"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _idMemberRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sModelName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "0":
+        '0':
           description: Observed response status 0
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -920,16 +922,16 @@ paths:
     get:
       operationId: get_apiv11_game_id1_rules
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -940,34 +942,34 @@ paths:
     get:
       operationId: get_apiv11_collection_index
       summary: Observed endpoint from HAR
-      description: "Observed 4 call(s); statuses: 200."
+      description: 'Observed 4 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_aFilters[Collection_Privacy]"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
-        - in: query
-          name: "_aFilters[Generic_Game]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _aFilters[Collection_Privacy]
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Game]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -978,9 +980,9 @@ paths:
     get:
       operationId: get_apiv11_collection_listfilterconfig
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -991,16 +993,16 @@ paths:
     get:
       operationId: get_apiv11_game_id1_keys_summary
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1011,22 +1013,22 @@ paths:
     get:
       operationId: get_apiv11_game_id1_keys_forsale
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1037,20 +1039,20 @@ paths:
     patch:
       operationId: patch_apiv11_game_id1_withhold
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 400."
+      description: 'Observed 1 call(s); statuses: 400.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "info"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: info
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       requestBody:
         required: false
         content:
@@ -1058,7 +1060,7 @@ paths:
             schema:
               type: object
       responses:
-        "400":
+        '400':
           description: Observed response status 400
           content:
             application/json:
@@ -1069,16 +1071,16 @@ paths:
     get:
       operationId: get_apiv11_game_id1_config
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1089,22 +1091,22 @@ paths:
     get:
       operationId: get_members_submissions_bitpit_id1
       summary: Observed endpoint from HAR
-      description: "Observed 17 call(s); statuses: 200."
+      description: 'Observed 17 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "api"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: api
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1115,22 +1117,22 @@ paths:
     get:
       operationId: get_apiv11_util_search_suggestions
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sSearchString"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sSearchString
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1141,47 +1143,47 @@ paths:
     get:
       operationId: get_apiv11_util_search_results
       summary: Observed endpoint from HAR
-      description: "Observed 4 call(s); statuses: 0, 200."
+      description: 'Observed 4 call(s); statuses: 0, 200.'
       parameters:
-        - in: query
-          name: "_csvFields"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
-        - in: query
-          name: "_idGameRow"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sOrder"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
-        - in: query
-          name: "_sSearchString"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: query
+        name: _csvFields
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sOrder
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _sSearchString
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "0":
+        '0':
           description: Observed response status 0
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1192,16 +1194,16 @@ paths:
     get:
       operationId: get_apiv11_member_id1_profilepage
       summary: Observed endpoint from HAR
-      description: "Observed 3 call(s); statuses: 200."
+      description: 'Observed 3 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1212,16 +1214,16 @@ paths:
     get:
       operationId: get_apiv11_member_id1_config
       summary: Observed endpoint from HAR
-      description: "Observed 3 call(s); statuses: 200."
+      description: 'Observed 3 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1232,28 +1234,28 @@ paths:
     get:
       operationId: get_apiv11_member_id1_subfeed
       summary: Observed endpoint from HAR
-      description: "Observed 3 call(s); statuses: 200."
+      description: 'Observed 3 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1264,34 +1266,34 @@ paths:
     get:
       operationId: get_apiv11_member_id1_posts
       summary: Observed endpoint from HAR
-      description: "Observed 3 call(s); statuses: 200."
+      description: 'Observed 3 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sSort"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1302,16 +1304,16 @@ paths:
     get:
       operationId: get_apiv11_member_id1_apps
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1322,16 +1324,16 @@ paths:
     get:
       operationId: get_apiv11_member_id1_buddiessummary
       summary: Observed endpoint from HAR
-      description: "Observed 13 call(s); statuses: 200."
+      description: 'Observed 13 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1342,22 +1344,22 @@ paths:
     get:
       operationId: get_apiv11_member_id1_buddies
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1368,22 +1370,22 @@ paths:
     get:
       operationId: get_apiv11_member_id1_incomingbuddyrequests
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1394,14 +1396,14 @@ paths:
     patch:
       operationId: patch_apiv11_member_buddy_id1_accept
       summary: Observed endpoint from HAR
-      description: "Observed 12 call(s); statuses: 200."
+      description: 'Observed 12 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       requestBody:
         required: false
         content:
@@ -1409,7 +1411,7 @@ paths:
             schema:
               type: object
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1420,22 +1422,22 @@ paths:
     get:
       operationId: get_apiv11_member_id1_outgoingbuddyrequests
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1446,40 +1448,40 @@ paths:
     get:
       operationId: get_apiv11_member_id1_submissions_sublog
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sDirection"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
-        - in: query
-          name: "_sNameOperator"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
-        - in: query
-          name: "_sSort"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sDirection
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _sNameOperator
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1490,28 +1492,28 @@ paths:
     get:
       operationId: get_apiv11_tool_index
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "_aFilters[Generic_Submitter]"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Submitter]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1522,9 +1524,9 @@ paths:
     get:
       operationId: get_apiv11_tool_listfilterconfig
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1535,22 +1537,22 @@ paths:
     get:
       operationId: get_apiv11_member_id1_settingsportal
       summary: Observed endpoint from HAR
-      description: "Observed 2 call(s); statuses: 200."
+      description: 'Observed 2 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "info"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: info
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1561,22 +1563,22 @@ paths:
     get:
       operationId: get_apiv11_member_id1_admin_tickets
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 400."
+      description: 'Observed 1 call(s); statuses: 400.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
       responses:
-        "400":
+        '400':
           description: Observed response status 400
           content:
             application/json:
@@ -1587,9 +1589,9 @@ paths:
     get:
       operationId: get_apiv11_support_listfilterconfig
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1600,16 +1602,16 @@ paths:
     get:
       operationId: get_apiv11_util_recordinfo
       summary: Observed endpoint from HAR
-      description: "Observed 2 call(s); statuses: 200."
+      description: 'Observed 2 call(s); statuses: 200.'
       parameters:
-        - in: query
-          name: "s"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: query
+        name: s
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1620,16 +1622,16 @@ paths:
     get:
       operationId: get_apiv11_mod_id1_profilepage
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1640,16 +1642,16 @@ paths:
     get:
       operationId: get_apiv11_mod_id1_config
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
       responses:
-        "200":
+        '200':
           description: Observed response status 200
           content:
             application/json:
@@ -1660,35 +1662,2404 @@ paths:
     get:
       operationId: get_apiv11_mod_id1_posts
       summary: Observed endpoint from HAR
-      description: "Observed 1 call(s); statuses: 200."
+      description: 'Observed 1 call(s); statuses: 200.'
       parameters:
-        - in: path
-          name: "id1"
-          required: true
-          schema:
-            type: integer
-          description: Path parameter observed in HAR
-        - in: query
-          name: "_nPage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_nPerpage"
-          required: false
-          schema:
-            type: integer
-          description: Observed query parameter
-        - in: query
-          name: "_sSort"
-          required: false
-          schema:
-            type: string
-          description: Observed query parameter
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Path parameter observed in HAR
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
       responses:
-        "200":
+        '200':
           description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{model_name}/ListFilterConfig:
+    get:
+      operationId: get_apiv11_model_name_listfilterconfig
+      summary: Search modificators
+      description: This endpoint returns filters configuration for API Index.
+      parameters:
+      - in: path
+        name: model_name
+        required: true
+        schema:
+          type: string
+        description: Required. Enter the model name.
+      responses:
+        '200':
+          description: 200 Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Game/NameMatch:
+    get:
+      operationId: get_apiv11_util_game_namematch
+      summary: Games by name
+      description: This endpoint returns a list of games containing the search query
+        in their names.
+      parameters:
+      - in: query
+        name: _sName
+        required: true
+        schema:
+          type: string
+        description: 'Required. Enter the search query. Case insensitive. Allowed
+          values: string of 3 characters or more.'
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Which ''page'' of results to get. Allowed values: greater than
+          1. Default value: 1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: 'Number of results per page. Allowed values: 1 through 50. Default
+          value: 10'
+      responses:
+        '200':
+          description: 200 Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Generic/Tags:
+    get:
+      operationId: get_apiv11_util_generic_tags
+      summary: Tags by text
+      description: This endpoint returns a list of tags containing the search query
+        in their names.
+      parameters:
+      - in: query
+        name: _sTag
+        required: true
+        schema:
+          type: string
+        description: 'Required. Enter the search query. Case insensitive. Allowed
+          values: string of 2 characters or more.'
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Narrow down the search to a specific Game's ID.
+      responses:
+        '200':
+          description: 200 Success - Request tags containing word 'time'
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id}/Subfeed:
+    get:
+      operationId: get_apiv11_game_id_subfeed
+      summary: Latest (game)
+      description: This endpoint returns a list of the latest submissions for the
+        specified Game ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Enter the Game's ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Which ''page'' of results to get. Allowed values: greater than
+          1. Default value: 1'
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: 'How to sort results. Allowed values: default, new, updated Default
+          value: default'
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: 'Enter the search query. Case insensitive. Allowed values: string
+          of 3 characters or more.'
+      - in: query
+        name: _csvModelInclusions
+        required: false
+        schema:
+          type: string
+        description: 'Comma-separated list of sections to include in the search results.
+          Allowed values: App, Article, Bug, Blog, Club, Contest, Concept, Event,
+          Game, Idea, Initiative, Jam, Mod, Model, Member, News, Poll, Project, Question,
+          Review, Request, Script, Sound, Spray, Studio, Thread, Tool, Tutorial, Wiki,
+          Wip.'
+      - in: query
+        name: _csvModelExclusions
+        required: false
+        schema:
+          type: string
+        description: 'Comma-separated list of sections to exclude from the search
+          results. Allowed values: App, Article, Bug, Blog, Club, Contest, Concept,
+          Event, Game, Idea, Initiative, Jam, Mod, Model, Member, News, Poll, Project,
+          Question, Review, Request, Script, Sound, Spray, Studio, Thread, Tool, Tutorial,
+          Wiki, Wip.'
+      - in: query
+        name: _csvTagInclusions
+        required: false
+        schema:
+          type: string
+        description: 'Comma-separated list of tags to include in the search results.
+          Allowed values: IDs as requested from Util/Generic/Tags endpoint.'
+      - in: query
+        name: _csvTagExclusions
+        required: false
+        schema:
+          type: string
+        description: 'Comma-separated list of tags to exclude from the search results.
+          Allowed values: IDs as requested from Util/Generic/Tags endpoint.'
+      responses:
+        '200':
+          description: 200 - All defaults
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: 400 - Invalid value for both _csvModelInclusions and _csvModelExclusions
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{model_name}/Index:
+    get:
+      operationId: get_apiv11_model_name_index
+      summary: Latest (section)
+      description: This endpoint returns a list of records matching the given criteria.
+      parameters:
+      - in: path
+        name: model_name
+        required: true
+        schema:
+          type: string
+        description: Required. Enter the model name.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Which ''page'' of results to get. Allowed values: greater than
+          1. Default value: 1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: 'Number of results per page. Allowed values: 1 through 50. Default
+          value: 20'
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: 'How to sort results. Allowed values: see _aSorts in ListFilterConfig'
+      - in: query
+        name: _aFilters[Generic_WasFeatured]
+        required: false
+        schema:
+          type: string
+        description: 'If provided, display only featured records. See other filters
+          in ListFilterConfig Allowed values: true'
+      responses:
+        '200':
+          description: 200 Success - Latest Mods in section Mod
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/SubFeed:
+    get:
+      operationId: get_apiv11_member_id_subfeed
+      summary: Latest (member)
+      description: This endpoint returns a list of latest submissions of Member ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Enter the Member's ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Which ''page'' of results to get. Allowed values: greater than
+          1. Default value: 1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: 'Number of results per page. Allowed values: 1 through 50. Default
+          value: 20'
+      responses:
+        '200':
+          description: 200 Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id}/TopSubs:
+    get:
+      operationId: get_apiv11_game_id_topsubs
+      summary: Top (game)
+      description: 'This endpoint returns top submissions displayed on the game''s
+        homepage. Available periods: - day - week - month - 3 months - 6 months -
+        year - all time'
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Enter the Game's ID.
+      responses:
+        '200':
+          description: 200 Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/ListFilterConfig:
+    get:
+      operationId: get_apiv11_game_listfilterconfig
+      summary: Sort options and filters
+      description: This endpoint returns a set of available sort options and filters.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/Index:
+    get:
+      operationId: get_apiv11_game_index
+      summary: By sort options and filters
+      description: This endpoint returns a list of Games. To sort results provide
+        a value for _sSort To filter results provide a value for _aFilters\[FILTER_NAME\]
+      parameters:
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Records per page. Allowed values: >1 Default value:
+          5'
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: 'oneOf. String. How to sort the records. Allowed values: see
+          ''Sort options and filters'' Default value: -'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id}/CommunitySpotlight:
+    get:
+      operationId: get_apiv11_game_id_communityspotlight
+      summary: Community Spotlight
+      description: This endpoint returns a set of submissions, studios and clubs that
+        have gained popularity recently for the specified Game ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id}/ProfilePage:
+    get:
+      operationId: get_apiv11_game_id_profilepage
+      summary: Multiple Properties (1)
+      description: This endpoint returns multiple properties for the specified Game
+        ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id}:
+    get:
+      operationId: get_apiv11_game_id
+      summary: Multiple Properties (2)
+      description: This endpoint returns multiple properties for the specified Game
+        ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: 'String. Comma-separated list of properties to request. Allowed
+          values: see response body. Default value: -'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id}/GetStartedPage:
+    get:
+      operationId: get_apiv11_game_id_getstartedpage
+      summary: Detailed information
+      description: This endpoint returns detailed information for the specified Game
+        ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Game/{id}/Rules:
+    get:
+      operationId: get_apiv11_game_id_rules
+      summary: Additional rules
+      description: This endpoint returns a list of additional rules for the specified
+        Game ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{sectionSlug}/Categories:
+    get:
+      operationId: get_apiv11_sectionslug_categories
+      summary: Multiple RootCategories
+      description: Returns a list of the root categories by Section Slug.
+      parameters:
+      - in: path
+        name: sectionSlug
+        required: true
+        schema:
+          type: string
+        description: Required. Section slug.
+      - in: query
+        name: _sSort
+        required: true
+        schema:
+          type: string
+        description: 'Required. String. How to sort the results. Allowed values: a_to_z,
+          count Default value: -'
+      - in: query
+        name: _bShowEmpty
+        required: false
+        schema:
+          type: boolean
+        description: 'Boolean. If provided, include empty categories. Allowed values:
+          true, false Default value: -'
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: '[oneOf] Integer. Categories for the specific Game.'
+      - in: query
+        name: _idCategoryRow
+        required: false
+        schema:
+          type: integer
+        description: '[oneOf] Integer. Categories for the specific Category.'
+      responses:
+        '200':
+          description: 200 OK - Root categories for section Mod for CS 1.6
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/ModCategory/{rootCategoryId}/SubCategories:
+    get:
+      operationId: get_apiv11_modcategory_rootcategoryid_subcategories
+      summary: Multiple SubCategories
+      description: Returns a list of the sub categories by Root Category ID.
+      parameters:
+      - in: path
+        name: rootCategoryId
+        required: true
+        schema:
+          type: integer
+        description: Required. Root category ID.
+      responses:
+        '200':
+          description: 200 OK - SubCategories for category GUIs for CS 1.6
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/AwardedBounties:
+    get:
+      operationId: get_apiv11_member_id_awardedbounties
+      summary: Awarded Bounties
+      description: Returns a list of submissions the specified Member ID has been
+        awarded bounties for.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/ContributedBounties:
+    get:
+      operationId: get_apiv11_member_id_contributedbounties
+      summary: Contributed Bounties
+      description: Returns a list of submissions the specified Member ID has contributed
+        bounties for.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/LikedSubmissions:
+    get:
+      operationId: get_apiv11_member_id_likedsubmissions
+      summary: Liked Submissions
+      description: Returns a list of submissions liked by a specified Member ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/Medals:
+    get:
+      operationId: get_apiv11_member_id_medals
+      summary: Medals
+      description: Returns a list of medals for a specified Member ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/ParticipatedContests:
+    get:
+      operationId: get_apiv11_member_id_participatedcontests
+      summary: Participated Contests
+      description: Returns a list of contests the specified Member ID has participated
+        in.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/RatedIdeas:
+    get:
+      operationId: get_apiv11_member_id_ratedideas
+      summary: Rated Ideas
+      description: Returns a list of ideas the specified Member ID has rated.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/SolvedQuestions:
+    get:
+      operationId: get_apiv11_member_id_solvedquestions
+      summary: Solved Questions
+      description: Returns a list of questions solved by the specified Member ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/ThankedSubmissions:
+    get:
+      operationId: get_apiv11_member_id_thankedsubmissions
+      summary: Thanked Submissions
+      description: Returns a list of submissions the specified Member ID has thanked.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/VotedPolls:
+    get:
+      operationId: get_apiv11_member_id_votedpolls
+      summary: Voted Polls
+      description: Returns a list of polls the specified Member ID has voted in.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/Submissions/Contributions:
+    get:
+      operationId: get_apiv11_member_id_submissions_contributions
+      summary: Contributions
+      description: Returns a list of submissions where the specified Member ID has
+        been listed in the credits.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/{id}/Submissions/Posts:
+    get:
+      operationId: get_apiv11_member_id_submissions_posts
+      summary: Latest Posts
+      description: Returns a list of posts made by a specified Member ID.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Member/EmailAuthenticate:
+    post:
+      operationId: post_apiv11_member_emailauthenticate
+      summary: 1. Request confirmation code
+      description: Imported from Postman collection.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _sEmail:
+                  type: string
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Util/Config/TrashReasons:
+    get:
+      operationId: get_apiv11_util_config_trashreasons
+      summary: Trash reasons
+      description: Imported from Postman collection.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}:
+    get:
+      operationId: get_apiv11_section_slug_submission_id
+      summary: Multiple Properties (Option 1)
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/ProfilePage:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_profilepage
+      summary: Multiple Properties (Option 2)
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/DownloadPage:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_downloadpage
+      summary: Files list (Option 2)
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/File/{file_id}:
+    get:
+      operationId: get_apiv11_file_file_id
+      summary: File contents
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: file_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Collections:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_collections
+      summary: Collections added to
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/AccessorCollections:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_accessorcollections
+      summary: Accessor collections
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Collection/Add:
+    post:
+      operationId: post_apiv11_collection_add
+      summary: '[Auth] Create a Collection'
+      description: Imported from Postman collection.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _sName:
+                  type: string
+                _bIsPrivate:
+                  type: boolean
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/AddToCollection:
+    post:
+      operationId: post_apiv11_section_slug_submission_id_addtocollection
+      summary: '[Auth] Add to Collection'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _idCollectionRow:
+                  type: integer
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/RemoveFromCollection:
+    delete:
+      operationId: delete_apiv11_section_slug_submission_id_removefromcollection
+      summary: '[Auth] Remove from Collection'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/EmbeddablesPage:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_embeddablespage
+      summary: Embeds list
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Issues:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_issues
+      summary: Issues list
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Issue/Add:
+    post:
+      operationId: post_apiv11_section_slug_submission_id_issue_add
+      summary: '[Auth] Add an Issue'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _sState:
+                  type: string
+                _sText:
+                  type: string
+                _bIsSticky:
+                  type: boolean
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Issue/{issue_id}:
+    patch:
+      operationId: patch_apiv11_issue_issue_id
+      summary: '[Auth] Edit an Issue'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: issue_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _sState:
+                  type: string
+                _sText:
+                  type: string
+                _bIsSticky:
+                  type: boolean
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+    delete:
+      operationId: delete_apiv11_issue_issue_id
+      summary: '[Auth] Trash an Issue'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: issue_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Likes:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_likes
+      summary: Users who liked
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Like:
+    post:
+      operationId: post_apiv11_section_slug_submission_id_like
+      summary: '[Auth] Like'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+    delete:
+      operationId: delete_apiv11_section_slug_submission_id_like
+      summary: '[Auth] Unlike'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Post/{post_id}/ProfilePage:
+    get:
+      operationId: get_apiv11_post_post_id_profilepage
+      summary: Post / Reply properties
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: post_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Posts:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_posts
+      summary: Posts feed
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Post/Add:
+    post:
+      operationId: post_apiv11_section_slug_submission_id_post_add
+      summary: '[Auth] Add a Post'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _sText:
+                  type: string
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Post/{post_id}:
+    post:
+      operationId: post_apiv11_post_post_id
+      summary: '[Auth] Add a Reply'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: post_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _sText:
+                  type: string
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+    delete:
+      operationId: delete_apiv11_post_post_id
+      summary: '[Auth] Trash a Post / Reply'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: post_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Post/{post_id}/Untrash:
+    patch:
+      operationId: patch_apiv11_post_post_id_untrash
+      summary: '[Auth] Untrash a Post / Reply'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: post_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Subscribers:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_subscribers
+      summary: Users who subscribed
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Subscription/Add:
+    post:
+      operationId: post_apiv11_section_slug_submission_id_subscription_add
+      summary: '[Auth] Subscribe'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Subscription/{subscription_id}:
+    delete:
+      operationId: delete_apiv11_subscription_subscription_id
+      summary: '[Auth] Unsubscribe'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: subscription_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Thanks:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_thanks
+      summary: Users who thanked
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Thank/Add:
+    post:
+      operationId: post_apiv11_section_slug_submission_id_thank_add
+      summary: '[Auth] Thank'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _nPointsToDonate:
+                  type: integer
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Todos:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_todos
+      summary: Todos list
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Todo/Add:
+    post:
+      operationId: post_apiv11_section_slug_submission_id_todo_add
+      summary: '[Auth] Add a Todo'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _nCompletion:
+                  type: integer
+                _nPriority:
+                  type: integer
+                _sText:
+                  type: string
+                _bIsSticky:
+                  type: boolean
+                _dsDeadline:
+                  type: string
+                _sColor:
+                  type: string
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Todo/{todo_id}:
+    patch:
+      operationId: patch_apiv11_todo_todo_id
+      summary: '[Auth] Edit a Todo'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: todo_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _nCompletion:
+                  type: integer
+                _nPriority:
+                  type: integer
+                _sText:
+                  type: string
+                _bIsSticky:
+                  type: boolean
+                _dsDeadline:
+                  type: string
+                _sColor:
+                  type: string
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+    delete:
+      operationId: delete_apiv11_todo_todo_id
+      summary: '[Auth] Trash a Todo'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: todo_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Todo/{todo_id}/Toggle:
+    patch:
+      operationId: patch_apiv11_todo_todo_id_toggle
+      summary: '[Auth] Toggle state'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: todo_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Updates:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_updates
+      summary: Updates list
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Files:
+    get:
+      operationId: get_apiv11_section_slug_submission_id_files
+      summary: Files
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/{section_slug}/{submission_id}/Update:
+    post:
+      operationId: post_apiv11_section_slug_submission_id_update
+      summary: '[Auth] Add an Update'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: section_slug
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _aChangeLog:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      text:
+                        type: string
+                      cat:
+                        type: string
+                    additionalProperties: true
+                _aFileRowIds:
+                  type: array
+                  items:
+                    type: integer
+                _sName:
+                  type: string
+                _sVersion:
+                  type: string
+                _sText:
+                  type: string
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Update/{update_id}:
+    patch:
+      operationId: patch_apiv11_update_update_id
+      summary: '[Auth] Edit an Update'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: update_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+    delete:
+      operationId: delete_apiv11_update_update_id
+      summary: '[Auth] Trash an Update'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: update_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Update/{update_id}/Untrash:
+    patch:
+      operationId: patch_apiv11_update_update_id_untrash
+      summary: '[Auth] Untrash an Update'
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: update_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _sNotes:
+                  type: string
+              additionalProperties: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/App/{submission_id}/Users:
+    get:
+      operationId: get_apiv11_app_submission_id_users
+      summary: Users
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/App/{submission_id}/CustomConfig/{app_config_id}:
+    get:
+      operationId: get_apiv11_app_submission_id_customconfig_app_config_id
+      summary: Custom config
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: path
+        name: app_config_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Contest/{submission_id}/Winners:
+    get:
+      operationId: get_apiv11_contest_submission_id_winners
+      summary: Winners
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Collection/{submission_id}/Items:
+    get:
+      operationId: get_apiv11_collection_submission_id_items
+      summary: Items
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Idea/{submission_id}/Ratings:
+    get:
+      operationId: get_apiv11_idea_submission_id_ratings
+      summary: Ratings list
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Jam/{submission_id}/Bounty/Contributors:
+    get:
+      operationId: get_apiv11_jam_submission_id_bounty_contributors
+      summary: Bounty contributors
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Jam/{submission_id}/Bounty/Recipients:
+    get:
+      operationId: get_apiv11_jam_submission_id_bounty_recipients
+      summary: Bounty recipients
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Jam/{submission_id}/Entries:
+    get:
+      operationId: get_apiv11_jam_submission_id_entries
+      summary: Entries list
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Poll/{submission_id}/Votes:
+    get:
+      operationId: get_apiv11_poll_submission_id_votes
+      summary: Votes
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Project/{submission_id}/FinishedWorks:
+    get:
+      operationId: get_apiv11_project_submission_id_finishedworks
+      summary: Finished works list
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Project/{submission_id}/Wips:
+    get:
+      operationId: get_apiv11_project_submission_id_wips
+      summary: Wips list
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Request/{submission_id}/BountyRecipients:
+    get:
+      operationId: get_apiv11_request_submission_id_bountyrecipients
+      summary: Bounty recipients
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Request/{submission_id}/Bounty/Contributors:
+    get:
+      operationId: get_apiv11_request_submission_id_bounty_contributors
+      summary: Bounty contributors
+      description: Imported from Postman collection.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Query parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Ripe/Info:
+    get:
+      operationId: get_apiv11_ripe_info
+      summary: Info
+      description: This endpoints returns Ripe info.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /apiv11/Ripe/Purchasers:
+    get:
+      operationId: get_apiv11_ripe_purchasers
+      summary: Latest purchasers
+      description: Imported from Postman collection.
+      responses:
+        '200':
+          description: Successful response
           content:
             application/json:
               schema:
