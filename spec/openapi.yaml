@@ -21932,6 +21932,4562 @@ paths:
         url: https://gamebanana.com/apiv12/Wip/ListFilterConfig
         contentType: text/html; charset=UTF-8
 
+# --- APIV12 CRAWL ADDITIONS ---
+  /apiv12/App/1/ProfilePage:
+    get:
+      operationId: get_apiv12_app_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: App'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/App/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/App/Search:
+    get:
+      operationId: get_apiv12_app_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: App'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/App/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Article/1/ProfilePage:
+    get:
+      operationId: get_apiv12_article_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Article'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Article/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Article/Index:
+    get:
+      operationId: get_apiv12_article_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Article'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Article/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Article/ListFilterConfig:
+    get:
+      operationId: get_apiv12_article_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Article'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Article/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Article/Search:
+    get:
+      operationId: get_apiv12_article_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Article'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Article/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/ArticleCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_articlecategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ArticleCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ArticleCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/ArticleCategory/Index:
+    get:
+      operationId: get_apiv12_articlecategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ArticleCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ArticleCategory/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/ArticleCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_articlecategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ArticleCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ArticleCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/ArticleCategory/Search:
+    get:
+      operationId: get_apiv12_articlecategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ArticleCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ArticleCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Bitpit/1/ProfilePage:
+    get:
+      operationId: get_apiv12_bitpit_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Bitpit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Bitpit/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Bitpit/Index:
+    get:
+      operationId: get_apiv12_bitpit_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Bitpit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Bitpit/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Bitpit/ListFilterConfig:
+    get:
+      operationId: get_apiv12_bitpit_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Bitpit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Bitpit/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Blog/1/ProfilePage:
+    get:
+      operationId: get_apiv12_blog_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Blog'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Blog/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Blog/Index:
+    get:
+      operationId: get_apiv12_blog_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Blog'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Blog/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Blog/ListFilterConfig:
+    get:
+      operationId: get_apiv12_blog_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Blog'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Blog/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Blog/Search:
+    get:
+      operationId: get_apiv12_blog_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Blog'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Blog/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/BlogCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_blogcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: BlogCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/BlogCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/BlogCategory/Index:
+    get:
+      operationId: get_apiv12_blogcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: BlogCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/BlogCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/BlogCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_blogcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: BlogCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/BlogCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Bug/1/ProfilePage:
+    get:
+      operationId: get_apiv12_bug_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Bug'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Bug/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Bug/Index:
+    get:
+      operationId: get_apiv12_bug_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Bug'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Bug/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Bug/ListFilterConfig:
+    get:
+      operationId: get_apiv12_bug_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Bug'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Bug/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Club/1/ProfilePage:
+    get:
+      operationId: get_apiv12_club_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Club'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Club/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Club/Index:
+    get:
+      operationId: get_apiv12_club_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Club'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Club/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Club/ListFilterConfig:
+    get:
+      operationId: get_apiv12_club_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Club'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Club/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Club/Search:
+    get:
+      operationId: get_apiv12_club_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Club'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Club/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Collection/1/ProfilePage:
+    get:
+      operationId: get_apiv12_collection_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Collection/Search:
+    get:
+      operationId: get_apiv12_collection_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Concept/1/ProfilePage:
+    get:
+      operationId: get_apiv12_concept_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Concept'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Concept/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Concept/Index:
+    get:
+      operationId: get_apiv12_concept_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Concept'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Concept/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Concept/ListFilterConfig:
+    get:
+      operationId: get_apiv12_concept_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Concept'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Concept/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/ConceptCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_conceptcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ConceptCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ConceptCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/ConceptCategory/Index:
+    get:
+      operationId: get_apiv12_conceptcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ConceptCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ConceptCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/ConceptCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_conceptcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ConceptCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ConceptCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Contest/1/ProfilePage:
+    get:
+      operationId: get_apiv12_contest_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Contest'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Contest/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Contest/Search:
+    get:
+      operationId: get_apiv12_contest_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Contest'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Contest/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/ContestCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_contestcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ContestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ContestCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/ContestCategory/Index:
+    get:
+      operationId: get_apiv12_contestcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ContestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ContestCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/ContestCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_contestcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ContestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ContestCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/ContestCategory/Search:
+    get:
+      operationId: get_apiv12_contestcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ContestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ContestCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Event/1/ProfilePage:
+    get:
+      operationId: get_apiv12_event_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Event'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Event/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Event/Index:
+    get:
+      operationId: get_apiv12_event_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Event'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Event/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Event/ListFilterConfig:
+    get:
+      operationId: get_apiv12_event_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Event'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Event/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Event/Search:
+    get:
+      operationId: get_apiv12_event_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Event'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Event/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/EventCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_eventcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: EventCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/EventCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/EventCategory/Index:
+    get:
+      operationId: get_apiv12_eventcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: EventCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/EventCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/EventCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_eventcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: EventCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/EventCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/EventCategory/Search:
+    get:
+      operationId: get_apiv12_eventcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: EventCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/EventCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Forum/Index:
+    get:
+      operationId: get_apiv12_forum_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Forum'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Forum/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Forum/ListFilterConfig:
+    get:
+      operationId: get_apiv12_forum_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Forum'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Forum/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Forum/Search:
+    get:
+      operationId: get_apiv12_forum_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Forum'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Forum/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Game/8694/ProfilePage:
+    get:
+      operationId: get_apiv12_game_8694_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Game'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Game/8694/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/GameKey/1/ProfilePage:
+    get:
+      operationId: get_apiv12_gamekey_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: GameKey'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/GameKey/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/GameKey/Index:
+    get:
+      operationId: get_apiv12_gamekey_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: GameKey'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/GameKey/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/GameKey/ListFilterConfig:
+    get:
+      operationId: get_apiv12_gamekey_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: GameKey'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/GameKey/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Generator/1/ProfilePage:
+    get:
+      operationId: get_apiv12_generator_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Generator'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Generator/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Generator/Index:
+    get:
+      operationId: get_apiv12_generator_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Generator'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Generator/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Generator/ListFilterConfig:
+    get:
+      operationId: get_apiv12_generator_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Generator'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Generator/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/GeneratorCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_generatorcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: GeneratorCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/GeneratorCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/GeneratorCategory/Index:
+    get:
+      operationId: get_apiv12_generatorcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: GeneratorCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/GeneratorCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/GeneratorCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_generatorcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: GeneratorCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/GeneratorCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/GmApplication/Index:
+    get:
+      operationId: get_apiv12_gmapplication_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '401':
+          description: Observed response status 401
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: GmApplication'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv12/GmApplication/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/GmApplication/ListFilterConfig:
+    get:
+      operationId: get_apiv12_gmapplication_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: GmApplication'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/GmApplication/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Idea/1/ProfilePage:
+    get:
+      operationId: get_apiv12_idea_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Idea'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Idea/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Initiative/1/ProfilePage:
+    get:
+      operationId: get_apiv12_initiative_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Initiative'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Initiative/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Initiative/Index:
+    get:
+      operationId: get_apiv12_initiative_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Initiative'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Initiative/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Initiative/ListFilterConfig:
+    get:
+      operationId: get_apiv12_initiative_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Initiative'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Initiative/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Initiative/Search:
+    get:
+      operationId: get_apiv12_initiative_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Initiative'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Initiative/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Jam/1/ProfilePage:
+    get:
+      operationId: get_apiv12_jam_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Jam'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Jam/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/JamCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_jamcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: JamCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/JamCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/JamCategory/Index:
+    get:
+      operationId: get_apiv12_jamcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: JamCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/JamCategory/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/JamCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_jamcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: JamCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/JamCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/JamCategory/Search:
+    get:
+      operationId: get_apiv12_jamcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: JamCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/JamCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Medal/1/ProfilePage:
+    get:
+      operationId: get_apiv12_medal_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Medal'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Medal/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Medal/Index:
+    get:
+      operationId: get_apiv12_medal_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Medal'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Medal/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Medal/ListFilterConfig:
+    get:
+      operationId: get_apiv12_medal_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Medal'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Medal/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Medal/Search:
+    get:
+      operationId: get_apiv12_medal_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Medal'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Medal/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Member/1/ProfilePage:
+    get:
+      operationId: get_apiv12_member_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Member'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Member/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Mod/1/ProfilePage:
+    get:
+      operationId: get_apiv12_mod_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Mod'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Mod/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Mod/Search:
+    get:
+      operationId: get_apiv12_mod_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Mod'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Mod/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/ModCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_modcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModCategory/Search:
+    get:
+      operationId: get_apiv12_modcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Model/1/ProfilePage:
+    get:
+      operationId: get_apiv12_model_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Model'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Model/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Model/Index:
+    get:
+      operationId: get_apiv12_model_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Model'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Model/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Model/ListFilterConfig:
+    get:
+      operationId: get_apiv12_model_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Model'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Model/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Model/Search:
+    get:
+      operationId: get_apiv12_model_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Model'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Model/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/ModelCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_modelcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModelCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModelCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModelCategory/Index:
+    get:
+      operationId: get_apiv12_modelcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModelCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModelCategory/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/ModelCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_modelcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModelCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModelCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModelCategory/Search:
+    get:
+      operationId: get_apiv12_modelcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModelCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModelCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/News/1/ProfilePage:
+    get:
+      operationId: get_apiv12_news_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: News'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/News/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/News/Index:
+    get:
+      operationId: get_apiv12_news_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: News'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/News/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/News/ListFilterConfig:
+    get:
+      operationId: get_apiv12_news_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: News'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/News/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/News/Search:
+    get:
+      operationId: get_apiv12_news_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: News'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/News/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/NewsCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_newscategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: NewsCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/NewsCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/NewsCategory/Index:
+    get:
+      operationId: get_apiv12_newscategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: NewsCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/NewsCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/NewsCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_newscategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: NewsCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/NewsCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/NewsCategory/Search:
+    get:
+      operationId: get_apiv12_newscategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: NewsCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/NewsCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Permit/1/ProfilePage:
+    get:
+      operationId: get_apiv12_permit_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Permit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Permit/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Permit/Index:
+    get:
+      operationId: get_apiv12_permit_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Permit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Permit/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Permit/ListFilterConfig:
+    get:
+      operationId: get_apiv12_permit_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Permit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Permit/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Permit/Search:
+    get:
+      operationId: get_apiv12_permit_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Permit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Permit/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Poll/1/ProfilePage:
+    get:
+      operationId: get_apiv12_poll_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Poll'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Poll/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/PollCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_pollcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: PollCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/PollCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/PollCategory/Index:
+    get:
+      operationId: get_apiv12_pollcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: PollCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/PollCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/PollCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_pollcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: PollCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/PollCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/PositionAvailable/1/ProfilePage:
+    get:
+      operationId: get_apiv12_positionavailable_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: PositionAvailable'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/PositionAvailable/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/PositionAvailable/Index:
+    get:
+      operationId: get_apiv12_positionavailable_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: PositionAvailable'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/PositionAvailable/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/PositionAvailable/ListFilterConfig:
+    get:
+      operationId: get_apiv12_positionavailable_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: PositionAvailable'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/PositionAvailable/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/PositionAvailable/Search:
+    get:
+      operationId: get_apiv12_positionavailable_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: PositionAvailable'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/PositionAvailable/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Post/1/ProfilePage:
+    get:
+      operationId: get_apiv12_post_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Post'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Post/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/ProjectCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_projectcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ProjectCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ProjectCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/ProjectCategory/Index:
+    get:
+      operationId: get_apiv12_projectcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ProjectCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ProjectCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/ProjectCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_projectcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ProjectCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ProjectCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/ProjectCategory/Search:
+    get:
+      operationId: get_apiv12_projectcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ProjectCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ProjectCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Question/1/ProfilePage:
+    get:
+      operationId: get_apiv12_question_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Question'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Question/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Question/Index:
+    get:
+      operationId: get_apiv12_question_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Question'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Question/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Question/ListFilterConfig:
+    get:
+      operationId: get_apiv12_question_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Question'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Question/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/QuestionCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_questioncategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: QuestionCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/QuestionCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/QuestionCategory/Index:
+    get:
+      operationId: get_apiv12_questioncategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: QuestionCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/QuestionCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/QuestionCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_questioncategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: QuestionCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/QuestionCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/QuestionCategory/Search:
+    get:
+      operationId: get_apiv12_questioncategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: QuestionCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/QuestionCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/RequestCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_requestcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RequestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RequestCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/RequestCategory/Index:
+    get:
+      operationId: get_apiv12_requestcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RequestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RequestCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/RequestCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_requestcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RequestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RequestCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Review/1/ProfilePage:
+    get:
+      operationId: get_apiv12_review_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Review'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Review/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Review/Index:
+    get:
+      operationId: get_apiv12_review_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Review'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Review/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Review/ListFilterConfig:
+    get:
+      operationId: get_apiv12_review_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Review'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Review/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Review/Search:
+    get:
+      operationId: get_apiv12_review_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Review'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Review/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Script/1/ProfilePage:
+    get:
+      operationId: get_apiv12_script_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Script'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Script/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Script/Index:
+    get:
+      operationId: get_apiv12_script_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Script'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Script/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Script/ListFilterConfig:
+    get:
+      operationId: get_apiv12_script_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Script'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Script/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Script/Search:
+    get:
+      operationId: get_apiv12_script_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Script'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Script/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/ScriptCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_scriptcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ScriptCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ScriptCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/ScriptCategory/Index:
+    get:
+      operationId: get_apiv12_scriptcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ScriptCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ScriptCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/ScriptCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_scriptcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ScriptCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ScriptCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Sound/1/ProfilePage:
+    get:
+      operationId: get_apiv12_sound_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Sound'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Sound/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Sound/Index:
+    get:
+      operationId: get_apiv12_sound_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Sound'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Sound/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Sound/ListFilterConfig:
+    get:
+      operationId: get_apiv12_sound_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Sound'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Sound/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/SoundCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_soundcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SoundCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SoundCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/SoundCategory/Index:
+    get:
+      operationId: get_apiv12_soundcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SoundCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SoundCategory/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/SoundCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_soundcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SoundCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SoundCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Spray/1/ProfilePage:
+    get:
+      operationId: get_apiv12_spray_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Spray'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Spray/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Spray/Index:
+    get:
+      operationId: get_apiv12_spray_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Spray'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Spray/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Spray/ListFilterConfig:
+    get:
+      operationId: get_apiv12_spray_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Spray'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Spray/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Spray/Search:
+    get:
+      operationId: get_apiv12_spray_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Spray'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Spray/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/SprayCategory/Index:
+    get:
+      operationId: get_apiv12_spraycategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SprayCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SprayCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/SprayCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_spraycategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SprayCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SprayCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/SprayCategory/Search:
+    get:
+      operationId: get_apiv12_spraycategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SprayCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SprayCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/StatusUpdate/1/ProfilePage:
+    get:
+      operationId: get_apiv12_statusupdate_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: StatusUpdate'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/StatusUpdate/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/StatusUpdate/Index:
+    get:
+      operationId: get_apiv12_statusupdate_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '401':
+          description: Observed response status 401
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: StatusUpdate'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 401
+        result: http_error
+        url: https://gamebanana.com/apiv12/StatusUpdate/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/StatusUpdate/ListFilterConfig:
+    get:
+      operationId: get_apiv12_statusupdate_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: StatusUpdate'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/StatusUpdate/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/StatusUpdate/Search:
+    get:
+      operationId: get_apiv12_statusupdate_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: StatusUpdate'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/StatusUpdate/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Studio/Index:
+    get:
+      operationId: get_apiv12_studio_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Studio'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Studio/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Studio/ListFilterConfig:
+    get:
+      operationId: get_apiv12_studio_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Studio'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Studio/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Support/1/ProfilePage:
+    get:
+      operationId: get_apiv12_support_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Support'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Support/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Thread/Index:
+    get:
+      operationId: get_apiv12_thread_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Thread'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Thread/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Thread/ListFilterConfig:
+    get:
+      operationId: get_apiv12_thread_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Thread'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Thread/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Todo/1/ProfilePage:
+    get:
+      operationId: get_apiv12_todo_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Todo'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Todo/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Todo/Search:
+    get:
+      operationId: get_apiv12_todo_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Todo'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Todo/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Tool/1/ProfilePage:
+    get:
+      operationId: get_apiv12_tool_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tool'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tool/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Tool/Search:
+    get:
+      operationId: get_apiv12_tool_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tool'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tool/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/ToolCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_toolcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ToolCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ToolCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/ToolCategory/Index:
+    get:
+      operationId: get_apiv12_toolcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ToolCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ToolCategory/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/ToolCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_toolcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ToolCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ToolCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/ToolCategory/Search:
+    get:
+      operationId: get_apiv12_toolcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ToolCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ToolCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Tutorial/1/ProfilePage:
+    get:
+      operationId: get_apiv12_tutorial_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tutorial'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tutorial/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Tutorial/Index:
+    get:
+      operationId: get_apiv12_tutorial_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tutorial'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tutorial/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Tutorial/ListFilterConfig:
+    get:
+      operationId: get_apiv12_tutorial_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tutorial'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tutorial/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Tutorial/Search:
+    get:
+      operationId: get_apiv12_tutorial_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tutorial'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tutorial/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/TutorialCategory/Index:
+    get:
+      operationId: get_apiv12_tutorialcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: TutorialCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/TutorialCategory/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/TutorialCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_tutorialcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: TutorialCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/TutorialCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/TutorialCategory/Search:
+    get:
+      operationId: get_apiv12_tutorialcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: TutorialCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/TutorialCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Update/1/ProfilePage:
+    get:
+      operationId: get_apiv12_update_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Update'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Update/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Ware/1/ProfilePage:
+    get:
+      operationId: get_apiv12_ware_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Ware'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Ware/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+  /apiv12/Ware/Index:
+    get:
+      operationId: get_apiv12_ware_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Ware'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Ware/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Ware/ListFilterConfig:
+    get:
+      operationId: get_apiv12_ware_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Ware'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Ware/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Ware/Search:
+    get:
+      operationId: get_apiv12_ware_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Ware'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Ware/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/WareCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_warecategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/WareCategory/Index:
+    get:
+      operationId: get_apiv12_warecategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareCategory/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/WareCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_warecategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/WareCategory/Search:
+    get:
+      operationId: get_apiv12_warecategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/WareOrder/1/ProfilePage:
+    get:
+      operationId: get_apiv12_wareorder_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareOrder'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareOrder/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/WareOrder/Index:
+    get:
+      operationId: get_apiv12_wareorder_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareOrder'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareOrder/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/WareOrder/ListFilterConfig:
+    get:
+      operationId: get_apiv12_wareorder_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareOrder'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareOrder/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/WareOrder/Search:
+    get:
+      operationId: get_apiv12_wareorder_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareOrder'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareOrder/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/Wiki/Index:
+    get:
+      operationId: get_apiv12_wiki_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Wiki'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Wiki/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/Wiki/ListFilterConfig:
+    get:
+      operationId: get_apiv12_wiki_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Wiki'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Wiki/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/Wiki/Search:
+    get:
+      operationId: get_apiv12_wiki_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Wiki'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Wiki/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/WikiCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_wikicategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WikiCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WikiCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/WikiCategory/Index:
+    get:
+      operationId: get_apiv12_wikicategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WikiCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WikiCategory/Index
+        contentType: text/html; charset=UTF-8
+  /apiv12/WikiCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_wikicategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WikiCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WikiCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/WikiCategory/Search:
+    get:
+      operationId: get_apiv12_wikicategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WikiCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WikiCategory/Search
+        contentType: text/html; charset=UTF-8
+  /apiv12/WipCategory/1/ProfilePage:
+    get:
+      operationId: get_apiv12_wipcategory_1_profilepage
+      summary: Get profil\1 \2age
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WipCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WipCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/WipCategory/Index:
+    get:
+      operationId: get_apiv12_wipcategory_index
+      summary: Get index
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WipCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WipCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/WipCategory/ListFilterConfig:
+    get:
+      operationId: get_apiv12_wipcategory_listfilterconfig
+      summary: Get lis\1 \2ilte\1 \2onfig
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WipCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WipCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+  /apiv12/WipCategory/Search:
+    get:
+      operationId: get_apiv12_wipcategory_search
+      summary: Get search
+      description: Returns data for API v12 endpoint discovered via on-site crawling and live probing on gamebanana.com.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WipCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WipCategory/Search
+        contentType: text/html; charset=UTF-8
+
 tags:
 - name: 'core: App'
   description: Endpoints grouped under CORE.
@@ -22172,4 +26728,104 @@ tags:
 - name: 'v12: Util'
   description: Endpoints grouped under V12.
 - name: 'v12: Wip'
+  description: Endpoints grouped under V12.
+- name: 'v12: Article'
+  description: Endpoints grouped under V12.
+- name: 'v12: ArticleCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Bitpit'
+  description: Endpoints grouped under V12.
+- name: 'v12: Blog'
+  description: Endpoints grouped under V12.
+- name: 'v12: BlogCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Bug'
+  description: Endpoints grouped under V12.
+- name: 'v12: Club'
+  description: Endpoints grouped under V12.
+- name: 'v12: Concept'
+  description: Endpoints grouped under V12.
+- name: 'v12: ConceptCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: ContestCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Event'
+  description: Endpoints grouped under V12.
+- name: 'v12: EventCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Forum'
+  description: Endpoints grouped under V12.
+- name: 'v12: GameKey'
+  description: Endpoints grouped under V12.
+- name: 'v12: Generator'
+  description: Endpoints grouped under V12.
+- name: 'v12: GeneratorCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: GmApplication'
+  description: Endpoints grouped under V12.
+- name: 'v12: Initiative'
+  description: Endpoints grouped under V12.
+- name: 'v12: JamCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Medal'
+  description: Endpoints grouped under V12.
+- name: 'v12: Model'
+  description: Endpoints grouped under V12.
+- name: 'v12: ModelCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: News'
+  description: Endpoints grouped under V12.
+- name: 'v12: NewsCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Permit'
+  description: Endpoints grouped under V12.
+- name: 'v12: PollCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: PositionAvailable'
+  description: Endpoints grouped under V12.
+- name: 'v12: ProjectCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Question'
+  description: Endpoints grouped under V12.
+- name: 'v12: QuestionCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: RequestCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Review'
+  description: Endpoints grouped under V12.
+- name: 'v12: Script'
+  description: Endpoints grouped under V12.
+- name: 'v12: ScriptCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Sound'
+  description: Endpoints grouped under V12.
+- name: 'v12: SoundCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Spray'
+  description: Endpoints grouped under V12.
+- name: 'v12: SprayCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: StatusUpdate'
+  description: Endpoints grouped under V12.
+- name: 'v12: Studio'
+  description: Endpoints grouped under V12.
+- name: 'v12: Thread'
+  description: Endpoints grouped under V12.
+- name: 'v12: ToolCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Tutorial'
+  description: Endpoints grouped under V12.
+- name: 'v12: TutorialCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: Ware'
+  description: Endpoints grouped under V12.
+- name: 'v12: WareCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: WareOrder'
+  description: Endpoints grouped under V12.
+- name: 'v12: Wiki'
+  description: Endpoints grouped under V12.
+- name: 'v12: WikiCategory'
+  description: Endpoints grouped under V12.
+- name: 'v12: WipCategory'
   description: Endpoints grouped under V12.
