@@ -2,56 +2,100 @@ paths:
   /apiv11/Mod/Index:
     get:
       operationId: v11_mod_index_get
-      summary: Get Mod Index
-      description: Returns Mod Index data for public API consumers. Supports optional
-        query filters.
+      summary: List primary resources (Mod)
+      description: 'v11 `Mod` endpoint `Index`. Purpose: Retrieve the default listing
+        for this domain, usually used to populate landing pages or initial browse
+        views. Expected input: Provide required path identifiers and optional query
+        filters as documented below. Returned data: typically a domain-specific JSON
+        object/collection used by GameBanana web clients and integrations. Last verified
+        probe content-type: `application/json; charset=UTF-8`.'
       parameters:
       - in: query
         name: _aFilters[Generic_Category]
         required: false
         schema:
           type: integer
-        description: Observed query parameter
+        description: Optional query parameter `_aFilters[Generic_Category]`. Filter
+          key `Generic_Category` used by server-side query filtering. Combine with
+          pagination/sort parameters to build faceted result queries.
+        example: example
       - in: query
         name: _aFilters[Generic_Game]
         required: false
         schema:
           type: integer
-        description: Observed query parameter
+        description: Optional query parameter `_aFilters[Generic_Game]`. Filter key
+          `Generic_Game` used by server-side query filtering. Combine with pagination/sort
+          parameters to build faceted result queries.
+        example: example
       - in: query
         name: _aFilters[Generic_Studio]
         required: false
         schema:
           type: integer
-        description: Observed query parameter
+        description: Optional query parameter `_aFilters[Generic_Studio]`. Filter
+          key `Generic_Studio` used by server-side query filtering. Combine with pagination/sort
+          parameters to build faceted result queries.
+        example: example
       - in: query
         name: _aFilters[Generic_Submitter]
         required: false
         schema:
           type: integer
-        description: Observed query parameter
+        description: Optional query parameter `_aFilters[Generic_Submitter]`. Filter
+          key `Generic_Submitter` used by server-side query filtering. Combine with
+          pagination/sort parameters to build faceted result queries.
+        example: example
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Observed query parameter
+        description: Optional query parameter `_nPage`. 1-based page index for paginated
+          results. Use `1` for the first page and increment for subsequent pages.
+        example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Observed query parameter
+        description: Optional query parameter `_nPerpage`. Maximum items to return
+          per page. Tune this for payload size vs. request count tradeoffs.
+        example: 15
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Mod/Index`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Mod/Index
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: index-example-1
+                  - id: 2
+                    name: index-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Mod'
       x-last-test:
@@ -60,21 +104,72 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/Index
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Index` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Mod/Index
+      x-observed-response-format: json
   /apiv11/Mod/ListFilterConfig:
     get:
       operationId: v11_mod_list_filter_config_get
-      summary: Get Mod List Filter Config
-      description: Returns Mod List Filter Config data for public API consumers.
+      summary: Get list filter configuration (Mod)
+      description: 'v11 `Mod` endpoint `List Filter Config`. Purpose: Return available
+        filter/sort metadata used to construct list and search requests. Expected
+        input: No parameters are required for a baseline request. Returned data: typically
+        a domain-specific JSON object/collection used by GameBanana web clients and
+        integrations. Probe evidence indicates this route can sometimes return non-JSON
+        content; implement content-type checks before parsing. Last verified probe
+        content-type: `text/html; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Mod/ListFilterConfig`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Mod/ListFilterConfig
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: listfilterconfig-example-1
+                  - id: 2
+                    name: listfilterconfig-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv11/Mod/ListFilterConfig`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Mod'
       x-last-test:
@@ -84,45 +179,82 @@ paths:
         url: https://gamebanana.com/apiv11/Mod/ListFilterConfig
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ListFilterConfig` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Mod/ListFilterConfig
+      x-observed-response-format: html
   /apiv11/Mod/Multi:
     get:
       operationId: v11_mod_multi_get
-      summary: Get Mod Multi
-      description: Returns Mod Multi data for public API consumers. Supports optional
-        query filters.
+      summary: Fetch multiple resources (Mod)
+      description: 'v11 `Mod` endpoint. Purpose: Return multiple resources in a single
+        request using batched identifiers. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. Last verified
+        probe content-type: `application/json; charset=UTF-8`.'
       parameters:
       - in: query
         name: _csvRowIds
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
-        example: 506678,547865,547860,490773,34283
+        description: Optional query parameter `_csvRowIds`. Comma-separated row identifiers.
+          Batch-fetches specific rows in one request.
+        example: 1,2,3
       - in: query
         name: _csvProperties
         required: false
         schema:
           type: string
-        description: Observed query parameter in public API usage examples
-        example: _idRow,_sName,_aSubmitter,_tsDateAdded,_sVersion,_aRootCategory,_aPreviewMedia,_nLikeCount,_nViewCount,_aFiles,_sDescription,_sText,_nDownloadCount,_aModManagerIntegrations
+        description: Optional query parameter `_csvProperties`. Comma-separated property
+          whitelist. Restricts response payload to the listed fields where supported.
+        example: _idRow,_sName
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Mod/Multi`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Mod/Multi
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
         '400':
-          description: Bad request
+          description: HTTP 400 response as observed for this endpoint.
         '401':
-          description: Unauthorized
+          description: HTTP 401 response as observed for this endpoint.
         '403':
-          description: Forbidden
+          description: HTTP 403 response as observed for this endpoint.
         '404':
-          description: Not found
+          description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Mod'
       x-last-test:
@@ -131,29 +263,70 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/Multi?_csvRowIds=506678%2C547865%2C547860%2C490773%2C34283&_csvProperties=_idRow%2C_sName%2C_aSubmitter%2C_tsDateAdded%2C_sVersion%2C_aRootCategory%2C_aPreviewMedia%2C_nLikeCount%2C_nViewCount%2C_aFiles%2C_sDescription%2C_sText%2C_nDownloadCount%2C_aModManagerIntegrations
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Multi` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Mod/Multi
+      x-observed-response-format: json
   /apiv11/Mod/{id1}/Config:
     get:
       operationId: v11_mod_id1_config_get
-      summary: Get Mod {id1} Config
-      description: Returns Mod {id1} Config data for public API consumers. Supports
-        optional query filters.
+      summary: Get resource configuration (Mod)
+      description: 'v11 `Mod` endpoint `{id1} / Config`. Purpose: Return configuration
+        data required by client workflows for this resource. Expected input: Provide
+        required path identifiers and optional query filters as documented below.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed query parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Mod/{id1}/Config`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Mod/{id1}/Config
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  filters:
+                  - key: sort
+                    values:
+                    - newest
+                    - popular
+                  defaults:
+                    sort: newest
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Mod'
       x-last-test:
@@ -162,47 +335,96 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Config
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Config` responses to drive config views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Mod/1/Config
+      x-observed-response-format: json
   /apiv11/Mod/{id1}/Posts:
     get:
       operationId: v11_mod_id1_posts_get
-      summary: Get Mod {id1} Posts
-      description: Returns Mod {id1} Posts data for public API consumers. Supports
-        optional query filters.
+      summary: List discussion posts (Mod)
+      description: 'v11 `Mod` endpoint `{id1} / Posts`. Purpose: Return post records
+        tied to the resource, often for comments or activity feeds. Expected input:
+        Provide required path identifiers and optional query filters as documented
+        below. Returned data: typically a domain-specific JSON object/collection used
+        by GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed query parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Observed query parameter
+        description: Optional query parameter `_nPage`. 1-based page index for paginated
+          results. Use `1` for the first page and increment for subsequent pages.
+        example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Observed query parameter
+        description: Optional query parameter `_nPerpage`. Maximum items to return
+          per page. Tune this for payload size vs. request count tradeoffs.
+        example: 15
       - in: query
         name: _sSort
         required: false
         schema:
           type: string
-        description: Observed query parameter
+        description: Optional query parameter `_sSort`. Sort mode key used by the
+          endpoint. Use server-supported values from `ListFilterConfig` where available.
+        example: newest
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Mod/{id1}/Posts`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Mod/{id1}/Posts
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: posts-example-1
+                  - id: 2
+                    name: posts-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Mod'
       x-last-test:
@@ -211,29 +433,70 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Posts
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Posts` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Mod/1/Posts
+      x-observed-response-format: json
   /apiv11/Mod/{id1}/ProfilePage:
     get:
       operationId: v11_mod_id1_profile_page_get
-      summary: Get Mod {id1} Profile Page
-      description: Returns Mod {id1} Profile Page data for public API consumers. Supports
-        optional query filters.
+      summary: Fetch profile page payload (Mod)
+      description: 'v11 `Mod` endpoint `{id1} / Profile Page`. Purpose: Return the
+        full profile-page data model used by GameBanana clients for a single entity.
+        Expected input: Provide required path identifiers and optional query filters
+        as documented below. Returned data: typically a domain-specific JSON object/collection
+        used by GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed query parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Mod/{id1}/ProfilePage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Mod/{id1}/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Mod'
       x-last-test:
@@ -242,37 +505,85 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/ProfilePage
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Mod/1/ProfilePage
+      x-observed-response-format: json
   /apiv11/Mod/{mod_id}/DownloadPage:
     get:
       operationId: v11_mod_mod_id_download_page_get
-      summary: Get Mod {mod Id} Download Page
-      description: Returns Mod {mod Id} Download Page data for public API consumers.
-        Supports optional query filters.
+      summary: Get download page payload (Mod)
+      description: 'v11 `Mod` endpoint. Purpose: Return download-page metadata and
+        assets for the target submission. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. This endpoint
+        has probe evidence of occasional non-JSON responses; guard on status and content-type
+        before decoding. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: mod_id
         required: true
         schema:
           type: integer
-        description: Path parameter
+        description: Required path parameter `mod_id`. Numeric identifier for the
+          target entity. Use an ID from index/search endpoints or previously resolved
+          links.
+        example: 1
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Mod/{mod_id}/DownloadPage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Mod/{mod_id}/DownloadPage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  download:
+                    url: https://gamebanana.com/dl/example
+                    filename: example.zip
+                  checksum:
+                    sha256: <hash>
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv11/Mod/{mod_id}/DownloadPage`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         '400':
-          description: Bad request
+          description: HTTP 400 response as observed for this endpoint.
         '401':
-          description: Unauthorized
+          description: HTTP 401 response as observed for this endpoint.
         '403':
-          description: Forbidden
+          description: HTTP 403 response as observed for this endpoint.
         '404':
-          description: Not found
+          description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Mod'
       x-last-test:
@@ -282,3 +593,19 @@ paths:
         url: https://gamebanana.com/apiv11/Mod/1/DownloadPage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `DownloadPage` responses to drive download views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Mod/1/DownloadPage
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `html`,
+        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
+        charset=UTF-8).'

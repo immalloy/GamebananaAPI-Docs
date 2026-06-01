@@ -2,18 +2,54 @@ paths:
   /apiv12/Game/8694/ProfilePage:
     get:
       operationId: v12_game_8694_profile_page_get
-      summary: Get Game 8694 Profile Page
-      description: Returns Game 8694 Profile Page data for public API consumers.
+      summary: Fetch profile page payload (Game)
+      description: 'v12 `Game` endpoint `8694 / Profile Page`. Purpose: Return the
+        full profile-page data model used by GameBanana clients for a single entity.
+        Expected input: No parameters are required for a baseline request. Returned
+        data: typically a domain-specific JSON object/collection used by GameBanana
+        web clients and integrations. Probe evidence indicates this route can sometimes
+        return non-JSON content; implement content-type checks before parsing. Last
+        verified probe content-type: `text/html; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/8694/ProfilePage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/8694/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/8694/ProfilePage`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -23,21 +59,63 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/ProfilePage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/8694/ProfilePage
+      x-observed-response-format: html
   /apiv12/Game/Index:
     get:
       operationId: v12_game_index_get
-      summary: Get Game Index
-      description: Returns Game Index data for public API consumers.
+      summary: List primary resources (Game)
+      description: 'v12 `Game` endpoint `Index`. Purpose: Retrieve the default listing
+        for this domain, usually used to populate landing pages or initial browse
+        views. Expected input: No parameters are required for a baseline request.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/Index`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/Index
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: index-example-1
+                  - id: 2
+                    name: index-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -46,21 +124,72 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Game/Index
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Index` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/Index
+      x-observed-response-format: json
   /apiv12/Game/ListFilterConfig:
     get:
       operationId: v12_game_list_filter_config_get
-      summary: Get Game List Filter Config
-      description: Returns Game List Filter Config data for public API consumers.
+      summary: Get list filter configuration (Game)
+      description: 'v12 `Game` endpoint `List Filter Config`. Purpose: Return available
+        filter/sort metadata used to construct list and search requests. Expected
+        input: No parameters are required for a baseline request. Returned data: typically
+        a domain-specific JSON object/collection used by GameBanana web clients and
+        integrations. Probe evidence indicates this route can sometimes return non-JSON
+        content; implement content-type checks before parsing. Last verified probe
+        content-type: `text/html; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/ListFilterConfig`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/ListFilterConfig
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: listfilterconfig-example-1
+                  - id: 2
+                    name: listfilterconfig-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/ListFilterConfig`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -70,29 +199,72 @@ paths:
         url: https://gamebanana.com/apiv12/Game/ListFilterConfig
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ListFilterConfig` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/ListFilterConfig
+      x-observed-response-format: html
   /apiv12/Game/{id1}/CategoryTree:
     get:
       operationId: v12_game_id1_category_tree_get
-      summary: Get Game {id1} Category Tree
-      description: Returns Game {id1} Category Tree data for public API consumers.
-        Supports optional query filters.
+      summary: Get category tree (Game)
+      description: 'v12 `Game` endpoint `{id1} / Category Tree`. Purpose: Return hierarchical
+        category data for navigation and filtering. Expected input: Provide required
+        path identifiers and optional query filters as documented below. Returned
+        data: typically a domain-specific JSON object/collection used by GameBanana
+        web clients and integrations. Last verified probe content-type: `application/json;
+        charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/CategoryTree`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/CategoryTree
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response payload observed in live verification.
+              example: <!doctype html><html><body>Observed HTML payload.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -101,29 +273,79 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Game/8694/CategoryTree
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `CategoryTree` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/CategoryTree
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `json`,
+        full live verification on 2026-06-01T21:22:07Z returned `html` (text/html;
+        charset=UTF-8).'
   /apiv12/Game/{id1}/CommunitySpotlight:
     get:
       operationId: v12_game_id1_community_spotlight_get
-      summary: Get Game {id1} Community Spotlight
-      description: Returns Game {id1} Community Spotlight data for public API consumers.
-        Supports optional query filters.
+      summary: Get community spotlight content (Game)
+      description: 'v12 `Game` endpoint `{id1} / Community Spotlight`. Purpose: Return
+        spotlighted or highlighted community content for the given scope. Expected
+        input: Provide required path identifiers and optional query filters as documented
+        below. Returned data: typically a domain-specific JSON object/collection used
+        by GameBanana web clients and integrations. Probe evidence indicates this
+        route can sometimes return non-JSON content; implement content-type checks
+        before parsing. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/CommunitySpotlight`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/CommunitySpotlight
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id1}/CommunitySpotlight`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -133,29 +355,70 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/CommunitySpotlight
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `CommunitySpotlight` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/CommunitySpotlight
+      x-observed-response-format: html
   /apiv12/Game/{id1}/Config:
     get:
       operationId: v12_game_id1_config_get
-      summary: Get Game {id1} Config
-      description: Returns Game {id1} Config data for public API consumers. Supports
-        optional query filters.
+      summary: Get resource configuration (Game)
+      description: 'v12 `Game` endpoint `{id1} / Config`. Purpose: Return configuration
+        data required by client workflows for this resource. Expected input: Provide
+        required path identifiers and optional query filters as documented below.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/Config`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/Config
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  filters:
+                  - key: sort
+                    values:
+                    - newest
+                    - popular
+                  defaults:
+                    sort: newest
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -164,29 +427,75 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Game/8694/Config
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Config` responses to drive config views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/Config
+      x-observed-response-format: json
   /apiv12/Game/{id1}/GetStartedPage:
     get:
       operationId: v12_game_id1_get_started_page_get
-      summary: Get Game {id1} Get Started Page
-      description: Returns Game {id1} Get Started Page data for public API consumers.
-        Supports optional query filters.
+      summary: Get getting started payload (Game)
+      description: 'v12 `Game` endpoint. Purpose: Return onboarding/getting-started
+        content for the target game. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. This endpoint
+        has probe evidence of occasional non-JSON responses; guard on status and content-type
+        before decoding. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/GetStartedPage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/GetStartedPage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id1}/GetStartedPage`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -196,29 +505,74 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/GetStartedPage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `GetStartedPage` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/GetStartedPage
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous probes suggested
+        `html`, live verification on 2026-06-01T21:18:58Z returned `json` (application/json;
+        charset=UTF-8).'
   /apiv12/Game/{id1}/Keys/ForSale:
     get:
       operationId: v12_game_id1_keys_for_sale_get
-      summary: Get Game {id1} Keys For Sale
-      description: Returns Game {id1} Keys For Sale data for public API consumers.
-        Supports optional query filters.
+      summary: List keys for sale (Game)
+      description: 'v12 `Game` endpoint. Purpose: Return game keys currently available
+        for sale. Expected input: Provide required path identifiers plus optional
+        query filters where supported. Returned data: JSON payload used by GameBanana
+        clients for list, detail, or interaction views. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/Keys/ForSale`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/Keys/ForSale
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: forsale-example-1
+                  - id: 2
+                    name: forsale-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -227,29 +581,71 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Game/8694/Keys/ForSale
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ForSale` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/Keys/ForSale
+      x-observed-response-format: json
   /apiv12/Game/{id1}/Keys/Summary:
     get:
       operationId: v12_game_id1_keys_summary_get
-      summary: Get Game {id1} Keys Summary
-      description: Returns Game {id1} Keys Summary data for public API consumers.
-        Supports optional query filters.
+      summary: Get key inventory summary (Game)
+      description: 'v12 `Game` endpoint. Purpose: Return summary counts/statistics
+        for game keys. Expected input: Provide required path identifiers plus optional
+        query filters where supported. Returned data: JSON payload used by GameBanana
+        clients for list, detail, or interaction views. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/Keys/Summary`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/Keys/Summary
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response payload observed in live verification.
+              example: <!doctype html><html><body>Observed HTML payload.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -258,29 +654,82 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Game/8694/Keys/Summary
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Summary` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/Keys/Summary
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `json`,
+        full live verification on 2026-06-01T21:22:07Z returned `html` (text/html;
+        charset=UTF-8).'
   /apiv12/Game/{id1}/ProfilePage:
     get:
       operationId: v12_game_id1_profile_page_get
-      summary: Get Game {id1} Profile Page
-      description: Returns Game {id1} Profile Page data for public API consumers.
-        Supports optional query filters.
+      summary: Fetch profile page payload (Game)
+      description: 'v12 `Game` endpoint `{id1} / Profile Page`. Purpose: Return the
+        full profile-page data model used by GameBanana clients for a single entity.
+        Expected input: Provide required path identifiers and optional query filters
+        as documented below. Returned data: typically a domain-specific JSON object/collection
+        used by GameBanana web clients and integrations. Probe evidence indicates
+        this route can sometimes return non-JSON content; implement content-type checks
+        before parsing. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/ProfilePage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id1}/ProfilePage`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -290,29 +739,72 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/ProfilePage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/ProfilePage
+      x-observed-response-format: html
   /apiv12/Game/{id1}/Rules:
     get:
       operationId: v12_game_id1_rules_get
-      summary: Get Game {id1} Rules
-      description: Returns Game {id1} Rules data for public API consumers. Supports
-        optional query filters.
+      summary: Get rules (Game)
+      description: 'v12 `Game` endpoint `{id1} / Rules`. Purpose: Return policy/rules
+        content shown to users before posting or interacting. Expected input: Provide
+        required path identifiers and optional query filters as documented below.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/Rules`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/Rules
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response payload observed in live verification.
+              example: <!doctype html><html><body>Observed HTML payload.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -321,29 +813,74 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Game/8694/Rules
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Rules` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/Rules
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `json`,
+        full live verification on 2026-06-01T21:22:07Z returned `html` (text/html;
+        charset=UTF-8).'
   /apiv12/Game/{id1}/Subfeed:
     get:
       operationId: v12_game_id1_subfeed_get
-      summary: Get Game {id1} Subfeed
-      description: Returns Game {id1} Subfeed data for public API consumers. Supports
-        optional query filters.
+      summary: Get submission feed (Game)
+      description: 'v12 `Game` endpoint. Purpose: Return activity feed entries related
+        to the target game or member. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. Last verified
+        probe content-type: `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/Subfeed`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/Subfeed
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response payload observed in live verification.
+              example: <!doctype html><html><body>Observed HTML payload.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -352,29 +889,79 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Game/8694/Subfeed
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Subfeed` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/Subfeed
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `json`,
+        full live verification on 2026-06-01T21:22:07Z returned `html` (text/html;
+        charset=UTF-8).'
   /apiv12/Game/{id1}/TopSubs:
     get:
       operationId: v12_game_id1_top_subs_get
-      summary: Get Game {id1} Top Subs
-      description: Returns Game {id1} Top Subs data for public API consumers. Supports
-        optional query filters.
+      summary: Get top submissions (Game)
+      description: 'v12 `Game` endpoint `{id1} / Top Subs`. Purpose: Return ranked/highlighted
+        submissions for discovery surfaces. Expected input: Provide required path
+        identifiers and optional query filters as documented below. Returned data:
+        typically a domain-specific JSON object/collection used by GameBanana web
+        clients and integrations. Probe evidence indicates this route can sometimes
+        return non-JSON content; implement content-type checks before parsing. Last
+        verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id1
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id1`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id1}/TopSubs`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id1}/TopSubs
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id1}/TopSubs`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -384,29 +971,76 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/TopSubs
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `TopSubs` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/TopSubs
+      x-observed-response-format: html
   /apiv12/Game/{id}/CommunitySpotlight:
     get:
       operationId: v12_game_id_community_spotlight_get
-      summary: Get Game {id} Community Spotlight
-      description: Returns Game {id} Community Spotlight data for public API consumers.
-        Supports optional query filters.
+      summary: Get community spotlight content (Game)
+      description: 'v12 `Game` endpoint `{id} / Community Spotlight`. Purpose: Return
+        spotlighted or highlighted community content for the given scope. Expected
+        input: Provide required path identifiers and optional query filters as documented
+        below. Returned data: typically a domain-specific JSON object/collection used
+        by GameBanana web clients and integrations. Probe evidence indicates this
+        route can sometimes return non-JSON content; implement content-type checks
+        before parsing. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id}/CommunitySpotlight`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id}/CommunitySpotlight
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id}/CommunitySpotlight`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -416,29 +1050,75 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/CommunitySpotlight
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `CommunitySpotlight` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/CommunitySpotlight
+      x-observed-response-format: html
   /apiv12/Game/{id}/GetStartedPage:
     get:
       operationId: v12_game_id_get_started_page_get
-      summary: Get Game {id} Get Started Page
-      description: Returns Game {id} Get Started Page data for public API consumers.
-        Supports optional query filters.
+      summary: Get getting started payload (Game)
+      description: 'v12 `Game` endpoint. Purpose: Return onboarding/getting-started
+        content for the target game. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. This endpoint
+        has probe evidence of occasional non-JSON responses; guard on status and content-type
+        before decoding. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id}/GetStartedPage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id}/GetStartedPage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id}/GetStartedPage`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -448,29 +1128,79 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/GetStartedPage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `GetStartedPage` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/GetStartedPage
+      x-observed-response-format: html
   /apiv12/Game/{id}/ProfilePage:
     get:
       operationId: v12_game_id_profile_page_get
-      summary: Get Game {id} Profile Page
-      description: Returns Game {id} Profile Page data for public API consumers. Supports
-        optional query filters.
+      summary: Fetch profile page payload (Game)
+      description: 'v12 `Game` endpoint `{id} / Profile Page`. Purpose: Return the
+        full profile-page data model used by GameBanana clients for a single entity.
+        Expected input: Provide required path identifiers and optional query filters
+        as documented below. Returned data: typically a domain-specific JSON object/collection
+        used by GameBanana web clients and integrations. Probe evidence indicates
+        this route can sometimes return non-JSON content; implement content-type checks
+        before parsing. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id}/ProfilePage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id}/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id}/ProfilePage`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -480,29 +1210,76 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/ProfilePage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/ProfilePage
+      x-observed-response-format: html
   /apiv12/Game/{id}/Rules:
     get:
       operationId: v12_game_id_rules_get
-      summary: Get Game {id} Rules
-      description: Returns Game {id} Rules data for public API consumers. Supports
-        optional query filters.
+      summary: Get rules (Game)
+      description: 'v12 `Game` endpoint `{id} / Rules`. Purpose: Return policy/rules
+        content shown to users before posting or interacting. Expected input: Provide
+        required path identifiers and optional query filters as documented below.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Probe evidence indicates this route
+        can sometimes return non-JSON content; implement content-type checks before
+        parsing. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id}/Rules`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id}/Rules
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id}/Rules`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -512,29 +1289,78 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/Rules
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Rules` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/Rules
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous probes suggested
+        `html`, live verification on 2026-06-01T21:18:58Z returned `json` (application/json;
+        charset=UTF-8).'
   /apiv12/Game/{id}/Subfeed:
     get:
       operationId: v12_game_id_subfeed_get
-      summary: Get Game {id} Subfeed
-      description: Returns Game {id} Subfeed data for public API consumers. Supports
-        optional query filters.
+      summary: Get submission feed (Game)
+      description: 'v12 `Game` endpoint. Purpose: Return activity feed entries related
+        to the target game or member. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. This endpoint
+        has probe evidence of occasional non-JSON responses; guard on status and content-type
+        before decoding. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id}/Subfeed`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id}/Subfeed
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id}/Subfeed`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -544,29 +1370,79 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/Subfeed
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Subfeed` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/Subfeed
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous probes suggested
+        `html`, live verification on 2026-06-01T21:18:58Z returned `json` (application/json;
+        charset=UTF-8).'
   /apiv12/Game/{id}/TopSubs:
     get:
       operationId: v12_game_id_top_subs_get
-      summary: Get Game {id} Top Subs
-      description: Returns Game {id} Top Subs data for public API consumers. Supports
-        optional query filters.
+      summary: Get top submissions (Game)
+      description: 'v12 `Game` endpoint `{id} / Top Subs`. Purpose: Return ranked/highlighted
+        submissions for discovery surfaces. Expected input: Provide required path
+        identifiers and optional query filters as documented below. Returned data:
+        typically a domain-specific JSON object/collection used by GameBanana web
+        clients and integrations. Probe evidence indicates this route can sometimes
+        return non-JSON content; implement content-type checks before parsing. Last
+        verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Game/{id}/TopSubs`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Game/{id}/TopSubs
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Game/{id}/TopSubs`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Game'
       x-last-test:
@@ -576,3 +1452,16 @@ paths:
         url: https://gamebanana.com/apiv12/Game/8694/TopSubs
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `TopSubs` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Game/1/TopSubs
+      x-observed-response-format: html

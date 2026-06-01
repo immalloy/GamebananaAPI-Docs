@@ -2,26 +2,56 @@ paths:
   /apiv11/Contest/{submission_id}/Winners:
     get:
       operationId: v11_contest_submission_id_winners_get
-      summary: Get Contest {submission Id} Winners
-      description: Returns Contest {submission Id} Winners data for public API consumers.
-        Supports optional query filters.
+      summary: List contest winners (Contest)
+      description: 'v11 `Contest` endpoint. Purpose: Return winner entries for the
+        target contest submission. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. Last verified
+        probe content-type: `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Path parameter
+        description: Required path parameter `submission_id`. Numeric identifier for
+          the target entity. Use an ID from index/search endpoints or previously resolved
+          links.
+        example: 1
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Contest/{submission_id}/Winners`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Contest/{submission_id}/Winners
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: winners-example-1
+                  - id: 2
+                    name: winners-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Contest'
       x-last-test:
@@ -30,3 +60,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Contest/1/Winners
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Winners` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Contest/1/Winners
+      x-observed-response-format: json

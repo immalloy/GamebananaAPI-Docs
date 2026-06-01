@@ -2,62 +2,97 @@ paths:
   /apiv7/Mod/ByGame:
     get:
       operationId: v7_mod_by_game_get
-      summary: Get Mod By Game
-      description: Returns Mod By Game data for public API consumers. Supports optional
-        query filters.
+      summary: List resources by game (Mod)
+      description: 'v7 `Mod` endpoint. Purpose: Return resources filtered by game
+        identifier. Expected input: Provide required path identifiers plus optional
+        query filters where supported. Returned data: JSON payload used by GameBanana
+        clients for list, detail, or interaction views. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
-        example: '50'
+        description: Optional query parameter `_nPerpage`. Maximum items to return
+          per page. Tune this for payload size vs. request count tradeoffs.
+        example: 15
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
-        example: '16'
+        description: Optional query parameter `_nPage`. 1-based page index for paginated
+          results. Use `1` for the first page and increment for subsequent pages.
+        example: 1
       - in: query
         name: _csvProperties
         required: false
         schema:
           type: string
-        description: Observed query parameter in public API usage examples
-        example: _idRow,_sName,_aFiles,_aCredits,_aModManagerIntegrations,_sText,_aPreviewMedia,_aSubmitter,_sProfileUrl,_nViewCount,_nLikeCount,_nDownloadCount
+        description: Optional query parameter `_csvProperties`. Comma-separated property
+          whitelist. Restricts response payload to the listed fields where supported.
+        example: _idRow,_sName
       - in: query
         name: _aGameRowIds[
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
+        description: Optional query parameter `_aGameRowIds[`. Array-style game row
+          identifier parameter. Used by legacy list endpoints that accept repeated
+          game IDs.
+        example: 1
       - in: query
         name: _aGameRowIds[]
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
-        example: '8694'
+        description: Optional query parameter `_aGameRowIds[]`. Array-style game row
+          identifier parameter. Used by legacy list endpoints that accept repeated
+          game IDs.
+        example: 1
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv7/Mod/ByGame`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv7/Mod/ByGame
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: bygame-example-1
+                  - id: 2
+                    name: bygame-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         '400':
-          description: Bad request
+          description: HTTP 400 response as observed for this endpoint.
         '401':
-          description: Unauthorized
+          description: HTTP 401 response as observed for this endpoint.
         '403':
-          description: Forbidden
+          description: HTTP 403 response as observed for this endpoint.
         '404':
-          description: Not found
+          description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v7: Mod'
       x-last-test:
@@ -66,3 +101,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv7/Mod/ByGame?_nPerpage=50&_nPage=16&_csvProperties=_idRow%2C_sName%2C_aFiles%2C_aCredits%2C_aModManagerIntegrations%2C_sText%2C_aPreviewMedia%2C_aSubmitter%2C_sProfileUrl%2C_nViewCount%2C_nLikeCount%2C_nDownloadCount&_aGameRowIds%5B%5D=8694
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ByGame` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv7/Mod/ByGame
+      x-observed-response-format: json

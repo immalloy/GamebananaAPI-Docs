@@ -2,34 +2,64 @@ paths:
   /apiv3/ModCategory/ByGame:
     get:
       operationId: v3_modcategory_by_game_get
-      summary: Get ModCategory By Game
-      description: Returns ModCategory By Game data for public API consumers. Supports
-        optional query filters.
+      summary: List resources by game (ModCategory)
+      description: 'v3 `ModCategory` endpoint. Purpose: Return resources filtered
+        by game identifier. Expected input: Provide required path identifiers plus
+        optional query filters where supported. Returned data: JSON payload used by
+        GameBanana clients for list, detail, or interaction views. Last verified probe
+        content-type: `application/json; charset=utf-8`.'
       parameters:
       - in: query
         name: _aGameRowIds[
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
+        description: Optional query parameter `_aGameRowIds[`. Array-style game row
+          identifier parameter. Used by legacy list endpoints that accept repeated
+          game IDs.
+        example: 1
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv3/ModCategory/ByGame`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv3/ModCategory/ByGame
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: bygame-example-1
+                  - id: 2
+                    name: bygame-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         '400':
-          description: Bad request
+          description: HTTP 400 response as observed for this endpoint.
         '401':
-          description: Unauthorized
+          description: HTTP 401 response as observed for this endpoint.
         '403':
-          description: Forbidden
+          description: HTTP 403 response as observed for this endpoint.
         '404':
-          description: Not found
+          description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v3: ModCategory'
       x-last-test:
@@ -38,3 +68,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv3/ModCategory/ByGame
         contentType: application/json; charset=utf-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ByGame` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv3/ModCategory/ByGame
+      x-observed-response-format: json

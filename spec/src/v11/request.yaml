@@ -2,32 +2,64 @@ paths:
   /apiv11/Request/{submission_id}/Bounty/Contributors:
     get:
       operationId: v11_request_submission_id_bounty_contributors_get
-      summary: Get Request {submission Id} Bounty Contributors
-      description: Returns Request {submission Id} Bounty Contributors data for public
-        API consumers. Supports optional query filters.
+      summary: List bounty contributors (Request)
+      description: 'v11 `Request` endpoint. Purpose: Return members who contributed
+        bounty funds. Expected input: Provide required path identifiers plus optional
+        query filters where supported. Returned data: JSON payload used by GameBanana
+        clients for list, detail, or interaction views. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Path parameter
+        description: Required path parameter `submission_id`. Numeric identifier for
+          the target entity. Use an ID from index/search endpoints or previously resolved
+          links.
+        example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Query parameter
+        description: Optional query parameter `_nPage`. 1-based page index for paginated
+          results. Use `1` for the first page and increment for subsequent pages.
+        example: 1
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Request/{submission_id}/Bounty/Contributors`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Request/{submission_id}/Bounty/Contributors
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: contributors-example-1
+                  - id: 2
+                    name: contributors-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Request'
       x-last-test:
@@ -36,3 +68,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Request/1/Bounty/Contributors
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Contributors` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Request/1/Bounty/Contributors
+      x-observed-response-format: json

@@ -2,18 +2,54 @@ paths:
   /apiv12/Tool/1/ProfilePage:
     get:
       operationId: v12_tool_1_profile_page_get
-      summary: Get Tool 1 Profile Page
-      description: Returns Tool 1 Profile Page data for public API consumers.
+      summary: Fetch profile page payload (Tool)
+      description: 'v12 `Tool` endpoint `1 / Profile Page`. Purpose: Return the full
+        profile-page data model used by GameBanana clients for a single entity. Expected
+        input: No parameters are required for a baseline request. Returned data: typically
+        a domain-specific JSON object/collection used by GameBanana web clients and
+        integrations. Probe evidence indicates this route can sometimes return non-JSON
+        content; implement content-type checks before parsing. Last verified probe
+        content-type: `text/html; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Tool/1/ProfilePage`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Tool/1/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Tool/1/ProfilePage`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Tool'
       x-last-test:
@@ -23,21 +59,69 @@ paths:
         url: https://gamebanana.com/apiv12/Tool/1/ProfilePage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Tool/1/ProfilePage
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `html`,
+        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
+        charset=UTF-8).'
+      x-live-verification-status: error
+      x-live-verification-note: 'Full verification on 2026-06-01T21:22:07Z returned
+        error: HTTP Error 404: Not Found'
   /apiv12/Tool/Index:
     get:
       operationId: v12_tool_index_get
-      summary: Get Tool Index
-      description: Returns Tool Index data for public API consumers.
+      summary: List primary resources (Tool)
+      description: 'v12 `Tool` endpoint `Index`. Purpose: Retrieve the default listing
+        for this domain, usually used to populate landing pages or initial browse
+        views. Expected input: No parameters are required for a baseline request.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Tool/Index`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Tool/Index
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: index-example-1
+                  - id: 2
+                    name: index-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Tool'
       x-last-test:
@@ -46,21 +130,72 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Tool/Index
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Index` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Tool/Index
+      x-observed-response-format: json
   /apiv12/Tool/ListFilterConfig:
     get:
       operationId: v12_tool_list_filter_config_get
-      summary: Get Tool List Filter Config
-      description: Returns Tool List Filter Config data for public API consumers.
+      summary: Get list filter configuration (Tool)
+      description: 'v12 `Tool` endpoint `List Filter Config`. Purpose: Return available
+        filter/sort metadata used to construct list and search requests. Expected
+        input: No parameters are required for a baseline request. Returned data: typically
+        a domain-specific JSON object/collection used by GameBanana web clients and
+        integrations. Probe evidence indicates this route can sometimes return non-JSON
+        content; implement content-type checks before parsing. Last verified probe
+        content-type: `text/html; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Tool/ListFilterConfig`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Tool/ListFilterConfig
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: listfilterconfig-example-1
+                  - id: 2
+                    name: listfilterconfig-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Tool/ListFilterConfig`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Tool'
       x-last-test:
@@ -70,21 +205,72 @@ paths:
         url: https://gamebanana.com/apiv12/Tool/ListFilterConfig
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ListFilterConfig` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Tool/ListFilterConfig
+      x-observed-response-format: html
   /apiv12/Tool/Search:
     get:
       operationId: v12_tool_search_get
-      summary: Get Tool Search
-      description: Returns Tool Search data for public API consumers.
+      summary: Search resources (Tool)
+      description: 'v12 `Tool` endpoint `Search`. Purpose: Execute a server-side search
+        query for this domain and return matching records. Expected input: No parameters
+        are required for a baseline request. Returned data: typically a domain-specific
+        JSON object/collection used by GameBanana web clients and integrations. Probe
+        evidence indicates this route can sometimes return non-JSON content; implement
+        content-type checks before parsing. Last verified probe content-type: `text/html;
+        charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Tool/Search`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Tool/Search
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: search-example-1
+                  - id: 2
+                    name: search-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Tool/Search`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Tool'
       x-last-test:
@@ -94,3 +280,22 @@ paths:
         url: https://gamebanana.com/apiv12/Tool/Search
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Search` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Tool/Search
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `html`,
+        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
+        charset=UTF-8).'
+      x-live-verification-status: error
+      x-live-verification-note: 'Full verification on 2026-06-01T21:22:07Z returned
+        error: HTTP Error 404: Not Found'

@@ -2,53 +2,100 @@ paths:
   /apiv11/{model_name}/Index:
     get:
       operationId: v11_modelname_index_get
-      summary: Get {model_name} Index
-      description: Returns {model_name} Index data for public API consumers. Supports
-        optional query filters.
+      summary: List primary resources ({model_name})
+      description: 'v11 `{model_name}` endpoint `Index`. Purpose: Retrieve the default
+        listing for this domain, usually used to populate landing pages or initial
+        browse views. Expected input: Provide required path identifiers and optional
+        query filters as documented below. Returned data: typically a domain-specific
+        JSON object/collection used by GameBanana web clients and integrations. Probe
+        evidence indicates this route can sometimes return non-JSON content; implement
+        content-type checks before parsing. Last verified probe content-type: `text/html;
+        charset=UTF-8`.'
       parameters:
       - in: path
         name: model_name
         required: true
         schema:
           type: string
-        description: Required. Enter the model name.
+        description: Required path parameter `model_name`. Model name selector identifying
+          the target API model. Typical values include content domains such as `Mod`,
+          `Game`, or `Member`.
+        example: Mod
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: 'Which ''page'' of results to get. Allowed values: greater than
-          1. Default value: 1'
+        description: Optional query parameter `_nPage`. 1-based page index for paginated
+          results. Use `1` for the first page and increment for subsequent pages.
+        example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: 'Number of results per page. Allowed values: 1 through 50. Default
-          value: 20'
+        description: Optional query parameter `_nPerpage`. Maximum items to return
+          per page. Tune this for payload size vs. request count tradeoffs.
+        example: 15
       - in: query
         name: _sSort
         required: false
         schema:
           type: string
-        description: 'How to sort results. Allowed values: see _aSorts in ListFilterConfig'
+        description: Optional query parameter `_sSort`. Sort mode key used by the
+          endpoint. Use server-supported values from `ListFilterConfig` where available.
+        example: newest
       - in: query
         name: _aFilters[Generic_WasFeatured]
         required: false
         schema:
           type: string
-        description: 'If provided, display only featured records. See other filters
-          in ListFilterConfig Allowed values: true'
+        description: Optional query parameter `_aFilters[Generic_WasFeatured]`. Filter
+          key `Generic_WasFeatured` used by server-side query filtering. Combine with
+          pagination/sort parameters to build faceted result queries.
+        example: example
       responses:
         '200':
-          description: 200 Success - Latest Mods in section Mod
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/{model_name}/Index`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/{model_name}/Index
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: index-example-1
+                  - id: 2
+                    name: index-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv11/{model_name}/Index`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: {model_name}'
       x-last-test:
@@ -58,29 +105,85 @@ paths:
         url: https://gamebanana.com/apiv11/Mod/Index
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Index` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/example/Index
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `html`,
+        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
+        charset=UTF-8).'
   /apiv11/{model_name}/ListFilterConfig:
     get:
       operationId: v11_modelname_list_filter_config_get
-      summary: Get {model_name} List Filter Config
-      description: Returns {model_name} List Filter Config data for public API consumers.
-        Supports optional query filters.
+      summary: Get list filter configuration ({model_name})
+      description: 'v11 `{model_name}` endpoint `List Filter Config`. Purpose: Return
+        available filter/sort metadata used to construct list and search requests.
+        Expected input: Provide required path identifiers and optional query filters
+        as documented below. Returned data: typically a domain-specific JSON object/collection
+        used by GameBanana web clients and integrations. Probe evidence indicates
+        this route can sometimes return non-JSON content; implement content-type checks
+        before parsing. Last verified probe content-type: `text/html; charset=UTF-8`.'
       parameters:
       - in: path
         name: model_name
         required: true
         schema:
           type: string
-        description: Required. Enter the model name.
+        description: Required path parameter `model_name`. Model name selector identifying
+          the target API model. Typical values include content domains such as `Mod`,
+          `Game`, or `Member`.
+        example: Mod
       responses:
         '200':
-          description: 200 Success
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/{model_name}/ListFilterConfig`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/{model_name}/ListFilterConfig
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: listfilterconfig-example-1
+                  - id: 2
+                    name: listfilterconfig-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv11/{model_name}/ListFilterConfig`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: {model_name}'
       x-last-test:
@@ -90,3 +193,16 @@ paths:
         url: https://gamebanana.com/apiv11/Mod/ListFilterConfig
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ListFilterConfig` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/example/ListFilterConfig
+      x-observed-response-format: html

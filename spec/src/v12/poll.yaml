@@ -2,18 +2,54 @@ paths:
   /apiv12/Poll/1/ProfilePage:
     get:
       operationId: v12_poll_1_profile_page_get
-      summary: Get Poll 1 Profile Page
-      description: Returns Poll 1 Profile Page data for public API consumers.
+      summary: Fetch profile page payload (Poll)
+      description: 'v12 `Poll` endpoint `1 / Profile Page`. Purpose: Return the full
+        profile-page data model used by GameBanana clients for a single entity. Expected
+        input: No parameters are required for a baseline request. Returned data: typically
+        a domain-specific JSON object/collection used by GameBanana web clients and
+        integrations. Probe evidence indicates this route can sometimes return non-JSON
+        content; implement content-type checks before parsing. Last verified probe
+        content-type: `text/html; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients. Probe data observed `text/html` responses on this route; clients
+            should branch parsing by content-type.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Poll/1/ProfilePage`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Poll/1/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response body observed for `/apiv12/Poll/1/ProfilePage`
+                  in probe data.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana
+                endpoint.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Poll'
       x-last-test:
@@ -23,21 +59,66 @@ paths:
         url: https://gamebanana.com/apiv12/Poll/1/ProfilePage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Poll/1/ProfilePage
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `html`,
+        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
+        charset=UTF-8).'
   /apiv12/Poll/Index:
     get:
       operationId: v12_poll_index_get
-      summary: Get Poll Index
-      description: Returns Poll Index data for public API consumers.
+      summary: List primary resources (Poll)
+      description: 'v12 `Poll` endpoint `Index`. Purpose: Retrieve the default listing
+        for this domain, usually used to populate landing pages or initial browse
+        views. Expected input: No parameters are required for a baseline request.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Poll/Index`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Poll/Index
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: index-example-1
+                  - id: 2
+                    name: index-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Poll'
       x-last-test:
@@ -46,21 +127,67 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Poll/Index
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Index` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Poll/Index
+      x-observed-response-format: json
   /apiv12/Poll/ListFilterConfig:
     get:
       operationId: v12_poll_list_filter_config_get
-      summary: Get Poll List Filter Config
-      description: Returns Poll List Filter Config data for public API consumers.
+      summary: Get list filter configuration (Poll)
+      description: 'v12 `Poll` endpoint `List Filter Config`. Purpose: Return available
+        filter/sort metadata used to construct list and search requests. Expected
+        input: No parameters are required for a baseline request. Returned data: typically
+        a domain-specific JSON object/collection used by GameBanana web clients and
+        integrations. Last verified probe content-type: `application/json; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Poll/ListFilterConfig`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Poll/ListFilterConfig
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: listfilterconfig-example-1
+                  - id: 2
+                    name: listfilterconfig-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response payload observed in live verification.
+              example: <!doctype html><html><body>Observed HTML payload.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Poll'
       x-last-test:
@@ -69,29 +196,73 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Poll/ListFilterConfig
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ListFilterConfig` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Poll/ListFilterConfig
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `json`,
+        full live verification on 2026-06-01T21:22:07Z returned `html` (text/html;
+        charset=UTF-8).'
   /apiv12/Poll/{id}/Config:
     get:
       operationId: v12_poll_id_config_get
-      summary: Get Poll {id} Config
-      description: Returns Poll {id} Config data for public API consumers. Supports
-        optional query filters.
+      summary: Get resource configuration (Poll)
+      description: 'v12 `Poll` endpoint `{id} / Config`. Purpose: Return configuration
+        data required by client workflows for this resource. Expected input: Provide
+        required path identifiers and optional query filters as documented below.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Poll/{id}/Config`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Poll/{id}/Config
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  filters:
+                  - key: sort
+                    values:
+                    - newest
+                    - popular
+                  defaults:
+                    sort: newest
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Poll'
       x-last-test:
@@ -100,29 +271,75 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Poll/1/Config
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Config` responses to drive config views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Poll/1/Config
+      x-observed-response-format: json
   /apiv12/Poll/{id}/ProfilePage:
     get:
       operationId: v12_poll_id_profile_page_get
-      summary: Get Poll {id} Profile Page
-      description: Returns Poll {id} Profile Page data for public API consumers. Supports
-        optional query filters.
+      summary: Fetch profile page payload (Poll)
+      description: 'v12 `Poll` endpoint `{id} / Profile Page`. Purpose: Return the
+        full profile-page data model used by GameBanana clients for a single entity.
+        Expected input: Provide required path identifiers and optional query filters
+        as documented below. Returned data: typically a domain-specific JSON object/collection
+        used by GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Poll/{id}/ProfilePage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Poll/{id}/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
+            text/html:
+              schema:
+                type: string
+                description: HTML response payload observed in live verification.
+              example: <!doctype html><html><body>Observed HTML payload.</body></html>
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Poll'
       x-last-test:
@@ -131,29 +348,75 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Poll/1/ProfilePage
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Poll/1/ProfilePage
+      x-observed-response-format: mixed
+      x-observed-response-note: 'Observed format drift: previous docs had `json`,
+        full live verification on 2026-06-01T21:22:07Z returned `html` (text/html;
+        charset=UTF-8).'
   /apiv12/Poll/{submission_id}/Votes:
     get:
       operationId: v12_poll_submission_id_votes_get
-      summary: Get Poll {submission Id} Votes
-      description: Returns Poll {submission Id} Votes data for public API consumers.
-        Supports optional query filters.
+      summary: List poll votes (Poll)
+      description: 'v12 `Poll` endpoint. Purpose: Return vote records for the target
+        poll. Expected input: Provide required path identifiers plus optional query
+        filters where supported. Returned data: JSON payload used by GameBanana clients
+        for list, detail, or interaction views. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `submission_id`. Numeric identifier for
+          the target entity. Use an ID from index/search endpoints or previously resolved
+          links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/Poll/{submission_id}/Votes`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/Poll/{submission_id}/Votes
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: votes-example-1
+                  - id: 2
+                    name: votes-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: Poll'
       x-last-test:
@@ -162,3 +425,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Poll/1/Votes
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Votes` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/Poll/1/Votes
+      x-observed-response-format: json

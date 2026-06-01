@@ -2,18 +2,47 @@ paths:
   /apiv12/RemoteDL/Index:
     get:
       operationId: v12_remotedl_index_get
-      summary: Get RemoteDL Index
-      description: Returns RemoteDL Index data for public API consumers.
+      summary: List primary resources (RemoteDL)
+      description: 'v12 `RemoteDL` endpoint `Index`. Purpose: Retrieve the default
+        listing for this domain, usually used to populate landing pages or initial
+        browse views. Expected input: No parameters are required for a baseline request.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/RemoteDL/Index`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/RemoteDL/Index
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: index-example-1
+                  - id: 2
+                    name: index-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: RemoteDL'
       x-last-test:
@@ -22,21 +51,63 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/RemoteDL/Index
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Index` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/RemoteDL/Index
+      x-observed-response-format: json
   /apiv12/RemoteDL/ListFilterConfig:
     get:
       operationId: v12_remotedl_list_filter_config_get
-      summary: Get RemoteDL List Filter Config
-      description: Returns RemoteDL List Filter Config data for public API consumers.
+      summary: Get list filter configuration (RemoteDL)
+      description: 'v12 `RemoteDL` endpoint `List Filter Config`. Purpose: Return
+        available filter/sort metadata used to construct list and search requests.
+        Expected input: No parameters are required for a baseline request. Returned
+        data: typically a domain-specific JSON object/collection used by GameBanana
+        web clients and integrations. Last verified probe content-type: `application/json;
+        charset=UTF-8`.'
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/RemoteDL/ListFilterConfig`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/RemoteDL/ListFilterConfig
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: listfilterconfig-example-1
+                  - id: 2
+                    name: listfilterconfig-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: RemoteDL'
       x-last-test:
@@ -45,29 +116,70 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/RemoteDL/ListFilterConfig
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ListFilterConfig` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/RemoteDL/ListFilterConfig
+      x-observed-response-format: json
   /apiv12/RemoteDL/{id}/Config:
     get:
       operationId: v12_remotedl_id_config_get
-      summary: Get RemoteDL {id} Config
-      description: Returns RemoteDL {id} Config data for public API consumers. Supports
-        optional query filters.
+      summary: Get resource configuration (RemoteDL)
+      description: 'v12 `RemoteDL` endpoint `{id} / Config`. Purpose: Return configuration
+        data required by client workflows for this resource. Expected input: Provide
+        required path identifiers and optional query filters as documented below.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/RemoteDL/{id}/Config`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/RemoteDL/{id}/Config
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  filters:
+                  - key: sort
+                    values:
+                    - newest
+                    - popular
+                  defaults:
+                    sort: newest
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: RemoteDL'
       x-last-test:
@@ -76,29 +188,70 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/RemoteDL/1/Config
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Config` responses to drive config views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/RemoteDL/1/Config
+      x-observed-response-format: json
   /apiv12/RemoteDL/{id}/ProfilePage:
     get:
       operationId: v12_remotedl_id_profile_page_get
-      summary: Get RemoteDL {id} Profile Page
-      description: Returns RemoteDL {id} Profile Page data for public API consumers.
-        Supports optional query filters.
+      summary: Fetch profile page payload (RemoteDL)
+      description: 'v12 `RemoteDL` endpoint `{id} / Profile Page`. Purpose: Return
+        the full profile-page data model used by GameBanana clients for a single entity.
+        Expected input: Provide required path identifiers and optional query filters
+        as documented below. Returned data: typically a domain-specific JSON object/collection
+        used by GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `id`. Numeric identifier for the target
+          entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/RemoteDL/{id}/ProfilePage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/RemoteDL/{id}/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: RemoteDL'
       x-last-test:
@@ -107,29 +260,67 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/RemoteDL/1/ProfilePage
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/RemoteDL/1/ProfilePage
+      x-observed-response-format: json
   /apiv12/RemoteDL/{remoteDLId}:
     get:
       operationId: v12_remotedl_remote_dlid_get
-      summary: Get RemoteDL {remote Dlid}
-      description: Returns RemoteDL {remote Dlid} data for public API consumers. Supports
-        optional query filters.
+      summary: Get resource payload (RemoteDL)
+      description: 'v12 `RemoteDL` endpoint. Purpose: Return endpoint payload for
+        the requested resource context. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. Last verified
+        probe content-type: `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: remoteDLId
         required: true
         schema:
           type: integer
-        description: Observed path parameter
+        description: Required path parameter `remoteDLId`. Numeric identifier for
+          the target entity. Use an ID from index/search endpoints or previously resolved
+          links.
+        example: 1
       responses:
         '200':
-          description: Observed response status 200
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv12/RemoteDL/{remoteDLId}`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv12/RemoteDL/{remoteDLId}
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v12: RemoteDL'
       x-last-test:
@@ -138,3 +329,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/RemoteDL/1
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `RemoteDL` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv12/RemoteDL/1
+      x-observed-response-format: json

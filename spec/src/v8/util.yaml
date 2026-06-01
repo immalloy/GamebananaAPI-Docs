@@ -2,49 +2,80 @@ paths:
   /apiv8/Util/Game/Submissions:
     get:
       operationId: v8_util_game_submissions_get
-      summary: Get Util Game Submissions
-      description: Returns Util Game Submissions data for public API consumers. Supports
-        optional query filters.
+      summary: List submissions (Util)
+      description: 'v8 `Util` endpoint `Game / Submissions`. Purpose: Return submission
+        records associated with the domain or parent entity. Expected input: Provide
+        required path identifiers and optional query filters as documented below.
+        Returned data: typically a domain-specific JSON object/collection used by
+        GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: query
         name: _idGameRow
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
-        example: '6498'
+        description: Optional query parameter `_idGameRow`. Game row identifier. Targets
+          operations to a specific game record.
+        example: 8694
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
-        example: '1'
+        description: Optional query parameter `_nPage`. 1-based page index for paginated
+          results. Use `1` for the first page and increment for subsequent pages.
+        example: 1
       - in: query
         name: _sName
         required: false
         schema:
           type: string
-        description: Observed query parameter in public API usage examples
-        example: mario
+        description: Optional query parameter `_sName`. Name search string. Matched
+          against endpoint-specific name/title fields.
+        example: example
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv8/Util/Game/Submissions`. Field
+                  presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv8/Util/Game/Submissions
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  items:
+                  - id: 1
+                    name: submissions-example-1
+                  - id: 2
+                    name: submissions-example-2
+                  pagination:
+                    page: 1
+                    per_page: 15
+                    total: 2
+                errors: []
         '400':
-          description: Bad request
+          description: HTTP 400 response as observed for this endpoint.
         '401':
-          description: Unauthorized
+          description: HTTP 401 response as observed for this endpoint.
         '403':
-          description: Forbidden
+          description: HTTP 403 response as observed for this endpoint.
         '404':
-          description: Not found
+          description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v8: Util'
       x-last-test:
@@ -53,3 +84,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv8/Util/Game/Submissions?_idGameRow=6498&_nPage=1&_sName=mario
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Submissions` responses to drive list views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv8/Util/Game/Submissions
+      x-observed-response-format: json

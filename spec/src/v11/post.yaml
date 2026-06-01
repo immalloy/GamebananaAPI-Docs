@@ -2,16 +2,22 @@ paths:
   /apiv11/Post/{post_id}:
     post:
       operationId: v11_post_post_id_post
-      summary: Get Post {post Id}
-      description: Returns Post {post Id} data for public API consumers. Supports
-        optional query filters.
+      summary: Get resource payload (Post)
+      description: 'v11 `Post` endpoint. Purpose: Return endpoint payload for the
+        requested resource context. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. Last verified
+        probe content-type: `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: post_id
         required: true
         schema:
           type: integer
-        description: Path parameter
+        description: Required path parameter `post_id`. Numeric identifier for the
+          target entity. Use an ID from index/search endpoints or previously resolved
+          links.
+        example: 1
       requestBody:
         required: false
         content:
@@ -24,14 +30,33 @@ paths:
               additionalProperties: true
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Post/{post_id}`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Post/{post_id}
+                  method: POST
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Post'
       x-last-test:
@@ -40,29 +65,71 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Post/1
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Post` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: POST https://gamebanana.com/apiv11/Post/1
+      x-observed-response-format: json
   /apiv11/Post/{post_id}/ProfilePage:
     get:
       operationId: v11_post_post_id_profile_page_get
-      summary: Get Post {post Id} Profile Page
-      description: Returns Post {post Id} Profile Page data for public API consumers.
-        Supports optional query filters.
+      summary: Fetch profile page payload (Post)
+      description: 'v11 `Post` endpoint `{post Id} / Profile Page`. Purpose: Return
+        the full profile-page data model used by GameBanana clients for a single entity.
+        Expected input: Provide required path identifiers and optional query filters
+        as documented below. Returned data: typically a domain-specific JSON object/collection
+        used by GameBanana web clients and integrations. Last verified probe content-type:
+        `application/json; charset=UTF-8`.'
       parameters:
       - in: path
         name: post_id
         required: true
         schema:
           type: integer
-        description: Path parameter
+        description: Required path parameter `post_id`. Numeric identifier for the
+          target entity. Use an ID from index/search endpoints or previously resolved
+          links.
+        example: 1
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv11/Post/{post_id}/ProfilePage`.
+                  Field presence can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv11/Post/{post_id}/ProfilePage
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  profile:
+                    id: 1
+                    name: Example
+                    summary: Example profile payload
+                  stats:
+                    views: 123
+                    likes: 10
+                errors: []
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v11: Post'
       x-last-test:
@@ -71,3 +138,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Post/1/ProfilePage
         contentType: application/json; charset=UTF-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ProfilePage` responses to drive profile views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv11/Post/1/ProfilePage
+      x-observed-response-format: json

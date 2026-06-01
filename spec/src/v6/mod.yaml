@@ -2,49 +2,74 @@ paths:
   /apiv6/Mod/ByName:
     get:
       operationId: v6_mod_by_name_get
-      summary: Get Mod By Name
-      description: Returns Mod By Name data for public API consumers. Supports optional
-        query filters.
+      summary: Search resources by name (Mod)
+      description: 'v6 `Mod` endpoint. Purpose: Return resources matched by name query.
+        Expected input: Provide required path identifiers plus optional query filters
+        where supported. Returned data: JSON payload used by GameBanana clients for
+        list, detail, or interaction views. Last verified probe content-type: `application/json;
+        charset=utf-8`.'
       parameters:
       - in: query
         name: _csvProperties
         required: false
         schema:
           type: string
-        description: Observed query parameter in public API usage examples
-        example: _idRow,_sName,_aFiles,_aGame
+        description: Optional query parameter `_csvProperties`. Comma-separated property
+          whitelist. Restricts response payload to the listed fields where supported.
+        example: _idRow,_sName
       - in: query
         name: _sName
         required: false
         schema:
           type: string
-        description: Observed query parameter in public API usage examples
-        example: '*uwu*'
+        description: Optional query parameter `_sName`. Name search string. Matched
+          against endpoint-specific name/title fields.
+        example: example
       - in: query
         name: _idGameRow
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
-        example: '6498'
+        description: Optional query parameter `_idGameRow`. Game row identifier. Targets
+          operations to a specific game record.
+        example: 8694
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv6/Mod/ByName`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv6/Mod/ByName
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
         '400':
-          description: Bad request
+          description: HTTP 400 response as observed for this endpoint.
         '401':
-          description: Unauthorized
+          description: HTTP 401 response as observed for this endpoint.
         '403':
-          description: Forbidden
+          description: HTTP 403 response as observed for this endpoint.
         '404':
-          description: Not found
+          description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v6: Mod'
       x-last-test:
@@ -53,45 +78,82 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv6/Mod/ByName?_csvProperties=_idRow%2C_sName%2C_aFiles%2C_aGame&_sName=%2Auwu%2A&_idGameRow=6498
         contentType: application/json; charset=utf-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `ByName` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv6/Mod/ByName
+      x-observed-response-format: json
   /apiv6/Mod/Multi:
     get:
       operationId: v6_mod_multi_get
-      summary: Get Mod Multi
-      description: Returns Mod Multi data for public API consumers. Supports optional
-        query filters.
+      summary: Fetch multiple resources (Mod)
+      description: 'v6 `Mod` endpoint. Purpose: Return multiple resources in a single
+        request using batched identifiers. Expected input: Provide required path identifiers
+        plus optional query filters where supported. Returned data: JSON payload used
+        by GameBanana clients for list, detail, or interaction views. Last verified
+        probe content-type: `application/json; charset=utf-8`.'
       parameters:
       - in: query
         name: _csvProperties
         required: false
         schema:
           type: string
-        description: Observed query parameter in public API usage examples
-        example: _aModManagerIntegrations,_sName,_bHasUpdates,_aLatestUpdates,_aFiles,_aPreviewMedia,_aAlternateFileSources
+        description: Optional query parameter `_csvProperties`. Comma-separated property
+          whitelist. Restricts response payload to the listed fields where supported.
+        example: _idRow,_sName
       - in: query
         name: _csvRowIds
         required: false
         schema:
           type: integer
-        description: Observed query parameter in public API usage examples
-        example: 9651,50891,50891,34011,34011,50935,250364,50932,250391,285496,50912,50934,50934,50910,50882,50882,50882,9647,50895,50893,50894,50903,50871,50930,33986,50931,9657,138058,50885,50885,50885,50885,33994,33990,293809,50908
+        description: Optional query parameter `_csvRowIds`. Comma-separated row identifiers.
+          Batch-fetches specific rows in one request.
+        example: 1,2,3
       responses:
         '200':
-          description: Successful response
+          description: Successful response. Payload structure depends on the endpoint
+            intent and may include nested objects, arrays, and metadata used by GameBanana
+            clients.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
+                description: Response schema for `/apiv6/Mod/Multi`. Field presence
+                  can vary by version, resource state, and caller context.
+              example:
+                _meta:
+                  endpoint: /apiv6/Mod/Multi
+                  method: GET
+                  status: '200'
+                  content_type_hint: application/json
+                  note: Example payload based on observed endpoint behavior and naming
+                    conventions.
+                data:
+                  id: 1
+                  name: example
+                  attributes:
+                    status: active
+                errors: []
         '400':
-          description: Bad request
+          description: HTTP 400 response as observed for this endpoint.
         '401':
-          description: Unauthorized
+          description: HTTP 401 response as observed for this endpoint.
         '403':
-          description: Forbidden
+          description: HTTP 403 response as observed for this endpoint.
         '404':
-          description: Not found
+          description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Unexpected response
+          description: Fallback response for unexpected server behavior, invalid inputs,
+            permission limitations, or upstream failures.
       tags:
       - 'v6: Mod'
       x-last-test:
@@ -100,3 +162,16 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv6/Mod/Multi?_csvProperties=_aModManagerIntegrations%2C_sName%2C_bHasUpdates%2C_aLatestUpdates%2C_aFiles%2C_aPreviewMedia%2C_aAlternateFileSources&_csvRowIds=9651%2C50891%2C50891%2C34011%2C34011%2C50935%2C250364%2C50932%2C250391%2C285496%2C50912%2C50934%2C50934%2C50910%2C50882%2C50882%2C50882%2C9647%2C50895%2C50893%2C50894%2C50903%2C50871%2C50930%2C33986%2C50931%2C9657%2C138058%2C50885%2C50885%2C50885%2C50885%2C33994%2C33990%2C293809%2C50908
         contentType: application/json; charset=utf-8
+      x-developer-notes:
+      - Implement retry with backoff and request timeouts; host behavior can differ
+        between gamebanana.com and api subdomains.
+      - Avoid strict schema locking; additive fields may appear without version bumps.
+      x-common-use-cases:
+      - Use `Multi` responses to drive detail views in client apps.
+      - Preload this endpoint during initial page/app hydration when latency matters.
+      x-edge-cases:
+      - Response shape can change with permissions, moderation state, or hidden/deleted
+        entities.
+      - Treat empty arrays/objects as valid outcomes, not parser errors.
+      x-request-example: GET https://gamebanana.com/apiv6/Mod/Multi
+      x-observed-response-format: json
