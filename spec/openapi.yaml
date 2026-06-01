@@ -3,7 +3,8 @@ info:
   title: GameBanana APIs (Unofficial Documentation)
   version: 0.1.0
   description: A simple API reference made by ImMalloy. You can use this however you
-    like.
+    like. Most endpoints were discovered by crawling/extraction tools, validated by
+    automated tests, and then manually reviewed by me.
 servers:
 - url: https://gamebanana.com
   description: GameBanana main host
