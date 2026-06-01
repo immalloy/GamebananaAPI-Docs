@@ -1,0 +1,284 @@
+paths:
+  /apiv11/Mod/Index:
+    get:
+      operationId: v11_mod_index_get
+      summary: Get Mod Index
+      description: Returns Mod Index data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _aFilters[Generic_Category]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Game]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Studio]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _aFilters[Generic_Submitter]
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/Index
+        contentType: application/json; charset=UTF-8
+  /apiv11/Mod/ListFilterConfig:
+    get:
+      operationId: v11_mod_list_filter_config_get
+      summary: Get Mod List Filter Config
+      description: Returns Mod List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Mod/Multi:
+    get:
+      operationId: v11_mod_multi_get
+      summary: Get Mod Multi
+      description: Returns Mod Multi data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: 506678,547865,547860,490773,34283
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_aSubmitter,_tsDateAdded,_sVersion,_aRootCategory,_aPreviewMedia,_nLikeCount,_nViewCount,_aFiles,_sDescription,_sText,_nDownloadCount,_aModManagerIntegrations
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/Multi?_csvRowIds=506678%2C547865%2C547860%2C490773%2C34283&_csvProperties=_idRow%2C_sName%2C_aSubmitter%2C_tsDateAdded%2C_sVersion%2C_aRootCategory%2C_aPreviewMedia%2C_nLikeCount%2C_nViewCount%2C_aFiles%2C_sDescription%2C_sText%2C_nDownloadCount%2C_aModManagerIntegrations
+        contentType: application/json; charset=UTF-8
+  /apiv11/Mod/{id1}/Config:
+    get:
+      operationId: v11_mod_id1_config_get
+      summary: Get Mod {id1} Config
+      description: Returns Mod {id1} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv11/Mod/{id1}/Posts:
+    get:
+      operationId: v11_mod_id1_posts_get
+      summary: Get Mod {id1} Posts
+      description: Returns Mod {id1} Posts data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/Posts
+        contentType: application/json; charset=UTF-8
+  /apiv11/Mod/{id1}/ProfilePage:
+    get:
+      operationId: v11_mod_id1_profile_page_get
+      summary: Get Mod {id1} Profile Page
+      description: Returns Mod {id1} Profile Page data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv11/Mod/{mod_id}/DownloadPage:
+    get:
+      operationId: v11_mod_mod_id_download_page_get
+      summary: Get Mod {mod Id} Download Page
+      description: Returns Mod {mod Id} Download Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: mod_id
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/1/DownloadPage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

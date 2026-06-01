@@ -1,0 +1,947 @@
+paths:
+  /apiv11/Member/EmailAuthenticate:
+    get:
+      operationId: v11_member_email_authenticate_get
+      summary: Get Member Email Authenticate
+      description: Returns Member Email Authenticate data for public API consumers.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/EmailAuthenticate
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Member/UiConfig:
+    get:
+      operationId: v11_member_ui_config_get
+      summary: Get Member Ui Config
+      description: Returns Member Ui Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: query
+        name: _sUrl
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/UiConfig
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/UiCounts:
+    get:
+      operationId: v11_member_ui_counts_get
+      summary: Get Member Ui Counts
+      description: Returns Member Ui Counts data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/UiCounts
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Member/{id1}/Apps:
+    get:
+      operationId: v11_member_id1_apps_get
+      summary: Get Member {id1} Apps
+      description: Returns Member {id1} Apps data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Apps
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/AvatarTooltip:
+    get:
+      operationId: v11_member_id1_avatar_tooltip_get
+      summary: Get Member {id1} Avatar Tooltip
+      description: Returns Member {id1} Avatar Tooltip data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/AvatarTooltip
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/Buddies:
+    get:
+      operationId: v11_member_id1_buddies_get
+      summary: Get Member {id1} Buddies
+      description: Returns Member {id1} Buddies data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Buddies
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/BuddiesSummary:
+    get:
+      operationId: v11_member_id1_buddies_summary_get
+      summary: Get Member {id1} Buddies Summary
+      description: Returns Member {id1} Buddies Summary data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/BuddiesSummary
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/Config:
+    get:
+      operationId: v11_member_id1_config_get
+      summary: Get Member {id1} Config
+      description: Returns Member {id1} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/IncomingBuddyRequests:
+    get:
+      operationId: v11_member_id1_incoming_buddy_requests_get
+      summary: Get Member {id1} Incoming Buddy Requests
+      description: Returns Member {id1} Incoming Buddy Requests data for public API
+        consumers. Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/IncomingBuddyRequests
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/OutgoingBuddyRequests:
+    get:
+      operationId: v11_member_id1_outgoing_buddy_requests_get
+      summary: Get Member {id1} Outgoing Buddy Requests
+      description: Returns Member {id1} Outgoing Buddy Requests data for public API
+        consumers. Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/OutgoingBuddyRequests
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/Posts:
+    get:
+      operationId: v11_member_id1_posts_get
+      summary: Get Member {id1} Posts
+      description: Returns Member {id1} Posts data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Posts
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/ProfilePage:
+    get:
+      operationId: v11_member_id1_profile_page_get
+      summary: Get Member {id1} Profile Page
+      description: Returns Member {id1} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/SubFeed:
+    get:
+      operationId: v11_member_id1_sub_feed_get
+      summary: Get Member {id1} Sub Feed
+      description: Returns Member {id1} Sub Feed data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/SubFeed
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id1}/Submissions/Sublog:
+    get:
+      operationId: v11_member_id1_submissions_sublog_get
+      summary: Get Member {id1} Submissions Sublog
+      description: Returns Member {id1} Submissions Sublog data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sDirection
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _sNameOperator
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Submissions/Sublog
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/AwardedBounties:
+    get:
+      operationId: v11_member_id_awarded_bounties_get
+      summary: Get Member {id} Awarded Bounties
+      description: Returns Member {id} Awarded Bounties data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/AwardedBounties
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/ContributedBounties:
+    get:
+      operationId: v11_member_id_contributed_bounties_get
+      summary: Get Member {id} Contributed Bounties
+      description: Returns Member {id} Contributed Bounties data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/ContributedBounties
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/LikedSubmissions:
+    get:
+      operationId: v11_member_id_liked_submissions_get
+      summary: Get Member {id} Liked Submissions
+      description: Returns Member {id} Liked Submissions data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/LikedSubmissions
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/Medals:
+    get:
+      operationId: v11_member_id_medals_get
+      summary: Get Member {id} Medals
+      description: Returns Member {id} Medals data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Medals
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/ParticipatedContests:
+    get:
+      operationId: v11_member_id_participated_contests_get
+      summary: Get Member {id} Participated Contests
+      description: Returns Member {id} Participated Contests data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/ParticipatedContests
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/RatedIdeas:
+    get:
+      operationId: v11_member_id_rated_ideas_get
+      summary: Get Member {id} Rated Ideas
+      description: Returns Member {id} Rated Ideas data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/RatedIdeas
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/SolvedQuestions:
+    get:
+      operationId: v11_member_id_solved_questions_get
+      summary: Get Member {id} Solved Questions
+      description: Returns Member {id} Solved Questions data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/SolvedQuestions
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/SubFeed:
+    get:
+      operationId: v11_member_id_sub_feed_get
+      summary: Get Member {id} Sub Feed
+      description: Returns Member {id} Sub Feed data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Enter the Member's ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Which ''page'' of results to get. Allowed values: greater than
+          1. Default value: 1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: 'Number of results per page. Allowed values: 1 through 50. Default
+          value: 20'
+      responses:
+        '200':
+          description: 200 Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/SubFeed
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/Submissions/Contributions:
+    get:
+      operationId: v11_member_id_submissions_contributions_get
+      summary: Get Member {id} Submissions Contributions
+      description: Returns Member {id} Submissions Contributions data for public API
+        consumers. Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Submissions/Contributions
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/Submissions/Posts:
+    get:
+      operationId: v11_member_id_submissions_posts_get
+      summary: Get Member {id} Submissions Posts
+      description: Returns Member {id} Submissions Posts data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/Submissions/Posts
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/ThankedSubmissions:
+    get:
+      operationId: v11_member_id_thanked_submissions_get
+      summary: Get Member {id} Thanked Submissions
+      description: Returns Member {id} Thanked Submissions data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/ThankedSubmissions
+        contentType: application/json; charset=UTF-8
+  /apiv11/Member/{id}/VotedPolls:
+    get:
+      operationId: v11_member_id_voted_polls_get
+      summary: Get Member {id} Voted Polls
+      description: Returns Member {id} Voted Polls data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Member ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      responses:
+        '200':
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Member'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Member/1/VotedPolls
+        contentType: application/json; charset=UTF-8

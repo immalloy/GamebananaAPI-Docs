@@ -1,0 +1,48 @@
+paths:
+  /apiv12/Project/Index:
+    get:
+      operationId: v12_project_index_get
+      summary: Get Project Index
+      description: Returns Project Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Project'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Project/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Project/ListFilterConfig:
+    get:
+      operationId: v12_project_list_filter_config_get
+      summary: Get Project List Filter Config
+      description: Returns Project List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Project'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Project/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

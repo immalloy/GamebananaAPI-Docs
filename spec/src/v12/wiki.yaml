@@ -1,0 +1,73 @@
+paths:
+  /apiv12/Wiki/Index:
+    get:
+      operationId: v12_wiki_index_get
+      summary: Get Wiki Index
+      description: Returns Wiki Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Wiki'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Wiki/Index
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Wiki/ListFilterConfig:
+    get:
+      operationId: v12_wiki_list_filter_config_get
+      summary: Get Wiki List Filter Config
+      description: Returns Wiki List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Wiki'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Wiki/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Wiki/Search:
+    get:
+      operationId: v12_wiki_search_get
+      summary: Get Wiki Search
+      description: Returns Wiki Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Wiki'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Wiki/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

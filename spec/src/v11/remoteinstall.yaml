@@ -1,0 +1,46 @@
+paths:
+  /apiv11/RemoteInstall/{memberid}/{secretkey}/PizzaOvenPlus:
+    get:
+      operationId: v11_remoteinstall_memberid_secretkey_pizza_oven_plus_get
+      summary: Get RemoteInstall {memberid} {secretkey} Pizza Oven Plus
+      description: Returns RemoteInstall {memberid} {secretkey} Pizza Oven Plus data
+        for public API consumers. Supports optional query filters.
+      parameters:
+      - in: path
+        name: memberid
+        required: true
+        schema:
+          type: integer
+        description: Path parameter
+      - in: path
+        name: secretkey
+        required: true
+        schema:
+          type: string
+        description: Path parameter
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/RemoteInstall/1/test/PizzaOvenPlus
+        contentType: application/json; charset=UTF-8

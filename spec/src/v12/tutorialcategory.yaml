@@ -1,0 +1,73 @@
+paths:
+  /apiv12/TutorialCategory/Index:
+    get:
+      operationId: v12_tutorialcategory_index_get
+      summary: Get TutorialCategory Index
+      description: Returns TutorialCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: TutorialCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/TutorialCategory/Index
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/TutorialCategory/ListFilterConfig:
+    get:
+      operationId: v12_tutorialcategory_list_filter_config_get
+      summary: Get TutorialCategory List Filter Config
+      description: Returns TutorialCategory List Filter Config data for public API
+        consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: TutorialCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/TutorialCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/TutorialCategory/Search:
+    get:
+      operationId: v12_tutorialcategory_search_get
+      summary: Get TutorialCategory Search
+      description: Returns TutorialCategory Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: TutorialCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/TutorialCategory/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

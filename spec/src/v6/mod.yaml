@@ -1,0 +1,102 @@
+paths:
+  /apiv6/Mod/ByName:
+    get:
+      operationId: v6_mod_by_name_get
+      summary: Get Mod By Name
+      description: Returns Mod By Name data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_aFiles,_aGame
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: '*uwu*'
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '6498'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v6: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv6/Mod/ByName?_csvProperties=_idRow%2C_sName%2C_aFiles%2C_aGame&_sName=%2Auwu%2A&_idGameRow=6498
+        contentType: application/json; charset=utf-8
+  /apiv6/Mod/Multi:
+    get:
+      operationId: v6_mod_multi_get
+      summary: Get Mod Multi
+      description: Returns Mod Multi data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aModManagerIntegrations,_sName,_bHasUpdates,_aLatestUpdates,_aFiles,_aPreviewMedia,_aAlternateFileSources
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: 9651,50891,50891,34011,34011,50935,250364,50932,250391,285496,50912,50934,50934,50910,50882,50882,50882,9647,50895,50893,50894,50903,50871,50930,33986,50931,9657,138058,50885,50885,50885,50885,33994,33990,293809,50908
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v6: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv6/Mod/Multi?_csvProperties=_aModManagerIntegrations%2C_sName%2C_bHasUpdates%2C_aLatestUpdates%2C_aFiles%2C_aPreviewMedia%2C_aAlternateFileSources&_csvRowIds=9651%2C50891%2C50891%2C34011%2C34011%2C50935%2C250364%2C50932%2C250391%2C285496%2C50912%2C50934%2C50934%2C50910%2C50882%2C50882%2C50882%2C9647%2C50895%2C50893%2C50894%2C50903%2C50871%2C50930%2C33986%2C50931%2C9657%2C138058%2C50885%2C50885%2C50885%2C50885%2C33994%2C33990%2C293809%2C50908
+        contentType: application/json; charset=utf-8

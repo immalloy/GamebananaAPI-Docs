@@ -1,0 +1,95 @@
+paths:
+  /apiv12/NewsCategory/1/ProfilePage:
+    get:
+      operationId: v12_newscategory_1_profile_page_get
+      summary: Get NewsCategory 1 Profile Page
+      description: Returns NewsCategory 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: NewsCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/NewsCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/NewsCategory/Index:
+    get:
+      operationId: v12_newscategory_index_get
+      summary: Get NewsCategory Index
+      description: Returns NewsCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: NewsCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/NewsCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/NewsCategory/ListFilterConfig:
+    get:
+      operationId: v12_newscategory_list_filter_config_get
+      summary: Get NewsCategory List Filter Config
+      description: Returns NewsCategory List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: NewsCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/NewsCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/NewsCategory/Search:
+    get:
+      operationId: v12_newscategory_search_get
+      summary: Get NewsCategory Search
+      description: Returns NewsCategory Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: NewsCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/NewsCategory/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

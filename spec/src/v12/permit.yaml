@@ -1,0 +1,97 @@
+paths:
+  /apiv12/Permit/1/ProfilePage:
+    get:
+      operationId: v12_permit_1_profile_page_get
+      summary: Get Permit 1 Profile Page
+      description: Returns Permit 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Permit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Permit/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Permit/Index:
+    get:
+      operationId: v12_permit_index_get
+      summary: Get Permit Index
+      description: Returns Permit Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Permit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Permit/Index
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Permit/ListFilterConfig:
+    get:
+      operationId: v12_permit_list_filter_config_get
+      summary: Get Permit List Filter Config
+      description: Returns Permit List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Permit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Permit/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Permit/Search:
+    get:
+      operationId: v12_permit_search_get
+      summary: Get Permit Search
+      description: Returns Permit Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Permit'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Permit/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

@@ -1,0 +1,164 @@
+paths:
+  /apiv12/Idea/1/ProfilePage:
+    get:
+      operationId: v12_idea_1_profile_page_get
+      summary: Get Idea 1 Profile Page
+      description: Returns Idea 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Idea'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Idea/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Idea/Index:
+    get:
+      operationId: v12_idea_index_get
+      summary: Get Idea Index
+      description: Returns Idea Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Idea'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Idea/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Idea/ListFilterConfig:
+    get:
+      operationId: v12_idea_list_filter_config_get
+      summary: Get Idea List Filter Config
+      description: Returns Idea List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Idea'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Idea/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Idea/{id}/Config:
+    get:
+      operationId: v12_idea_id_config_get
+      summary: Get Idea {id} Config
+      description: Returns Idea {id} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Idea'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Idea/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv12/Idea/{id}/ProfilePage:
+    get:
+      operationId: v12_idea_id_profile_page_get
+      summary: Get Idea {id} Profile Page
+      description: Returns Idea {id} Profile Page data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Idea'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Idea/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Idea/{submission_id}/Ratings:
+    get:
+      operationId: v12_idea_submission_id_ratings_get
+      summary: Get Idea {submission Id} Ratings
+      description: Returns Idea {submission Id} Ratings data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Idea'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Idea/1/Ratings
+        contentType: application/json; charset=UTF-8

@@ -1,0 +1,71 @@
+paths:
+  /apiv12/SoundCategory/1/ProfilePage:
+    get:
+      operationId: v12_soundcategory_1_profile_page_get
+      summary: Get SoundCategory 1 Profile Page
+      description: Returns SoundCategory 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SoundCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SoundCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/SoundCategory/Index:
+    get:
+      operationId: v12_soundcategory_index_get
+      summary: Get SoundCategory Index
+      description: Returns SoundCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SoundCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SoundCategory/Index
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/SoundCategory/ListFilterConfig:
+    get:
+      operationId: v12_soundcategory_list_filter_config_get
+      summary: Get SoundCategory List Filter Config
+      description: Returns SoundCategory List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SoundCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SoundCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8

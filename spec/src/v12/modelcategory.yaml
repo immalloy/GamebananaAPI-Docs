@@ -1,0 +1,95 @@
+paths:
+  /apiv12/ModelCategory/1/ProfilePage:
+    get:
+      operationId: v12_modelcategory_1_profile_page_get
+      summary: Get ModelCategory 1 Profile Page
+      description: Returns ModelCategory 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModelCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModelCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModelCategory/Index:
+    get:
+      operationId: v12_modelcategory_index_get
+      summary: Get ModelCategory Index
+      description: Returns ModelCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModelCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModelCategory/Index
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/ModelCategory/ListFilterConfig:
+    get:
+      operationId: v12_modelcategory_list_filter_config_get
+      summary: Get ModelCategory List Filter Config
+      description: Returns ModelCategory List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModelCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModelCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModelCategory/Search:
+    get:
+      operationId: v12_modelcategory_search_get
+      summary: Get ModelCategory Search
+      description: Returns ModelCategory Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModelCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModelCategory/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

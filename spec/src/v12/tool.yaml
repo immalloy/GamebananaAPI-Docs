@@ -1,0 +1,96 @@
+paths:
+  /apiv12/Tool/1/ProfilePage:
+    get:
+      operationId: v12_tool_1_profile_page_get
+      summary: Get Tool 1 Profile Page
+      description: Returns Tool 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tool'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tool/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Tool/Index:
+    get:
+      operationId: v12_tool_index_get
+      summary: Get Tool Index
+      description: Returns Tool Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tool'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tool/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Tool/ListFilterConfig:
+    get:
+      operationId: v12_tool_list_filter_config_get
+      summary: Get Tool List Filter Config
+      description: Returns Tool List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tool'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tool/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Tool/Search:
+    get:
+      operationId: v12_tool_search_get
+      summary: Get Tool Search
+      description: Returns Tool Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Tool'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Tool/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

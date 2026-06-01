@@ -1,0 +1,242 @@
+paths:
+  /apiv12/Util/Config/TrashReasons:
+    get:
+      operationId: v12_util_config_trash_reasons_get
+      summary: Get Util Config Trash Reasons
+      description: Returns Util Config Trash Reasons data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/Config/TrashReasons
+        contentType: application/json; charset=UTF-8
+  /apiv12/Util/Generic/Discussions:
+    get:
+      operationId: v12_util_generic_discussions_get
+      summary: Get Util Generic Discussions
+      description: Returns Util Generic Discussions data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/Generic/Discussions
+        contentType: application/json; charset=UTF-8
+  /apiv12/Util/Homepage/CommunitySpotlight:
+    get:
+      operationId: v12_util_homepage_community_spotlight_get
+      summary: Get Util Homepage Community Spotlight
+      description: Returns Util Homepage Community Spotlight data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/Homepage/CommunitySpotlight
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Util/Homepage/Features:
+    get:
+      operationId: v12_util_homepage_features_get
+      summary: Get Util Homepage Features
+      description: Returns Util Homepage Features data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/Homepage/Features
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Util/Homepage/Submissions:
+    get:
+      operationId: v12_util_homepage_submissions_get
+      summary: Get Util Homepage Submissions
+      description: Returns Util Homepage Submissions data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/Homepage/Submissions
+        contentType: application/json; charset=UTF-8
+  /apiv12/Util/Homepage/TopGames:
+    get:
+      operationId: v12_util_homepage_top_games_get
+      summary: Get Util Homepage Top Games
+      description: Returns Util Homepage Top Games data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/Homepage/TopGames
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Util/Index:
+    get:
+      operationId: v12_util_index_get
+      summary: Get Util Index
+      description: Returns Util Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Util/ListFilterConfig:
+    get:
+      operationId: v12_util_list_filter_config_get
+      summary: Get Util List Filter Config
+      description: Returns Util List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Util/RecordInfo:
+    get:
+      operationId: v12_util_record_info_get
+      summary: Get Util Record Info
+      description: Returns Util Record Info data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/RecordInfo
+        contentType: application/json; charset=UTF-8
+  /apiv12/Util/{id}/ProfilePage:
+    get:
+      operationId: v12_util_id_profile_page_get
+      summary: Get Util {id} Profile Page
+      description: Returns Util {id} Profile Page data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Util'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Util/1/ProfilePage
+        contentType: application/json; charset=UTF-8

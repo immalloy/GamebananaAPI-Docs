@@ -1,0 +1,48 @@
+paths:
+  /apiv6/Gamefile/Multi:
+    get:
+      operationId: v6_gamefile_multi_get
+      summary: Get Gamefile Multi
+      description: Returns Gamefile Multi data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _aModManagerIntegrations,_sName,_bHasUpdates,_aLatestUpdates,_aFiles,_aPreviewMedia,_aAlternateFileSources
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: 13051,13572,13084
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v6: Gamefile'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv6/Gamefile/Multi?_csvProperties=_aModManagerIntegrations%2C_sName%2C_bHasUpdates%2C_aLatestUpdates%2C_aFiles%2C_aPreviewMedia%2C_aAlternateFileSources&_csvRowIds=13051%2C13572%2C13084
+        contentType: application/json; charset=utf-8

@@ -1,0 +1,96 @@
+paths:
+  /apiv12/WareOrder/1/ProfilePage:
+    get:
+      operationId: v12_wareorder_1_profile_page_get
+      summary: Get WareOrder 1 Profile Page
+      description: Returns WareOrder 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareOrder'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareOrder/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/WareOrder/Index:
+    get:
+      operationId: v12_wareorder_index_get
+      summary: Get WareOrder Index
+      description: Returns WareOrder Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareOrder'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareOrder/Index
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/WareOrder/ListFilterConfig:
+    get:
+      operationId: v12_wareorder_list_filter_config_get
+      summary: Get WareOrder List Filter Config
+      description: Returns WareOrder List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareOrder'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareOrder/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/WareOrder/Search:
+    get:
+      operationId: v12_wareorder_search_get
+      summary: Get WareOrder Search
+      description: Returns WareOrder Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WareOrder'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WareOrder/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

@@ -1,0 +1,110 @@
+paths:
+  /apiv12/Support/1/ProfilePage:
+    get:
+      operationId: v12_support_1_profile_page_get
+      summary: Get Support 1 Profile Page
+      description: Returns Support 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Support'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Support/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Support/ListFilterConfig:
+    get:
+      operationId: v12_support_list_filter_config_get
+      summary: Get Support List Filter Config
+      description: Returns Support List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Support'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Support/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Support/{id}/Config:
+    get:
+      operationId: v12_support_id_config_get
+      summary: Get Support {id} Config
+      description: Returns Support {id} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Support'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Support/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv12/Support/{id}/ProfilePage:
+    get:
+      operationId: v12_support_id_profile_page_get
+      summary: Get Support {id} Profile Page
+      description: Returns Support {id} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Support'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Support/1/ProfilePage
+        contentType: application/json; charset=UTF-8

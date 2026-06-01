@@ -1,0 +1,71 @@
+paths:
+  /apiv12/RequestCategory/1/ProfilePage:
+    get:
+      operationId: v12_requestcategory_1_profile_page_get
+      summary: Get RequestCategory 1 Profile Page
+      description: Returns RequestCategory 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RequestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RequestCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/RequestCategory/Index:
+    get:
+      operationId: v12_requestcategory_index_get
+      summary: Get RequestCategory Index
+      description: Returns RequestCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RequestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RequestCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/RequestCategory/ListFilterConfig:
+    get:
+      operationId: v12_requestcategory_list_filter_config_get
+      summary: Get RequestCategory List Filter Config
+      description: Returns RequestCategory List Filter Config data for public API
+        consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RequestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RequestCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8

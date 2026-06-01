@@ -1,0 +1,25 @@
+paths:
+  /apiv11/Support/ListFilterConfig:
+    get:
+      operationId: v11_support_list_filter_config_get
+      summary: Get Support List Filter Config
+      description: Returns Support List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Support'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Support/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

@@ -1,0 +1,189 @@
+paths:
+  /apiv12/Collection/1/ProfilePage:
+    get:
+      operationId: v12_collection_1_profile_page_get
+      summary: Get Collection 1 Profile Page
+      description: Returns Collection 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Collection/Index:
+    get:
+      operationId: v12_collection_index_get
+      summary: Get Collection Index
+      description: Returns Collection Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Collection/ListFilterConfig:
+    get:
+      operationId: v12_collection_list_filter_config_get
+      summary: Get Collection List Filter Config
+      description: Returns Collection List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Collection/Search:
+    get:
+      operationId: v12_collection_search_get
+      summary: Get Collection Search
+      description: Returns Collection Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Collection/{id}/Config:
+    get:
+      operationId: v12_collection_id_config_get
+      summary: Get Collection {id} Config
+      description: Returns Collection {id} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv12/Collection/{id}/ProfilePage:
+    get:
+      operationId: v12_collection_id_profile_page_get
+      summary: Get Collection {id} Profile Page
+      description: Returns Collection {id} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Collection/{submission_id}/Items:
+    get:
+      operationId: v12_collection_submission_id_items_get
+      summary: Get Collection {submission Id} Items
+      description: Returns Collection {submission Id} Items data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Collection'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Collection/1/Items
+        contentType: application/json; charset=UTF-8

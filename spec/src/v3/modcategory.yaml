@@ -1,0 +1,40 @@
+paths:
+  /apiv3/ModCategory/ByGame:
+    get:
+      operationId: v3_modcategory_by_game_get
+      summary: Get ModCategory By Game
+      description: Returns ModCategory By Game data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v3: ModCategory'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv3/ModCategory/ByGame
+        contentType: application/json; charset=utf-8

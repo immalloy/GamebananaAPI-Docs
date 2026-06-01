@@ -1,0 +1,55 @@
+paths:
+  /apiv8/Util/Game/Submissions:
+    get:
+      operationId: v8_util_game_submissions_get
+      summary: Get Util Game Submissions
+      description: Returns Util Game Submissions data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: query
+        name: _idGameRow
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '6498'
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: '1'
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: mario
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v8: Util'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv8/Util/Game/Submissions?_idGameRow=6498&_nPage=1&_sName=mario
+        contentType: application/json; charset=UTF-8

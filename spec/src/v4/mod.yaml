@@ -1,0 +1,79 @@
+paths:
+  /apiv4/Mod/ByGame:
+    get:
+      operationId: v4_mod_by_game_get
+      summary: Get Mod By Game
+      description: Returns Mod By Game data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _aGameRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v4: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv4/Mod/ByGame
+        contentType: application/json; charset=utf-8
+  /apiv4/Mod/Index:
+    get:
+      operationId: v4_mod_index_get
+      summary: Get Mod Index
+      description: Returns Mod Index data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: help
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v4: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv4/Mod/Index
+        contentType: application/json; charset=utf-8

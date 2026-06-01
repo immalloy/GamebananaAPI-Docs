@@ -1,0 +1,187 @@
+paths:
+  /apiv5/Mod/ByCategory:
+    get:
+      operationId: v5_mod_by_category_get
+      summary: Get Mod By Category
+      description: Returns Mod By Category data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: '@gbprofile'
+      - in: query
+        name: _aCategoryRowIds[
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv5/Mod/ByCategory?_csvProperties=%40gbprofile
+        contentType: application/json; charset=utf-8
+  /apiv5/Mod/ByName:
+    get:
+      operationId: v5_mod_by_name_get
+      summary: Get Mod By Name
+      description: Returns Mod By Name data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_aFiles,_aGame,_aCategory,_sName,_aPreviewMedia,_aSubmitter
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: bhop_badges
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv5/Mod/ByName?_csvProperties=_idRow%2C_aFiles%2C_aGame%2C_aCategory%2C_sName%2C_aPreviewMedia%2C_aSubmitter&_sName=bhop_badges
+        contentType: application/json; charset=utf-8
+  /apiv5/Mod/Index:
+    get:
+      operationId: v5_mod_index_get
+      summary: Get Mod Index
+      description: Returns Mod Index data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _aArgs[
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_sObsolescenceNotice
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv5/Mod/Index?_csvProperties=_idRow%2C_sName%2C_sObsolescenceNotice
+        contentType: application/json; charset=utf-8
+  /apiv5/Mod/Multi:
+    get:
+      operationId: v5_mod_multi_get
+      summary: Get Mod Multi
+      description: Returns Mod Multi data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _csvRowIds
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter in public API usage examples
+        example: 123,456
+      - in: query
+        name: _csvProperties
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter in public API usage examples
+        example: _idRow,_sName,_sObsolescenceNotice
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        default:
+          description: Unexpected response
+      tags:
+      - 'v5: Mod'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv5/Mod/Multi?_csvRowIds=123%2C456&_csvProperties=_idRow%2C_sName%2C_sObsolescenceNotice
+        contentType: application/json; charset=utf-8

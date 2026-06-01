@@ -1,0 +1,126 @@
+paths:
+  /apiv12/App/1/ProfilePage:
+    get:
+      operationId: v12_app_1_profile_page_get
+      summary: Get App 1 Profile Page
+      description: Returns App 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: App'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/App/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/App/Index:
+    get:
+      operationId: v12_app_index_get
+      summary: Get App Index
+      description: Returns App Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: App'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/App/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/App/ListFilterConfig:
+    get:
+      operationId: v12_app_list_filter_config_get
+      summary: Get App List Filter Config
+      description: Returns App List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: App'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/App/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/App/Search:
+    get:
+      operationId: v12_app_search_get
+      summary: Get App Search
+      description: Returns App Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: App'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/App/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/App/{submission_id}/Users:
+    get:
+      operationId: v12_app_submission_id_users_get
+      summary: Get App {submission Id} Users
+      description: Returns App {submission Id} Users data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: submission_id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: App'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/App/1/Users
+        contentType: application/json; charset=UTF-8

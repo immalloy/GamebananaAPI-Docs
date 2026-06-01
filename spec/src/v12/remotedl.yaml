@@ -1,0 +1,140 @@
+paths:
+  /apiv12/RemoteDL/Index:
+    get:
+      operationId: v12_remotedl_index_get
+      summary: Get RemoteDL Index
+      description: Returns RemoteDL Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteDL'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteDL/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteDL/ListFilterConfig:
+    get:
+      operationId: v12_remotedl_list_filter_config_get
+      summary: Get RemoteDL List Filter Config
+      description: Returns RemoteDL List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteDL'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteDL/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteDL/{id}/Config:
+    get:
+      operationId: v12_remotedl_id_config_get
+      summary: Get RemoteDL {id} Config
+      description: Returns RemoteDL {id} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteDL'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteDL/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteDL/{id}/ProfilePage:
+    get:
+      operationId: v12_remotedl_id_profile_page_get
+      summary: Get RemoteDL {id} Profile Page
+      description: Returns RemoteDL {id} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteDL'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteDL/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteDL/{remoteDLId}:
+    get:
+      operationId: v12_remotedl_remote_dlid_get
+      summary: Get RemoteDL {remote Dlid}
+      description: Returns RemoteDL {remote Dlid} data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: remoteDLId
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteDL'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteDL/1
+        contentType: application/json; charset=UTF-8

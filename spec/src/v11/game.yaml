@@ -1,0 +1,657 @@
+paths:
+  /apiv11/Game/Index:
+    get:
+      operationId: v11_game_index_get
+      summary: Get Game Index
+      description: Returns Game Index data for public API consumers. Supports optional
+        query filters.
+      parameters:
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Page to get. Allowed values: >1 Default value: 1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: 'Integer. Records per page. Allowed values: >1 Default value:
+          5'
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: 'oneOf. String. How to sort the records. Allowed values: see
+          ''Sort options and filters'' Default value: -'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/Index
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/ListFilterConfig:
+    get:
+      operationId: v11_game_list_filter_config_get
+      summary: Get Game List Filter Config
+      description: Returns Game List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Game/{id1}/CategoryTree:
+    get:
+      operationId: v11_game_id1_category_tree_get
+      summary: Get Game {id1} Category Tree
+      description: Returns Game {id1} Category Tree data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/CategoryTree
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/CommunitySpotlight:
+    get:
+      operationId: v11_game_id1_community_spotlight_get
+      summary: Get Game {id1} Community Spotlight
+      description: Returns Game {id1} Community Spotlight data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/CommunitySpotlight
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/Config:
+    get:
+      operationId: v11_game_id1_config_get
+      summary: Get Game {id1} Config
+      description: Returns Game {id1} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/GetStartedPage:
+    get:
+      operationId: v11_game_id1_get_started_page_get
+      summary: Get Game {id1} Get Started Page
+      description: Returns Game {id1} Get Started Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/GetStartedPage
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/Keys/ForSale:
+    get:
+      operationId: v11_game_id1_keys_for_sale_get
+      summary: Get Game {id1} Keys For Sale
+      description: Returns Game {id1} Keys For Sale data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Keys/ForSale
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/Keys/Summary:
+    get:
+      operationId: v11_game_id1_keys_summary_get
+      summary: Get Game {id1} Keys Summary
+      description: Returns Game {id1} Keys Summary data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Keys/Summary
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/ProfilePage:
+    get:
+      operationId: v11_game_id1_profile_page_get
+      summary: Get Game {id1} Profile Page
+      description: Returns Game {id1} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/Rules:
+    get:
+      operationId: v11_game_id1_rules_get
+      summary: Get Game {id1} Rules
+      description: Returns Game {id1} Rules data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Rules
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/Subfeed:
+    get:
+      operationId: v11_game_id1_subfeed_get
+      summary: Get Game {id1} Subfeed
+      description: Returns Game {id1} Subfeed data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: Observed query parameter
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Subfeed
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id1}/TopSubs:
+    get:
+      operationId: v11_game_id1_top_subs_get
+      summary: Get Game {id1} Top Subs
+      description: Returns Game {id1} Top Subs data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id1
+        required: true
+        schema:
+          type: integer
+        description: Observed query parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/TopSubs
+        contentType: application/json; charset=UTF-8
+  /apiv11/Game/{id}/CommunitySpotlight:
+    get:
+      operationId: v11_game_id_community_spotlight_get
+      summary: Get Game {id} Community Spotlight
+      description: Returns Game {id} Community Spotlight data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/CommunitySpotlight
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Game/{id}/GetStartedPage:
+    get:
+      operationId: v11_game_id_get_started_page_get
+      summary: Get Game {id} Get Started Page
+      description: Returns Game {id} Get Started Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/GetStartedPage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Game/{id}/ProfilePage:
+    get:
+      operationId: v11_game_id_profile_page_get
+      summary: Get Game {id} Profile Page
+      description: Returns Game {id} Profile Page data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Game/{id}/Rules:
+    get:
+      operationId: v11_game_id_rules_get
+      summary: Get Game {id} Rules
+      description: Returns Game {id} Rules data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Integer. Game ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Rules
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Game/{id}/Subfeed:
+    get:
+      operationId: v11_game_id_subfeed_get
+      summary: Get Game {id} Subfeed
+      description: Returns Game {id} Subfeed data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Enter the Game's ID.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Which ''page'' of results to get. Allowed values: greater than
+          1. Default value: 1'
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: 'How to sort results. Allowed values: default, new, updated Default
+          value: default'
+      - in: query
+        name: _sName
+        required: false
+        schema:
+          type: string
+        description: Observed query parameter
+      - in: query
+        name: _csvModelInclusions
+        required: false
+        schema:
+          type: string
+        description: 'Comma-separated list of sections to include in the search results.
+          Allowed values: App, Article, Bug, Blog, Club, Contest, Concept, Event,
+          Game, Idea, Initiative, Jam, Mod, Model, Member, News, Poll, Project, Question,
+          Review, Request, Script, Sound, Spray, Studio, Thread, Tool, Tutorial, Wiki,
+          Wip.'
+      - in: query
+        name: _csvModelExclusions
+        required: false
+        schema:
+          type: string
+        description: 'Comma-separated list of sections to exclude from the search
+          results. Allowed values: App, Article, Bug, Blog, Club, Contest, Concept,
+          Event, Game, Idea, Initiative, Jam, Mod, Model, Member, News, Poll, Project,
+          Question, Review, Request, Script, Sound, Spray, Studio, Thread, Tool, Tutorial,
+          Wiki, Wip.'
+      - in: query
+        name: _csvTagInclusions
+        required: false
+        schema:
+          type: string
+        description: 'Comma-separated list of tags to include in the search results.
+          Allowed values: IDs as requested from Util/Generic/Tags endpoint.'
+      - in: query
+        name: _csvTagExclusions
+        required: false
+        schema:
+          type: string
+        description: 'Comma-separated list of tags to exclude from the search results.
+          Allowed values: IDs as requested from Util/Generic/Tags endpoint.'
+      responses:
+        '200':
+          description: 200 - All defaults
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          description: 400 - Invalid value for both _csvModelInclusions and _csvModelExclusions
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/Subfeed
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/Game/{id}/TopSubs:
+    get:
+      operationId: v11_game_id_top_subs_get
+      summary: Get Game {id} Top Subs
+      description: Returns Game {id} Top Subs data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required. Enter the Game's ID.
+      responses:
+        '200':
+          description: 200 Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: Game'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Game/1/TopSubs
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

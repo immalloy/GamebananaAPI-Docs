@@ -1,0 +1,183 @@
+paths:
+  /apiv12/RemoteInstall/Index:
+    get:
+      operationId: v12_remoteinstall_index_get
+      summary: Get RemoteInstall Index
+      description: Returns RemoteInstall Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteInstall/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteInstall/ListFilterConfig:
+    get:
+      operationId: v12_remoteinstall_list_filter_config_get
+      summary: Get RemoteInstall List Filter Config
+      description: Returns RemoteInstall List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteInstall/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteInstall/{id}/Config:
+    get:
+      operationId: v12_remoteinstall_id_config_get
+      summary: Get RemoteInstall {id} Config
+      description: Returns RemoteInstall {id} Config data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteInstall/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteInstall/{id}/ProfilePage:
+    get:
+      operationId: v12_remoteinstall_id_profile_page_get
+      summary: Get RemoteInstall {id} Profile Page
+      description: Returns RemoteInstall {id} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteInstall/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteInstall/{memberid}/{secretkey}/PizzaOvenPlus:
+    get:
+      operationId: v12_remoteinstall_memberid_secretkey_pizza_oven_plus_get
+      summary: Get RemoteInstall {memberid} {secretkey} Pizza Oven Plus
+      description: Returns RemoteInstall {memberid} {secretkey} Pizza Oven Plus data
+        for public API consumers. Supports optional query filters.
+      parameters:
+      - in: path
+        name: memberid
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      - in: path
+        name: secretkey
+        required: true
+        schema:
+          type: string
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteInstall/1/1/PizzaOvenPlus
+        contentType: application/json; charset=UTF-8
+  /apiv12/RemoteInstall/{secretkey}/{memberid}/TotkModManager:
+    get:
+      operationId: v12_remoteinstall_secretkey_memberid_totk_mod_manager_get
+      summary: Get RemoteInstall {secretkey} {memberid} Totk Mod Manager
+      description: Returns RemoteInstall {secretkey} {memberid} Totk Mod Manager data
+        for public API consumers. Supports optional query filters.
+      parameters:
+      - in: path
+        name: secretkey
+        required: true
+        schema:
+          type: string
+        description: Observed path parameter
+      - in: path
+        name: memberid
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: RemoteInstall'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/RemoteInstall/1/1/TotkModManager
+        contentType: application/json; charset=UTF-8

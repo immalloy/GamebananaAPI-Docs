@@ -1,0 +1,95 @@
+paths:
+  /apiv12/WipCategory/1/ProfilePage:
+    get:
+      operationId: v12_wipcategory_1_profile_page_get
+      summary: Get WipCategory 1 Profile Page
+      description: Returns WipCategory 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WipCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WipCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/WipCategory/Index:
+    get:
+      operationId: v12_wipcategory_index_get
+      summary: Get WipCategory Index
+      description: Returns WipCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WipCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WipCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/WipCategory/ListFilterConfig:
+    get:
+      operationId: v12_wipcategory_list_filter_config_get
+      summary: Get WipCategory List Filter Config
+      description: Returns WipCategory List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WipCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WipCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/WipCategory/Search:
+    get:
+      operationId: v12_wipcategory_search_get
+      summary: Get WipCategory Search
+      description: Returns WipCategory Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: WipCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/WipCategory/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

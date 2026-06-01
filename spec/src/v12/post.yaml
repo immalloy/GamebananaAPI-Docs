@@ -1,0 +1,132 @@
+paths:
+  /apiv12/Post/1/ProfilePage:
+    get:
+      operationId: v12_post_1_profile_page_get
+      summary: Get Post 1 Profile Page
+      description: Returns Post 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Post'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Post/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Post/Index:
+    get:
+      operationId: v12_post_index_get
+      summary: Get Post Index
+      description: Returns Post Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Post'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Post/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Post/ListFilterConfig:
+    get:
+      operationId: v12_post_list_filter_config_get
+      summary: Get Post List Filter Config
+      description: Returns Post List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Post'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Post/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Post/{id}/Config:
+    get:
+      operationId: v12_post_id_config_get
+      summary: Get Post {id} Config
+      description: Returns Post {id} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Post'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Post/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv12/Post/{post_id}/ProfilePage:
+    get:
+      operationId: v12_post_post_id_profile_page_get
+      summary: Get Post {post Id} Profile Page
+      description: Returns Post {post Id} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: post_id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Post'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Post/1/ProfilePage
+        contentType: application/json; charset=UTF-8

@@ -1,0 +1,95 @@
+paths:
+  /apiv12/EventCategory/1/ProfilePage:
+    get:
+      operationId: v12_eventcategory_1_profile_page_get
+      summary: Get EventCategory 1 Profile Page
+      description: Returns EventCategory 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: EventCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/EventCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/EventCategory/Index:
+    get:
+      operationId: v12_eventcategory_index_get
+      summary: Get EventCategory Index
+      description: Returns EventCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: EventCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/EventCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/EventCategory/ListFilterConfig:
+    get:
+      operationId: v12_eventcategory_list_filter_config_get
+      summary: Get EventCategory List Filter Config
+      description: Returns EventCategory List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: EventCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/EventCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/EventCategory/Search:
+    get:
+      operationId: v12_eventcategory_search_get
+      summary: Get EventCategory Search
+      description: Returns EventCategory Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: EventCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/EventCategory/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

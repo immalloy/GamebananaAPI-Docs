@@ -1,0 +1,187 @@
+paths:
+  /apiv12/ModCategory/1/ProfilePage:
+    get:
+      operationId: v12_modcategory_1_profile_page_get
+      summary: Get ModCategory 1 Profile Page
+      description: Returns ModCategory 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModCategory/Index:
+    get:
+      operationId: v12_modcategory_index_get
+      summary: Get ModCategory Index
+      description: Returns ModCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModCategory/ListFilterConfig:
+    get:
+      operationId: v12_modcategory_list_filter_config_get
+      summary: Get ModCategory List Filter Config
+      description: Returns ModCategory List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModCategory/Search:
+    get:
+      operationId: v12_modcategory_search_get
+      summary: Get ModCategory Search
+      description: Returns ModCategory Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/ModCategory/{id}/Config:
+    get:
+      operationId: v12_modcategory_id_config_get
+      summary: Get ModCategory {id} Config
+      description: Returns ModCategory {id} Config data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModCategory/{id}/ProfilePage:
+    get:
+      operationId: v12_modcategory_id_profile_page_get
+      summary: Get ModCategory {id} Profile Page
+      description: Returns ModCategory {id} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/ModCategory/{rootCategoryId}/SubCategories:
+    get:
+      operationId: v12_modcategory_root_category_id_sub_categories_get
+      summary: Get ModCategory {root Category Id} Sub Categories
+      description: Returns ModCategory {root Category Id} Sub Categories data for
+        public API consumers. Supports optional query filters.
+      parameters:
+      - in: path
+        name: rootCategoryId
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ModCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ModCategory/1/SubCategories
+        contentType: application/json; charset=UTF-8

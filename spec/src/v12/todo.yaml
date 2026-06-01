@@ -1,0 +1,95 @@
+paths:
+  /apiv12/Todo/1/ProfilePage:
+    get:
+      operationId: v12_todo_1_profile_page_get
+      summary: Get Todo 1 Profile Page
+      description: Returns Todo 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Todo'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Todo/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Todo/Index:
+    get:
+      operationId: v12_todo_index_get
+      summary: Get Todo Index
+      description: Returns Todo Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Todo'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Todo/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Todo/ListFilterConfig:
+    get:
+      operationId: v12_todo_list_filter_config_get
+      summary: Get Todo List Filter Config
+      description: Returns Todo List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Todo'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Todo/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Todo/Search:
+    get:
+      operationId: v12_todo_search_get
+      summary: Get Todo Search
+      description: Returns Todo Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Todo'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Todo/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

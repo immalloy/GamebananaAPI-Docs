@@ -1,0 +1,133 @@
+paths:
+  /apiv12/Update/1/ProfilePage:
+    get:
+      operationId: v12_update_1_profile_page_get
+      summary: Get Update 1 Profile Page
+      description: Returns Update 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Update'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Update/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/Update/Index:
+    get:
+      operationId: v12_update_index_get
+      summary: Get Update Index
+      description: Returns Update Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Update'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Update/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Update/ListFilterConfig:
+    get:
+      operationId: v12_update_list_filter_config_get
+      summary: Get Update List Filter Config
+      description: Returns Update List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Update'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Update/ListFilterConfig
+        contentType: application/json; charset=UTF-8
+  /apiv12/Update/{id}/Config:
+    get:
+      operationId: v12_update_id_config_get
+      summary: Get Update {id} Config
+      description: Returns Update {id} Config data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Update'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Update/1/Config
+        contentType: application/json; charset=UTF-8
+  /apiv12/Update/{updateId}/ProfilePage:
+    get:
+      operationId: v12_update_update_id_profile_page_get
+      summary: Get Update {update Id} Profile Page
+      description: Returns Update {update Id} Profile Page data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: updateId
+        required: true
+        schema:
+          type: integer
+        description: Observed path parameter
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Update'
+      x-last-test:
+        timestamp: '2026-06-01T20:31:47Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Update/1/ProfilePage
+        contentType: application/json; charset=UTF-8

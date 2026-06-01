@@ -1,0 +1,97 @@
+paths:
+  /apiv12/ContestCategory/1/ProfilePage:
+    get:
+      operationId: v12_contestcategory_1_profile_page_get
+      summary: Get ContestCategory 1 Profile Page
+      description: Returns ContestCategory 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ContestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ContestCategory/1/ProfilePage
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/ContestCategory/Index:
+    get:
+      operationId: v12_contestcategory_index_get
+      summary: Get ContestCategory Index
+      description: Returns ContestCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ContestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ContestCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/ContestCategory/ListFilterConfig:
+    get:
+      operationId: v12_contestcategory_list_filter_config_get
+      summary: Get ContestCategory List Filter Config
+      description: Returns ContestCategory List Filter Config data for public API
+        consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ContestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ContestCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/ContestCategory/Search:
+    get:
+      operationId: v12_contestcategory_search_get
+      summary: Get ContestCategory Search
+      description: Returns ContestCategory Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: ContestCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/ContestCategory/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

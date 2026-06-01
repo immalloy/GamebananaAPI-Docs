@@ -1,0 +1,72 @@
+paths:
+  /apiv12/SprayCategory/Index:
+    get:
+      operationId: v12_spraycategory_index_get
+      summary: Get SprayCategory Index
+      description: Returns SprayCategory Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SprayCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SprayCategory/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/SprayCategory/ListFilterConfig:
+    get:
+      operationId: v12_spraycategory_list_filter_config_get
+      summary: Get SprayCategory List Filter Config
+      description: Returns SprayCategory List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SprayCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SprayCategory/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv12/SprayCategory/Search:
+    get:
+      operationId: v12_spraycategory_search_get
+      summary: Get SprayCategory Search
+      description: Returns SprayCategory Search data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: SprayCategory'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/SprayCategory/Search
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

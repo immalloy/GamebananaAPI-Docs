@@ -1,0 +1,92 @@
+paths:
+  /apiv11/{model_name}/Index:
+    get:
+      operationId: v11_modelname_index_get
+      summary: Get {model_name} Index
+      description: Returns {model_name} Index data for public API consumers. Supports
+        optional query filters.
+      parameters:
+      - in: path
+        name: model_name
+        required: true
+        schema:
+          type: string
+        description: Required. Enter the model name.
+      - in: query
+        name: _nPage
+        required: false
+        schema:
+          type: integer
+        description: 'Which ''page'' of results to get. Allowed values: greater than
+          1. Default value: 1'
+      - in: query
+        name: _nPerpage
+        required: false
+        schema:
+          type: integer
+        description: 'Number of results per page. Allowed values: 1 through 50. Default
+          value: 20'
+      - in: query
+        name: _sSort
+        required: false
+        schema:
+          type: string
+        description: 'How to sort results. Allowed values: see _aSorts in ListFilterConfig'
+      - in: query
+        name: _aFilters[Generic_WasFeatured]
+        required: false
+        schema:
+          type: string
+        description: 'If provided, display only featured records. See other filters
+          in ListFilterConfig Allowed values: true'
+      responses:
+        '200':
+          description: 200 Success - Latest Mods in section Mod
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: {model_name}'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/Index
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'
+  /apiv11/{model_name}/ListFilterConfig:
+    get:
+      operationId: v11_modelname_list_filter_config_get
+      summary: Get {model_name} List Filter Config
+      description: Returns {model_name} List Filter Config data for public API consumers.
+        Supports optional query filters.
+      parameters:
+      - in: path
+        name: model_name
+        required: true
+        schema:
+          type: string
+        description: Required. Enter the model name.
+      responses:
+        '200':
+          description: 200 Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v11: {model_name}'
+      x-last-test:
+        timestamp: '2026-04-19T17:42:02+00:00'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv11/Mod/ListFilterConfig
+        contentType: text/html; charset=UTF-8
+      x-curation-note: 'uncertain: probe content-type is not JSON'

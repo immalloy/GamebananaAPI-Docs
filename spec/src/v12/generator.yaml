@@ -1,0 +1,70 @@
+paths:
+  /apiv12/Generator/1/ProfilePage:
+    get:
+      operationId: v12_generator_1_profile_page_get
+      summary: Get Generator 1 Profile Page
+      description: Returns Generator 1 Profile Page data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Generator'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Generator/1/ProfilePage
+        contentType: application/json; charset=UTF-8
+  /apiv12/Generator/Index:
+    get:
+      operationId: v12_generator_index_get
+      summary: Get Generator Index
+      description: Returns Generator Index data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Generator'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Generator/Index
+        contentType: application/json; charset=UTF-8
+  /apiv12/Generator/ListFilterConfig:
+    get:
+      operationId: v12_generator_list_filter_config_get
+      summary: Get Generator List Filter Config
+      description: Returns Generator List Filter Config data for public API consumers.
+      responses:
+        '200':
+          description: Observed response status 200
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        default:
+          description: Unexpected response
+      tags:
+      - 'v12: Generator'
+      x-last-test:
+        timestamp: '2026-06-01T20:43:35Z'
+        status: 200
+        result: ok
+        url: https://gamebanana.com/apiv12/Generator/ListFilterConfig
+        contentType: application/json; charset=UTF-8
