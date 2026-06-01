@@ -16320,7 +16320,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: App'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -16343,7 +16343,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: App'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16366,7 +16366,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: App'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16396,7 +16396,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: App'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16419,7 +16419,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Collection'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -16442,7 +16442,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Collection'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16465,7 +16465,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Collection'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16495,7 +16495,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Collection'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16525,7 +16525,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Collection'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16555,7 +16555,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: Collection'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16578,7 +16578,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Contest'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -16601,7 +16601,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Contest'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16624,7 +16624,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Contest'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16654,7 +16654,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Contest'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16684,7 +16684,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Contest'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16714,7 +16714,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: Contest'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16737,7 +16737,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: File'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -16760,7 +16760,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: File'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16783,7 +16783,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: File'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16813,7 +16813,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {file_id}'
+      - 'v12: File'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16843,7 +16843,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: File'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16873,7 +16873,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: File'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16896,7 +16896,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -16919,7 +16919,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16942,7 +16942,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -16972,7 +16972,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17002,7 +17002,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17032,7 +17032,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17062,7 +17062,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17092,7 +17092,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17122,7 +17122,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17152,7 +17152,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17182,7 +17182,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17212,7 +17212,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17242,7 +17242,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17272,7 +17272,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -17302,7 +17302,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17332,7 +17332,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17362,7 +17362,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17392,7 +17392,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17422,7 +17422,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17452,7 +17452,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Game'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17475,7 +17475,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Idea'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -17498,7 +17498,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Idea'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17521,7 +17521,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Idea'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17551,7 +17551,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Idea'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17581,7 +17581,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Idea'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17611,7 +17611,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: Idea'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17634,7 +17634,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Issue'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -17657,7 +17657,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Issue'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17680,7 +17680,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Issue'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17703,7 +17703,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: ItemType'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -17726,7 +17726,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: ItemType'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17749,7 +17749,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: ItemType'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17779,7 +17779,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: ItemType'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17809,7 +17809,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: ItemType'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17832,7 +17832,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Jam'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -17855,7 +17855,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Jam'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17878,7 +17878,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Jam'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17908,7 +17908,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Jam'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17938,7 +17938,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Jam'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17968,7 +17968,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: Jam'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -17998,7 +17998,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: Jam'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18028,7 +18028,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: Jam'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18051,7 +18051,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -18074,7 +18074,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18097,7 +18097,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18120,7 +18120,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Navigator'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 401
@@ -18143,7 +18143,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: UiConfig'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18166,7 +18166,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: UiCounts'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18196,7 +18196,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 401
@@ -18226,7 +18226,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18256,7 +18256,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18286,7 +18286,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18316,7 +18316,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18346,7 +18346,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18376,7 +18376,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18406,7 +18406,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18436,7 +18436,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18466,7 +18466,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18496,7 +18496,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 401
@@ -18526,7 +18526,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18556,7 +18556,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18586,7 +18586,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18616,7 +18616,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18646,7 +18646,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18676,7 +18676,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18706,7 +18706,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18736,7 +18736,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18766,7 +18766,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18796,7 +18796,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18826,7 +18826,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18856,7 +18856,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18886,7 +18886,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18916,7 +18916,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18946,7 +18946,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {memberId}'
+      - 'v12: Member'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -18969,7 +18969,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -18992,7 +18992,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19015,7 +19015,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19038,7 +19038,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Multi'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19068,7 +19068,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19098,7 +19098,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19128,7 +19128,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id1}'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19158,7 +19158,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {modId}'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19188,7 +19188,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {modId}'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19218,7 +19218,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {mod_id}'
+      - 'v12: Mod'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19241,7 +19241,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: ModCategory'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19264,7 +19264,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: ModCategory'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19287,7 +19287,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: ModCategory'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19317,7 +19317,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: ModCategory'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19347,7 +19347,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: ModCategory'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19377,7 +19377,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {rootCategoryId}'
+      - 'v12: ModCategory'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19400,7 +19400,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Mods'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19423,7 +19423,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Mods'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19446,7 +19446,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Mods'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19476,7 +19476,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Mods'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19506,7 +19506,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Mods'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19529,7 +19529,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Poll'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19552,7 +19552,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Poll'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19575,7 +19575,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Poll'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19605,7 +19605,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Poll'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19635,7 +19635,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Poll'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19665,7 +19665,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: Poll'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19688,7 +19688,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Post'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19711,7 +19711,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Post'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19734,7 +19734,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Post'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19764,7 +19764,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Post'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19794,7 +19794,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {post_id}'
+      - 'v12: Post'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19824,7 +19824,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {post_id}'
+      - 'v12: Post'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19847,7 +19847,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Project'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19870,7 +19870,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Project'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19893,7 +19893,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Project'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19916,7 +19916,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: RemoteDL'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -19939,7 +19939,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: RemoteDL'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19962,7 +19962,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: RemoteDL'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -19992,7 +19992,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: RemoteDL'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20022,7 +20022,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: RemoteDL'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20052,7 +20052,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {remoteDLId}'
+      - 'v12: RemoteDL'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20075,7 +20075,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: RemoteInstall'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20098,7 +20098,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: RemoteInstall'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20121,7 +20121,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: RemoteInstall'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20151,7 +20151,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: RemoteInstall'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20181,7 +20181,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: RemoteInstall'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20217,7 +20217,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {memberid}'
+      - 'v12: RemoteInstall'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20253,7 +20253,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {secretkey}'
+      - 'v12: RemoteInstall'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20276,7 +20276,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Request'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20299,7 +20299,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Request'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20322,7 +20322,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Request'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20352,7 +20352,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {submission_id}'
+      - 'v12: Request'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20375,7 +20375,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Ripe'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20398,7 +20398,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Ripe'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20421,7 +20421,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Info'
+      - 'v12: Ripe'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20444,7 +20444,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Ripe'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20467,7 +20467,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Purchasers'
+      - 'v12: Ripe'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20497,7 +20497,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Ripe'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20527,7 +20527,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Ripe'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20550,7 +20550,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Subscription'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20573,7 +20573,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Subscription'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20596,7 +20596,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Subscription'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20626,7 +20626,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Subscription'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20656,7 +20656,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Subscription'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20686,7 +20686,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {subscription_id}'
+      - 'v12: Subscription'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20709,7 +20709,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Support'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20732,7 +20732,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Support'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 401
@@ -20755,7 +20755,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Support'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20785,7 +20785,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Support'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20815,7 +20815,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Support'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20838,7 +20838,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Todo'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20861,7 +20861,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Todo'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20884,7 +20884,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Todo'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20907,7 +20907,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Tool'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20930,7 +20930,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Tool'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20953,7 +20953,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Tool'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -20976,7 +20976,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Update'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -20999,7 +20999,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Update'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21022,7 +21022,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Update'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21052,7 +21052,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Update'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21082,7 +21082,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {updateId}'
+      - 'v12: Update'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21112,7 +21112,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {update_id}'
+      - 'v12: Update'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21135,7 +21135,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: BlogCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21158,7 +21158,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21181,7 +21181,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ConceptCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21204,7 +21204,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Config'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21227,7 +21227,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ContestCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21250,7 +21250,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: EventCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21273,7 +21273,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Forum'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21296,7 +21296,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Game'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21319,7 +21319,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Generic'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21342,7 +21342,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Generic'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21365,7 +21365,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Homepage'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21388,7 +21388,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Homepage'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21411,7 +21411,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Homepage'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21434,7 +21434,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Homepage'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21457,7 +21457,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21480,7 +21480,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: JamCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21503,7 +21503,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: List'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21526,7 +21526,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21549,7 +21549,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ModCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21572,7 +21572,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: NewsCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21595,7 +21595,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: QuestionCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21618,7 +21618,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: RecordInfo'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21641,7 +21641,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: RequestCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21664,7 +21664,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ScriptCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21687,7 +21687,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Search'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21710,7 +21710,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Search'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21733,7 +21733,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: SoundCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21756,7 +21756,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ToolCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21779,7 +21779,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: TutorialCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21802,7 +21802,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: WareCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21825,7 +21825,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: WipCategory'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21855,7 +21855,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: {id}'
+      - 'v12: Util'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21878,7 +21878,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Categories'
+      - 'v12: Wip'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 400
@@ -21901,7 +21901,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: Index'
+      - 'v12: Wip'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -21924,7 +21924,7 @@ paths:
         default:
           description: Unexpected response
       tags:
-      - 'v12: ListFilterConfig'
+      - 'v12: Wip'
       x-last-test:
         timestamp: '2026-06-01T20:31:47Z'
         status: 200
@@ -22119,98 +22119,57 @@ tags:
   description: Endpoints grouped under V8.
 - name: 'v9: Game'
   description: Endpoints grouped under V9.
-- name: 'v12: BlogCategory'
+- name: 'v12: App'
   description: Endpoints grouped under V12.
-- name: 'v12: Categories'
+- name: 'v12: Collection'
   description: Endpoints grouped under V12.
-- name: 'v12: ConceptCategory'
+- name: 'v12: Contest'
   description: Endpoints grouped under V12.
-- name: 'v12: Config'
-  description: Endpoints grouped under V12.
-- name: 'v12: ContestCategory'
-  description: Endpoints grouped under V12.
-- name: 'v12: EventCategory'
-  description: Endpoints grouped under V12.
-- name: 'v12: Forum'
+- name: 'v12: File'
   description: Endpoints grouped under V12.
 - name: 'v12: Game'
   description: Endpoints grouped under V12.
-- name: 'v12: Generic'
+- name: 'v12: Idea'
   description: Endpoints grouped under V12.
-- name: 'v12: Homepage'
+- name: 'v12: Issue'
   description: Endpoints grouped under V12.
-- name: 'v12: Index'
+- name: 'v12: ItemType'
   description: Endpoints grouped under V12.
-- name: 'v12: Info'
+- name: 'v12: Jam'
   description: Endpoints grouped under V12.
-- name: 'v12: JamCategory'
+- name: 'v12: Member'
   description: Endpoints grouped under V12.
-- name: 'v12: List'
-  description: Endpoints grouped under V12.
-- name: 'v12: ListFilterConfig'
+- name: 'v12: Mod'
   description: Endpoints grouped under V12.
 - name: 'v12: ModCategory'
   description: Endpoints grouped under V12.
-- name: 'v12: Multi'
+- name: 'v12: Mods'
   description: Endpoints grouped under V12.
-- name: 'v12: Navigator'
+- name: 'v12: Poll'
   description: Endpoints grouped under V12.
-- name: 'v12: NewsCategory'
+- name: 'v12: Post'
   description: Endpoints grouped under V12.
-- name: 'v12: Purchasers'
+- name: 'v12: Project'
   description: Endpoints grouped under V12.
-- name: 'v12: QuestionCategory'
+- name: 'v12: RemoteDL'
   description: Endpoints grouped under V12.
-- name: 'v12: RecordInfo'
+- name: 'v12: RemoteInstall'
   description: Endpoints grouped under V12.
-- name: 'v12: RequestCategory'
+- name: 'v12: Request'
   description: Endpoints grouped under V12.
-- name: 'v12: ScriptCategory'
+- name: 'v12: Ripe'
   description: Endpoints grouped under V12.
-- name: 'v12: Search'
+- name: 'v12: Subscription'
   description: Endpoints grouped under V12.
-- name: 'v12: SoundCategory'
+- name: 'v12: Support'
   description: Endpoints grouped under V12.
-- name: 'v12: ToolCategory'
+- name: 'v12: Todo'
   description: Endpoints grouped under V12.
-- name: 'v12: TutorialCategory'
+- name: 'v12: Tool'
   description: Endpoints grouped under V12.
-- name: 'v12: UiConfig'
+- name: 'v12: Update'
   description: Endpoints grouped under V12.
-- name: 'v12: UiCounts'
+- name: 'v12: Util'
   description: Endpoints grouped under V12.
-- name: 'v12: WareCategory'
+- name: 'v12: Wip'
   description: Endpoints grouped under V12.
-- name: 'v12: WipCategory'
-  description: Endpoints grouped under V12.
-- name: 'v12: {file_id}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {id1}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {id}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {memberId}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {memberid}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {modId}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {mod_id}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {post_id}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {remoteDLId}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {rootCategoryId}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {secretkey}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {submission_id}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {subscription_id}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {updateId}'
-  description: Endpoints grouped under V12.
-- name: 'v12: {update_id}'
-  description: Endpoints grouped under V12.
-
