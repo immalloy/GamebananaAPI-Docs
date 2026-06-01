@@ -1,0 +1,720 @@
+versions:
+  v12:
+    App: 5
+    Article: 4
+    ArticleCategory: 4
+    Bitpit: 3
+    Blog: 4
+    BlogCategory: 3
+    Bug: 3
+    Club: 4
+    Collection: 7
+    Concept: 3
+    ConceptCategory: 3
+    Contest: 7
+    ContestCategory: 4
+    Event: 4
+    EventCategory: 4
+    File: 5
+    Forum: 3
+    Game: 19
+    GameKey: 3
+    Generator: 3
+    GeneratorCategory: 3
+    GmApplication: 1
+    Idea: 6
+    Initiative: 4
+    Issue: 2
+    ItemType: 4
+    Jam: 8
+    JamCategory: 4
+    Medal: 4
+    Member: 29
+    Mod: 9
+    ModCategory: 7
+    Model: 4
+    ModelCategory: 4
+    Mods: 4
+    News: 4
+    NewsCategory: 4
+    Permit: 4
+    Poll: 6
+    PollCategory: 3
+    PositionAvailable: 4
+    Post: 5
+    Project: 2
+    ProjectCategory: 4
+    Question: 3
+    QuestionCategory: 4
+    RemoteDL: 5
+    RemoteInstall: 6
+    Request: 3
+    RequestCategory: 3
+    Review: 4
+    Ripe: 6
+    Script: 4
+    ScriptCategory: 3
+    Sound: 3
+    SoundCategory: 3
+    Spray: 4
+    SprayCategory: 3
+    StatusUpdate: 3
+    Studio: 2
+    Subscription: 4
+    Support: 4
+    Thread: 2
+    Todo: 4
+    Tool: 4
+    ToolCategory: 4
+    Tutorial: 4
+    TutorialCategory: 3
+    Update: 5
+    Util: 10
+    Ware: 4
+    WareCategory: 4
+    WareOrder: 4
+    Wiki: 3
+    WikiCategory: 4
+    Wip: 2
+    WipCategory: 4
+  v11:
+    App: 1
+    Collection: 3
+    Contest: 1
+    File: 1
+    Game: 18
+    Idea: 1
+    Jam: 3
+    Member: 26
+    Mod: 7
+    ModCategory: 1
+    Mods: 1
+    Poll: 1
+    Post: 2
+    RemoteInstall: 1
+    Request: 1
+    Ripe: 2
+    Support: 1
+    Tool: 2
+    Util: 9
+    Wip: 2
+    '{model_name}': 2
+    '{section_slug}': 11
+  v8:
+    Mod: 2
+    Util: 1
+  v7:
+    Mod: 1
+  v6:
+    Gamefile: 1
+    Mod: 2
+  v5:
+    Mod: 4
+  v4:
+    Mod: 2
+  v3:
+    Mod: 3
+    ModCategory: 1
+    Tool: 1
+excluded_count: 330
+excluded:
+- path: /apiv10/Game/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Game/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Game/{gameId}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Game/{gameId}/Subfeed
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Member/Activity
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Member/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Member/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Member/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Mod/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Mod/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Mod/MapId/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Mod/{modId}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Mod/{modId}/ReloadedConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/ModCategory/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/ModCategory/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/ModCategory/{modCategoryId}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Post/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Post/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Post/_idRow/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Post/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Tool/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Tool/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv10/Tool/{toolId}
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/App/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/App/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/App/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/App/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/App/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/App/{submission_id}/CustomConfig/{app_config_id}
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Collection/Add
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Collection/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Collection/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Collection/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Contest/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Contest/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Contest/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Contest/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Contest/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/File/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/File/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/File/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/File/fileid
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/File/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/File/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Game/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Game/gameId/Subfeed
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Game/{id1}/Withhold
+  method: patch
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Game/{id}
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Idea/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Idea/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Idea/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Idea/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Idea/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Issue/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Issue/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Issue/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Issue/{issue_id}
+  method: patch
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Issue/{issue_id}
+  method: delete
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ItemType/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ItemType/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ItemType/ItemID/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ItemType/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ItemType/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ItemType/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Jam/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Jam/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Jam/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Jam/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Jam/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/MOD_TYPE/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/MOD_TYPE/MOD_ID/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/MOD_TYPE/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/Authenticate
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/Buddy/{id1}/Accept
+  method: patch
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/EmailAuthenticate
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/Navigator/Personal
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/{id1}/Admin/Tickets
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/{id1}/SettingsPortal
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Member/{memberId}/Buddies
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Mod/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Mod/modId/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Mod/{modId}
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Mod/{modId}/Updates
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ModCategory/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ModCategory/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ModCategory/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ModCategory/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/ModCategory/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Mods/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Mods/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Mods/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Mods/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Poll/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Poll/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Poll/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Poll/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Poll/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Post/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Post/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Post/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Post/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Post/{post_id}
+  method: delete
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Post/{post_id}/Untrash
+  method: patch
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Project/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Project/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Project/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Project/{submission_id}/FinishedWorks
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Project/{submission_id}/Wips
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteDL/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteDL/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteDL/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteDL/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteDL/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteDL/{remoteDLId}
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/[member_id
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/memberID/secretKey/PizzaOvenPlus
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/member_id
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/RemoteInstall/{secretkey}/{memberid}/TotkModManager
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Request/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Request/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Request/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Request/{requestId}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Request/{submission_id}/BountyRecipients
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Ripe/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Ripe/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Ripe/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Ripe/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Ripe/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Subscription/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Subscription/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Subscription/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Subscription/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Subscription/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Subscription/{subscription_id}
+  method: delete
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Support/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Support/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Support/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Support/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Todo/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Todo/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Todo/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Todo/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Todo/{todo_id}
+  method: patch
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Todo/{todo_id}
+  method: delete
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Todo/{todo_id}/Toggle
+  method: patch
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Tool/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Tool/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Update/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Update/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Update/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Update/{id}/Config
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Update/{updateId}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Update/{update_id}
+  method: patch
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Update/{update_id}
+  method: delete
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Update/{update_id}/Untrash
+  method: patch
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/BlogCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/ConceptCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/ContestCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/EventCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/Forum/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/Index
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/JamCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/List/Featured
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/ListFilterConfig
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/ModCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/NewsCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/QuestionCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/RequestCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/ScriptCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/Search/Results
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/Search/Suggestions
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/SoundCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/ToolCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/TutorialCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/WareCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/WipCategory/NestedStructure
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Util/{id}/ProfilePage
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/Wip/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{sectionSlug}/Categories
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/AccessorCollections
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/AddToCollection
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/Issue/Add
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/Issues
+  method: get
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/Like
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/Like
+  method: delete
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/Post/Add
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/RemoveFromCollection
+  method: delete
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/Subscription/Add
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/Thank/Add
+  method: post
+  reason: 'excluded: probe status is not 200'
+- path: /apiv11/{section_slug}/{submission_id}/Todo/Add
+  method: post
+  reason: 'excluded: probe status is not 200'
