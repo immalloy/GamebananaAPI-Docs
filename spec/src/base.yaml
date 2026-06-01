@@ -2,9 +2,8 @@ openapi: 3.0.3
 info:
   title: GameBanana APIs (Unofficial Documentation)
   version: 0.1.0
-  description: Curated, version-first GameBanana API reference. Browse tags by version
-    (v12 to v3), then by domain. Endpoints are retained only when probe evidence indicates
-    meaningful reachability; uncertainty is marked with x-curation-note.
+  description: A simple API reference made by ImMalloy. You can use this however you
+    like.
 servers:
 - url: https://gamebanana.com
   description: GameBanana main host
