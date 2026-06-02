@@ -3,32 +3,23 @@ paths:
     get:
       operationId: v12_ripe_index_get
       summary: List primary resources (Ripe)
-      description: 'v12 `Ripe` endpoint `Index`. Purpose: Retrieve the default listing
-        for this domain, usually used to populate landing pages or initial browse
-        views. Expected input: No parameters are required for a baseline request.
-        Returned data: typically a domain-specific JSON object/collection used by
-        GameBanana web clients and integrations. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list primary resources (Ripe). No parameters are required.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Ripe/Index`. Field presence
-                  can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/Ripe/Index
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -41,8 +32,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: Ripe'
       x-last-test:
@@ -51,50 +41,30 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Ripe/Index
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Index` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/Ripe/Index
       x-observed-response-format: json
   /apiv12/Ripe/Info:
     get:
       operationId: v12_ripe_info_get
       summary: Get product info payload (Ripe)
-      description: 'v12 `Ripe` endpoint. Purpose: Return product/info metadata for
-        the target commerce endpoint. Expected input: No parameters are required for
-        the baseline call. Returned data: JSON payload used by GameBanana clients
-        for list, detail, or interaction views. This endpoint has probe evidence of
-        occasional non-JSON responses; guard on status and content-type before decoding.
-        Last verified probe content-type: `text/html; charset=UTF-8`.'
+      description: Use this endpoint to get product info payload (Ripe). No parameters are required. This
+        endpoint may return HTML, so check the response content type before parsing.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients. Probe data observed `text/html` responses on this route; clients
-            should branch parsing by content-type.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Ripe/Info`. Field presence
-                  can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/Ripe/Info
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   id: 1
                   name: example
@@ -104,13 +74,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv12/Ripe/Info` in
-                  probe data.
-              example: <!doctype html><html><body>Observed HTML payload from GameBanana
-                endpoint.</body></html>
+                description: Raw response body.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana endpoint.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: Ripe'
       x-last-test:
@@ -120,51 +87,31 @@ paths:
         url: https://gamebanana.com/apiv12/Ripe/Info
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Info` responses to drive detail views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/Ripe/Info
       x-observed-response-format: mixed
-      x-observed-response-note: 'Observed format drift: previous docs had `html`,
-        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
-        charset=UTF-8).'
+      x-observed-response-note: 'Observed format drift: previous docs had `html`, full live verification
+        on 2026-06-01T21:22:07Z returned `json` (application/json; charset=UTF-8).'
   /apiv12/Ripe/ListFilterConfig:
     get:
       operationId: v12_ripe_list_filter_config_get
       summary: Get list filter configuration (Ripe)
-      description: 'v12 `Ripe` endpoint `List Filter Config`. Purpose: Return available
-        filter/sort metadata used to construct list and search requests. Expected
-        input: No parameters are required for a baseline request. Returned data: typically
-        a domain-specific JSON object/collection used by GameBanana web clients and
-        integrations. Last verified probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to get list filter configuration (Ripe). No parameters are required.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Ripe/ListFilterConfig`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/Ripe/ListFilterConfig
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -177,8 +124,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: Ripe'
       x-last-test:
@@ -187,48 +133,29 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Ripe/ListFilterConfig
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ListFilterConfig` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/Ripe/ListFilterConfig
       x-observed-response-format: json
   /apiv12/Ripe/Purchasers:
     get:
       operationId: v12_ripe_purchasers_get
       summary: List purchasers (Ripe)
-      description: 'v12 `Ripe` endpoint. Purpose: Return purchaser records for the
-        target commerce endpoint. Expected input: No parameters are required for the
-        baseline call. Returned data: JSON payload used by GameBanana clients for
-        list, detail, or interaction views. Last verified probe content-type: `application/json;
-        charset=UTF-8`.'
+      description: Use this endpoint to list purchasers (Ripe). No parameters are required.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Ripe/Purchasers`. Field
-                  presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/Ripe/Purchasers
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -241,8 +168,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: Ripe'
       x-last-test:
@@ -251,58 +177,38 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Ripe/Purchasers
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Purchasers` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/Ripe/Purchasers
       x-observed-response-format: json
   /apiv12/Ripe/{id}/Config:
     get:
       operationId: v12_ripe_id_config_get
       summary: Get resource configuration (Ripe)
-      description: 'v12 `Ripe` endpoint `{id} / Config`. Purpose: Return configuration
-        data required by client workflows for this resource. Expected input: Provide
-        required path identifiers and optional query filters as documented below.
-        Returned data: typically a domain-specific JSON object/collection used by
-        GameBanana web clients and integrations. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to get resource configuration (Ripe). Required path and query values
+        are listed below.
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Required path parameter `id`. Numeric identifier for the target
-          entity. Use an ID from index/search endpoints or previously resolved links.
+        description: ID used in the `id` URL segment.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Ripe/{id}/Config`. Field
-                  presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/Ripe/{id}/Config
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   filters:
                   - key: sort
@@ -313,8 +219,7 @@ paths:
                     sort: newest
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: Ripe'
       x-last-test:
@@ -323,58 +228,38 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Ripe/1/Config
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Config` responses to drive config views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/Ripe/1/Config
       x-observed-response-format: json
   /apiv12/Ripe/{id}/ProfilePage:
     get:
       operationId: v12_ripe_id_profile_page_get
       summary: Fetch profile page payload (Ripe)
-      description: 'v12 `Ripe` endpoint `{id} / Profile Page`. Purpose: Return the
-        full profile-page data model used by GameBanana clients for a single entity.
-        Expected input: Provide required path identifiers and optional query filters
-        as documented below. Returned data: typically a domain-specific JSON object/collection
-        used by GameBanana web clients and integrations. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to fetch profile page payload (Ripe). Required path and query values
+        are listed below.
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Required path parameter `id`. Numeric identifier for the target
-          entity. Use an ID from index/search endpoints or previously resolved links.
+        description: ID used in the `id` URL segment.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Ripe/{id}/ProfilePage`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/Ripe/{id}/ProfilePage
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   profile:
                     id: 1
@@ -385,8 +270,7 @@ paths:
                     likes: 10
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: Ripe'
       x-last-test:
@@ -395,16 +279,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Ripe/1/ProfilePage
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ProfilePage` responses to drive profile views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/Ripe/1/ProfilePage
       x-observed-response-format: json

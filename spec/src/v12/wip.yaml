@@ -3,32 +3,23 @@ paths:
     get:
       operationId: v12_wip_index_get
       summary: List primary resources (Wip)
-      description: 'v12 `Wip` endpoint `Index`. Purpose: Retrieve the default listing
-        for this domain, usually used to populate landing pages or initial browse
-        views. Expected input: No parameters are required for a baseline request.
-        Returned data: typically a domain-specific JSON object/collection used by
-        GameBanana web clients and integrations. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list primary resources (Wip). No parameters are required.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Wip/Index`. Field presence
-                  can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/Wip/Index
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -41,8 +32,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: Wip'
       x-last-test:
@@ -51,51 +41,30 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/Wip/Index
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Index` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/Wip/Index
       x-observed-response-format: json
   /apiv12/Wip/ListFilterConfig:
     get:
       operationId: v12_wip_list_filter_config_get
       summary: Get list filter configuration (Wip)
-      description: 'v12 `Wip` endpoint `List Filter Config`. Purpose: Return available
-        filter/sort metadata used to construct list and search requests. Expected
-        input: No parameters are required for a baseline request. Returned data: typically
-        a domain-specific JSON object/collection used by GameBanana web clients and
-        integrations. Probe evidence indicates this route can sometimes return non-JSON
-        content; implement content-type checks before parsing. Last verified probe
-        content-type: `text/html; charset=UTF-8`.'
+      description: Use this endpoint to get list filter configuration (Wip). No parameters are required.
+        This endpoint may return HTML, so check the response content type before parsing.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients. Probe data observed `text/html` responses on this route; clients
-            should branch parsing by content-type.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Wip/ListFilterConfig`. Field
-                  presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/Wip/ListFilterConfig
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -110,13 +79,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv12/Wip/ListFilterConfig`
-                  in probe data.
-              example: <!doctype html><html><body>Observed HTML payload from GameBanana
-                endpoint.</body></html>
+                description: Raw response body.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana endpoint.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: Wip'
       x-last-test:
@@ -126,16 +92,5 @@ paths:
         url: https://gamebanana.com/apiv12/Wip/ListFilterConfig
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ListFilterConfig` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/Wip/ListFilterConfig
       x-observed-response-format: html

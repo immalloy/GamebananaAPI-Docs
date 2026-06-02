@@ -3,40 +3,32 @@ paths:
     get:
       operationId: v12_soundcategory_id_profile_page_get
       summary: Fetch profile page payload (SoundCategory)
-      description: 'v12 `SoundCategory` endpoint `{id} / Profile Page`. Purpose: Return
-        the full profile-page data model used by GameBanana clients for a single entity.
-        Expected input: Provide the required path identifier documented below. Returned
-        data: typically a domain-specific JSON object/collection used by GameBanana
-        web clients and integrations. Last verified probe content-type: `application/json;
-        charset=UTF-8`.'
+      description: Use this endpoint to fetch profile page payload (SoundCategory). Required path and
+        query values are listed below.
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Required path parameter id. Numeric identifier for the target entity. Use an ID from index/search endpoints or previously resolved links.
+        description: ID used in the `id` URL segment.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/SoundCategory/{id}/ProfilePage`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/SoundCategory/{id}/ProfilePage
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   profile:
                     id: 1
@@ -47,8 +39,7 @@ paths:
                     likes: 10
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: SoundCategory'
       x-last-test:
@@ -57,51 +48,30 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/SoundCategory/1/ProfilePage
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ProfilePage` responses to drive profile views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/SoundCategory/{id}/ProfilePage
       x-observed-response-format: json
   /apiv12/SoundCategory/Index:
     get:
       operationId: v12_soundcategory_index_get
       summary: List primary resources (SoundCategory)
-      description: 'v12 `SoundCategory` endpoint `Index`. Purpose: Retrieve the default
-        listing for this domain, usually used to populate landing pages or initial
-        browse views. Expected input: Provide required path identifiers and optional query filters as documented below.
-        Returned data: typically a domain-specific JSON object/collection used by
-        GameBanana web clients and integrations. Probe evidence indicates this route
-        can sometimes return non-JSON content; implement content-type checks before
-        parsing. Last verified probe content-type: `text/html; charset=UTF-8`.'
+      description: Use this endpoint to list primary resources (SoundCategory). No parameters are required.
+        This endpoint may return HTML, so check the response content type before parsing.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients. Probe data observed `text/html` responses on this route; clients
-            should branch parsing by content-type.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/SoundCategory/Index`. Field
-                  presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/SoundCategory/Index
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -116,13 +86,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv12/SoundCategory/Index`
-                  in probe data.
-              example: <!doctype html><html><body>Observed HTML payload from GameBanana
-                endpoint.</body></html>
+                description: Raw response body.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana endpoint.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: SoundCategory'
       x-last-test:
@@ -132,52 +99,32 @@ paths:
         url: https://gamebanana.com/apiv12/SoundCategory/Index
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Index` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/SoundCategory/Index
       x-observed-response-format: mixed
-      x-observed-response-note: 'Observed format drift: previous docs had `html`,
-        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
-        charset=UTF-8).'
+      x-observed-response-note: 'Observed format drift: previous docs had `html`, full live verification
+        on 2026-06-01T21:22:07Z returned `json` (application/json; charset=UTF-8).'
   /apiv12/SoundCategory/ListFilterConfig:
     get:
       operationId: v12_soundcategory_list_filter_config_get
       summary: Get list filter configuration (SoundCategory)
-      description: 'v12 `SoundCategory` endpoint `List Filter Config`. Purpose: Return
-        available filter/sort metadata used to construct list and search requests.
-        Expected input: No parameters are required for a baseline request. Returned
-        data: typically a domain-specific JSON object/collection used by GameBanana
-        web clients and integrations. Last verified probe content-type: `application/json;
-        charset=UTF-8`.'
+      description: Use this endpoint to get list filter configuration (SoundCategory). No parameters are
+        required.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/SoundCategory/ListFilterConfig`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/SoundCategory/ListFilterConfig
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -190,8 +137,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: SoundCategory'
       x-last-test:
@@ -200,16 +146,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/SoundCategory/ListFilterConfig
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ListFilterConfig` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/SoundCategory/ListFilterConfig
       x-observed-response-format: json

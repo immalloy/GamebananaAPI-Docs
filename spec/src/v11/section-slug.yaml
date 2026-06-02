@@ -3,58 +3,47 @@ paths:
     get:
       operationId: v11_sectionslug_submission_id_collections_get
       summary: List submission collections ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return collections that
-        include the target submission. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list submission collections ({section_slug}). Required path and
+        query values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/Collections`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/Collections
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -67,8 +56,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -77,67 +65,46 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Collections
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Collections` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/Collections
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/DownloadPage:
     get:
       operationId: v11_sectionslug_submission_id_download_page_get
       summary: Get download page payload ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return download-page metadata
-        and assets for the target submission. Expected input: Provide required path
-        identifiers plus optional query filters where supported. Returned data: JSON
-        payload used by GameBanana clients for list, detail, or interaction views.
-        Last verified probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to get download page payload ({section_slug}). Required path and
+        query values are listed below. This endpoint may return HTML, so check the response content type
+        before parsing.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/DownloadPage`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/DownloadPage
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   download:
                     url: https://gamebanana.com/dl/example
@@ -148,11 +115,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response payload observed in live verification.
+                description: Raw response body.
               example: <!doctype html><html><body>Observed HTML payload.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -161,70 +127,47 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/DownloadPage
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `DownloadPage` responses to drive download views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/DownloadPage
       x-observed-response-format: mixed
-      x-observed-response-note: 'Observed format drift: previous docs had `json`,
-        full live verification on 2026-06-01T21:22:07Z returned `html` (text/html;
-        charset=UTF-8).'
+      x-observed-response-note: 'Observed format drift: previous docs had `json`, full live verification
+        on 2026-06-01T21:22:07Z returned `html` (text/html; charset=UTF-8).'
   /apiv11/{section_slug}/{submission_id}/EmbeddablesPage:
     get:
       operationId: v11_sectionslug_submission_id_embeddables_page_get
       summary: Get embeddables page payload ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return embed-ready content
-        and metadata for the submission. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to get embeddables page payload ({section_slug}). Required path and
+        query values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/EmbeddablesPage`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/EmbeddablesPage
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   id: 1
                   name: example
@@ -232,8 +175,7 @@ paths:
                     status: active
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -242,67 +184,45 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/EmbeddablesPage
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `EmbeddablesPage` responses to drive detail views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/EmbeddablesPage
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/Files:
     get:
       operationId: v11_sectionslug_submission_id_files_get
       summary: List submission files ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return files attached
-        to the target submission. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list submission files ({section_slug}). Required path and query
+        values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/Files`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/Files
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -315,8 +235,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -325,75 +244,53 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Files
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Files` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/Files
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/Likes:
     get:
       operationId: v11_sectionslug_submission_id_likes_get
       summary: List submission likes ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return like interactions
-        for the target submission. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list submission likes ({section_slug}). Required path and query
+        values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/Likes`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/Likes
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -406,8 +303,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -416,92 +312,69 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Likes
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Likes` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/Likes
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/Posts:
     get:
       operationId: v11_sectionslug_submission_id_posts_get
       summary: List discussion posts ({section_slug})
-      description: 'v11 `{section_slug}` endpoint `{submission Id} / Posts`. Purpose:
-        Return post records tied to the resource, often for comments or activity feeds.
-        Expected input: Provide required path identifiers and optional query filters
-        as documented below. Returned data: typically a domain-specific JSON object/collection
-        used by GameBanana web clients and integrations. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list discussion posts ({section_slug}). Required path and query
+        values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPerpage`. Maximum items to return
-          per page. Tune this for payload size vs. request count tradeoffs.
+        description: Optional query parameter `_nPerpage`. Maximum items to return per page. Tune this
+          for payload size vs. request count tradeoffs.
         example: 15
       - in: query
         name: _sSort
         required: false
         schema:
           type: string
-        description: Optional query parameter `_sSort`. Sort mode key used by the
-          endpoint. Use server-supported values from `ListFilterConfig` where available.
+        description: Optional query parameter `_sSort`. Sort mode key used by the endpoint. Use server-supported
+          values from `ListFilterConfig` where available.
         example: newest
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/Posts`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/Posts
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -514,8 +387,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -524,68 +396,45 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Posts
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Posts` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/Posts
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/ProfilePage:
     get:
       operationId: v11_sectionslug_submission_id_profile_page_get
       summary: Fetch profile page payload ({section_slug})
-      description: 'v11 `{section_slug}` endpoint `{submission Id} / Profile Page`.
-        Purpose: Return the full profile-page data model used by GameBanana clients
-        for a single entity. Expected input: Provide required path identifiers and
-        optional query filters as documented below. Returned data: typically a domain-specific
-        JSON object/collection used by GameBanana web clients and integrations. Last
-        verified probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to fetch profile page payload ({section_slug}). Required path and
+        query values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/ProfilePage`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/ProfilePage
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   profile:
                     id: 1
@@ -596,8 +445,7 @@ paths:
                     likes: 10
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -606,75 +454,53 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/ProfilePage
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ProfilePage` responses to drive profile views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/ProfilePage
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/Subscribers:
     get:
       operationId: v11_sectionslug_submission_id_subscribers_get
       summary: List submission subscribers ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return members subscribed
-        to the target submission. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list submission subscribers ({section_slug}). Required path and
+        query values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/Subscribers`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/Subscribers
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -687,8 +513,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -697,75 +522,53 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Subscribers
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Subscribers` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/Subscribers
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/Thanks:
     get:
       operationId: v11_sectionslug_submission_id_thanks_get
       summary: List submission thanks ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return member thanks/acknowledgements
-        for the target submission. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list submission thanks ({section_slug}). Required path and query
+        values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/Thanks`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/Thanks
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -778,8 +581,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -788,75 +590,53 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Thanks
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Thanks` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/Thanks
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/Todos:
     get:
       operationId: v11_sectionslug_submission_id_todos_get
       summary: List submission todos ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return TODO entries associated
-        with the target submission. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list submission todos ({section_slug}). Required path and query
+        values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/Todos`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/Todos
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -869,8 +649,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -879,83 +658,61 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Todos
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Todos` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/Todos
       x-observed-response-format: json
   /apiv11/{section_slug}/{submission_id}/Updates:
     get:
       operationId: v11_sectionslug_submission_id_updates_get
       summary: List submission updates ({section_slug})
-      description: 'v11 `{section_slug}` endpoint. Purpose: Return update/change-log
-        entries for the target submission. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list submission updates ({section_slug}). Required path and query
+        values are listed below.
       parameters:
       - in: path
         name: section_slug
         required: true
         schema:
           type: string
-        description: Required path parameter `section_slug`. Section slug identifying
-          the submission domain (for example `Mod`, `Tool`, `Sound`). Choose a slug
-          that maps to a supported GameBanana section.
+        description: ID used in the `section_slug` URL segment.
         example: Mod
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPerpage`. Maximum items to return
-          per page. Tune this for payload size vs. request count tradeoffs.
+        description: Optional query parameter `_nPerpage`. Maximum items to return per page. Tune this
+          for payload size vs. request count tradeoffs.
         example: 15
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/{section_slug}/{submission_id}/Updates`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/{section_slug}/{submission_id}/Updates
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -968,8 +725,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: {section_slug}'
       x-last-test:
@@ -978,16 +734,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mod/1/Updates
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Updates` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/example/1/Updates
       x-observed-response-format: json

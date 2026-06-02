@@ -3,50 +3,39 @@ paths:
     get:
       operationId: v11_remoteinstall_memberid_secretkey_pizza_oven_plus_get
       summary: Get PizzaOvenPlus install payload (RemoteInstall)
-      description: 'v11 `RemoteInstall` endpoint. Purpose: Return remote install payload
-        for PizzaOvenPlus client integration. Expected input: Provide required path
-        identifiers plus optional query filters where supported. Returned data: JSON
-        payload used by GameBanana clients for list, detail, or interaction views.
-        Last verified probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to get PizzaOvenPlus install payload (RemoteInstall). Required path
+        and query values are listed below.
       parameters:
       - in: path
         name: memberid
         required: true
         schema:
           type: integer
-        description: Required path parameter `memberid`. Numeric identifier for the
-          target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `memberid` URL segment.
         example: 1
       - in: path
         name: secretkey
         required: true
         schema:
           type: string
-        description: Required path parameter `secretkey`. Installer/shared secret
-          token used for remote-install authorization. Treat this value as sensitive
-          and avoid logging it verbatim.
+        description: ID used in the `secretkey` URL segment.
         example: <secret>
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/RemoteInstall/{memberid}/{secretkey}/PizzaOvenPlus`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/RemoteInstall/{memberid}/{secretkey}/PizzaOvenPlus
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   download:
                     url: https://gamebanana.com/dl/example
@@ -63,8 +52,7 @@ paths:
         '404':
           description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: RemoteInstall'
       x-last-test:
@@ -73,16 +61,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/RemoteInstall/1/test/PizzaOvenPlus
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `PizzaOvenPlus` responses to drive download views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/RemoteInstall/1/example/PizzaOvenPlus
       x-observed-response-format: json

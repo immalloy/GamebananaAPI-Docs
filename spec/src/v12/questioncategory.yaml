@@ -3,42 +3,33 @@ paths:
     get:
       operationId: v12_questioncategory_id_profile_page_get
       summary: Fetch profile page payload (QuestionCategory)
-      description: 'v12 `QuestionCategory` endpoint `{id} / Profile Page`. Purpose: Return
-        the full profile-page data model used by GameBanana clients for a single entity.
-        Expected input: Provide the required path identifier documented below. Returned
-        data: typically a domain-specific JSON object/collection used by GameBanana
-        web clients and integrations. Probe evidence indicates this route can sometimes
-        return non-JSON content; implement content-type checks before parsing. Last
-        verified probe content-type: `text/html; charset=UTF-8`.'
+      description: Use this endpoint to fetch profile page payload (QuestionCategory). Required path and
+        query values are listed below. This endpoint may return HTML, so check the response content type
+        before parsing.
       parameters:
       - in: path
         name: id
         required: true
         schema:
           type: integer
-        description: Required path parameter id. Numeric identifier for the target entity. Use an ID from index/search endpoints or previously resolved links.
+        description: ID used in the `id` URL segment.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients. Probe data observed `text/html` responses on this route; clients
-            should branch parsing by content-type.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/QuestionCategory/{id}/ProfilePage`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/QuestionCategory/{id}/ProfilePage
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   profile:
                     id: 1
@@ -51,13 +42,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv12/QuestionCategory/{id}/ProfilePage`
-                  in probe data.
-              example: <!doctype html><html><body>Observed HTML payload from GameBanana
-                endpoint.</body></html>
+                description: Raw response body.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana endpoint.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: QuestionCategory'
       x-last-test:
@@ -67,52 +55,31 @@ paths:
         url: https://gamebanana.com/apiv12/QuestionCategory/1/ProfilePage
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ProfilePage` responses to drive profile views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/QuestionCategory/{id}/ProfilePage
       x-observed-response-format: mixed
-      x-observed-response-note: 'Observed format drift: previous docs had `html`,
-        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
-        charset=UTF-8).'
+      x-observed-response-note: 'Observed format drift: previous docs had `html`, full live verification
+        on 2026-06-01T21:22:07Z returned `json` (application/json; charset=UTF-8).'
   /apiv12/QuestionCategory/Index:
     get:
       operationId: v12_questioncategory_index_get
       summary: List primary resources (QuestionCategory)
-      description: 'v12 `QuestionCategory` endpoint `Index`. Purpose: Retrieve the
-        default listing for this domain, usually used to populate landing pages or
-        initial browse views. Expected input: No parameters are required for a baseline
-        request. Returned data: typically a domain-specific JSON object/collection
-        used by GameBanana web clients and integrations. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list primary resources (QuestionCategory). No parameters are required.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/QuestionCategory/Index`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/QuestionCategory/Index
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -125,8 +92,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: QuestionCategory'
       x-last-test:
@@ -135,49 +101,30 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/QuestionCategory/Index
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Index` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/QuestionCategory/Index
       x-observed-response-format: json
   /apiv12/QuestionCategory/ListFilterConfig:
     get:
       operationId: v12_questioncategory_list_filter_config_get
       summary: Get list filter configuration (QuestionCategory)
-      description: 'v12 `QuestionCategory` endpoint `List Filter Config`. Purpose:
-        Return available filter/sort metadata used to construct list and search requests.
-        Expected input: Provide required path identifiers and optional query filters as documented below. Returned
-        data: typically a domain-specific JSON object/collection used by GameBanana
-        web clients and integrations. Last verified probe content-type: `application/json;
-        charset=UTF-8`.'
+      description: Use this endpoint to get list filter configuration (QuestionCategory). No parameters
+        are required.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/QuestionCategory/ListFilterConfig`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/QuestionCategory/ListFilterConfig
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -190,8 +137,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: QuestionCategory'
       x-last-test:
@@ -200,51 +146,30 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv12/QuestionCategory/ListFilterConfig
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ListFilterConfig` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/QuestionCategory/ListFilterConfig
       x-observed-response-format: json
   /apiv12/QuestionCategory/Search:
     get:
       operationId: v12_questioncategory_search_get
       summary: Search resources (QuestionCategory)
-      description: 'v12 `QuestionCategory` endpoint `Search`. Purpose: Execute a server-side
-        search query for this domain and return matching records. Expected input:
-        No parameters are required for a baseline request. Returned data: typically
-        a domain-specific JSON object/collection used by GameBanana web clients and
-        integrations. Probe evidence indicates this route can sometimes return non-JSON
-        content; implement content-type checks before parsing. Last verified probe
-        content-type: `text/html; charset=UTF-8`.'
+      description: Use this endpoint to search resources (QuestionCategory). No parameters are required.
+        This endpoint may return HTML, so check the response content type before parsing.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients. Probe data observed `text/html` responses on this route; clients
-            should branch parsing by content-type.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/QuestionCategory/Search`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv12/QuestionCategory/Search
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -259,13 +184,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv12/QuestionCategory/Search`
-                  in probe data.
-              example: <!doctype html><html><body>Observed HTML payload from GameBanana
-                endpoint.</body></html>
+                description: Raw response body.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana endpoint.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v12: QuestionCategory'
       x-last-test:
@@ -275,22 +197,10 @@ paths:
         url: https://gamebanana.com/apiv12/QuestionCategory/Search
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Search` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv12/QuestionCategory/Search
       x-observed-response-format: mixed
-      x-observed-response-note: 'Observed format drift: previous docs had `html`,
-        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
-        charset=UTF-8).'
+      x-observed-response-note: 'Observed format drift: previous docs had `html`, full live verification
+        on 2026-06-01T21:22:07Z returned `json` (application/json; charset=UTF-8).'
       x-live-verification-status: error
-      x-live-verification-note: 'Full verification on 2026-06-01T21:22:07Z returned
-        error: HTTP Error 404: Not Found'
+      x-live-verification-note: 'Full verification on 2026-06-01T21:22:07Z returned error: HTTP Error
+        404: Not Found'

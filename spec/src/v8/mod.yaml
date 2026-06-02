@@ -3,67 +3,56 @@ paths:
     get:
       operationId: v8_mod_by_category_get
       summary: List resources by category (Mod)
-      description: 'v8 `Mod` endpoint. Purpose: Return resources filtered by category
-        identifier. Expected input: Provide required path identifiers plus optional
-        query filters where supported. Returned data: JSON payload used by GameBanana
-        clients for list, detail, or interaction views. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list resources by category (Mod). No parameters are required.
       parameters:
       - in: query
         name: _aCategoryRowIds[
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_aCategoryRowIds[`. Array-style category
-          row identifier parameter. Used to filter results by one or more category
-          IDs.
+        description: Optional query parameter `_aCategoryRowIds[`. Array-style category row identifier
+          parameter. Used to filter results by one or more category IDs.
         example: 1
       - in: query
         name: nPerpage
         required: false
         schema:
           type: string
-        description: Optional query parameter `nPerpage`. Endpoint-specific query
-          parameter. Use only values accepted by this route; unsupported values may
-          be ignored.
+        description: Optional query parameter `nPerpage`. Endpoint-specific query parameter. Use only
+          values accepted by this route; unsupported values may be ignored.
         example: example
       - in: query
         name: _csvProperties
         required: false
         schema:
           type: string
-        description: Optional query parameter `_csvProperties`. Comma-separated property
-          whitelist. Restricts response payload to the listed fields where supported.
+        description: Optional query parameter `_csvProperties`. Comma-separated property whitelist. Restricts
+          response payload to the listed fields where supported.
         example: _idRow,_sName
       - in: query
         name: _csvFlags
         required: false
         schema:
           type: string
-        description: Optional query parameter `_csvFlags`. Endpoint-specific query
-          parameter. Use only values accepted by this route; unsupported values may
-          be ignored.
+        description: Optional query parameter `_csvFlags`. Endpoint-specific query parameter. Use only
+          values accepted by this route; unsupported values may be ignored.
         example: example
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv8/Mod/ByCategory`. Field presence
-                  can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv8/Mod/ByCategory
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -84,8 +73,7 @@ paths:
         '404':
           description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v8: Mod'
       x-last-test:
@@ -94,65 +82,46 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv8/Mod/ByCategory?nPerpage=50&_csvProperties=_aFiles%2C_idRow%2C_sName%2C_aAlternateFileSources%2C_aLatestUpdates%2C_sText&_csvFlags=FILE_METADATA
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ByCategory` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv8/Mod/ByCategory
       x-observed-response-format: json
   /apiv8/Mod/Multi:
     get:
       operationId: v8_mod_multi_get
       summary: Fetch multiple resources (Mod)
-      description: 'v8 `Mod` endpoint. Purpose: Return multiple resources in a single
-        request using batched identifiers. Expected input: Provide required path identifiers
-        plus optional query filters where supported. Returned data: JSON payload used
-        by GameBanana clients for list, detail, or interaction views. Last verified
-        probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to fetch multiple resources (Mod). No parameters are required.
       parameters:
       - in: query
         name: _csvProperties
         required: false
         schema:
           type: string
-        description: Optional query parameter `_csvProperties`. Comma-separated property
-          whitelist. Restricts response payload to the listed fields where supported.
+        description: Optional query parameter `_csvProperties`. Comma-separated property whitelist. Restricts
+          response payload to the listed fields where supported.
         example: _idRow,_sName
       - in: query
         name: _csvRowIds
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_csvRowIds`. Comma-separated row identifiers.
-          Batch-fetches specific rows in one request.
+        description: Optional query parameter `_csvRowIds`. Comma-separated row identifiers. Batch-fetches
+          specific rows in one request.
         example: 1,2,3
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv8/Mod/Multi`. Field presence
-                  can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv8/Mod/Multi
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   id: 1
                   name: example
@@ -168,8 +137,7 @@ paths:
         '404':
           description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v8: Mod'
       x-last-test:
@@ -178,16 +146,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv8/Mod/Multi?_csvProperties=_aModManagerIntegrations%2C_sName%2C_bHasUpdates%2C_aLatestUpdates%2C_aFiles%2C_aPreviewMedia%2C_aAlternateFileSources&_csvRowIds=389764
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Multi` responses to drive detail views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv8/Mod/Multi
       x-observed-response-format: json

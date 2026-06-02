@@ -3,56 +3,48 @@ paths:
     get:
       operationId: v11_mods_categories_get
       summary: List categories (Mods)
-      description: 'v11 `Mods` endpoint. Purpose: Return categories available for
-        the resource domain. Expected input: Provide required path identifiers plus
-        optional query filters where supported. Returned data: JSON payload used by
-        GameBanana clients for list, detail, or interaction views. Last verified probe
-        content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list categories (Mods). No parameters are required.
       parameters:
       - in: query
         name: _sSort
         required: false
         schema:
           type: string
-        description: Optional query parameter `_sSort`. Sort mode key used by the
-          endpoint. Use server-supported values from `ListFilterConfig` where available.
+        description: Optional query parameter `_sSort`. Sort mode key used by the endpoint. Use server-supported
+          values from `ListFilterConfig` where available.
         example: newest
       - in: query
         name: _bShowEmpty
         required: false
         schema:
           type: boolean
-        description: Optional query parameter `_bShowEmpty`. Include empty groups/sections
-          in response. Set true to include categories or sections with no items.
+        description: Optional query parameter `_bShowEmpty`. Include empty groups/sections in response.
+          Set true to include categories or sections with no items.
         example: false
       - in: query
         name: _idGameRow
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_idGameRow`. Game row identifier. Targets
-          operations to a specific game record.
+        description: Optional query parameter `_idGameRow`. Game row identifier. Targets operations to
+          a specific game record.
         example: 8694
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Mods/Categories`. Field
-                  presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Mods/Categories
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -73,8 +65,7 @@ paths:
         '404':
           description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Mods'
       x-last-test:
@@ -83,16 +74,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Mods/Categories?_sSort=a_to_z&_bShowEmpty=true&_idGameRow=297
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Categories` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Mods/Categories
       x-observed-response-format: json

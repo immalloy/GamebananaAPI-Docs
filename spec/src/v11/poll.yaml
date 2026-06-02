@@ -3,57 +3,48 @@ paths:
     get:
       operationId: v11_poll_submission_id_votes_get
       summary: List poll votes (Poll)
-      description: 'v11 `Poll` endpoint. Purpose: Return vote records for the target
-        poll. Expected input: Provide required path identifiers plus optional query
-        filters where supported. Returned data: JSON payload used by GameBanana clients
-        for list, detail, or interaction views. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list poll votes (Poll). Required path and query values are listed
+        below.
       parameters:
       - in: path
         name: submission_id
         required: true
         schema:
           type: integer
-        description: Required path parameter `submission_id`. Numeric identifier for
-          the target entity. Use an ID from index/search endpoints or previously resolved
-          links.
+        description: ID used in the `submission_id` URL segment.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPerpage`. Maximum items to return
-          per page. Tune this for payload size vs. request count tradeoffs.
+        description: Optional query parameter `_nPerpage`. Maximum items to return per page. Tune this
+          for payload size vs. request count tradeoffs.
         example: 15
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Poll/{submission_id}/Votes`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Poll/{submission_id}/Votes
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -66,8 +57,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Poll'
       x-last-test:
@@ -76,16 +66,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Poll/1/Votes
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Votes` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Poll/1/Votes
       x-observed-response-format: json

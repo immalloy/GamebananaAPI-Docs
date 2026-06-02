@@ -3,30 +3,23 @@ paths:
     get:
       operationId: v11_util_config_trash_reasons_get
       summary: List trash reasons (Util)
-      description: 'v11 `Util` endpoint. Purpose: Return available moderation trash-reason
-        options. Expected input: No parameters are required for the baseline call.
-        Returned data: JSON payload used by GameBanana clients for list, detail, or
-        interaction views. Last verified probe content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list trash reasons (Util). No parameters are required.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Config/TrashReasons`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Config/TrashReasons
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -39,8 +32,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -49,73 +41,55 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Util/Config/TrashReasons
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `TrashReasons` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/Config/TrashReasons
       x-observed-response-format: json
   /apiv11/Util/Game/NameMatch:
     get:
       operationId: v11_util_game_name_match_get
       summary: Run game name match (Util)
-      description: 'v11 `Util` endpoint. Purpose: Return game name matching results
-        for fuzzy lookup. Expected input: Provide required path identifiers plus optional
-        query filters where supported. Returned data: JSON payload used by GameBanana
-        clients for list, detail, or interaction views. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to run game name match (Util). Required path and query values are
+        listed below.
       parameters:
       - in: query
         name: _sName
         required: true
         schema:
           type: string
-        description: Required query parameter `_sName`. Name search string. Matched
-          against endpoint-specific name/title fields.
+        description: Required query parameter `_sName`. Name search string. Matched against endpoint-specific
+          name/title fields.
         example: example
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPerpage`. Maximum items to return
-          per page. Tune this for payload size vs. request count tradeoffs.
+        description: Optional query parameter `_nPerpage`. Maximum items to return per page. Tune this
+          for payload size vs. request count tradeoffs.
         example: 15
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Game/NameMatch`. Field
-                  presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Game/NameMatch
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   id: 1
                   name: example
@@ -123,8 +97,7 @@ paths:
                     status: active
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -133,68 +106,53 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Util/Game/NameMatch?_sName=test
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `NameMatch` responses to drive detail views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/Game/NameMatch
       x-observed-response-format: json
   /apiv11/Util/Generic/Discussions:
     get:
       operationId: v11_util_generic_discussions_get
       summary: List generic discussions (Util)
-      description: 'v11 `Util` endpoint. Purpose: Return generic discussion records
-        for configured scopes. Expected input: Provide required path identifiers plus
-        optional query filters where supported. Returned data: JSON payload used by
-        GameBanana clients for list, detail, or interaction views. Last verified probe
-        content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list generic discussions (Util). No parameters are required.
       parameters:
       - in: query
         name: _idGameRow
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_idGameRow`. Game row identifier. Targets
-          operations to a specific game record.
+        description: Optional query parameter `_idGameRow`. Game row identifier. Targets operations to
+          a specific game record.
         example: 8694
       - in: query
         name: _idMemberRow
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_idMemberRow`. Member row identifier.
-          Targets operations to a specific member record.
+        description: Optional query parameter `_idMemberRow`. Member row identifier. Targets operations
+          to a specific member record.
         example: 1
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPerpage`. Maximum items to return
-          per page. Tune this for payload size vs. request count tradeoffs.
+        description: Optional query parameter `_nPerpage`. Maximum items to return per page. Tune this
+          for payload size vs. request count tradeoffs.
         example: 15
       - in: query
         name: _sModelName
         required: false
         schema:
           type: string
-        description: Optional query parameter `_sModelName`. Model/domain name selector.
-          Used by generic endpoints to choose the target model.
+        description: Optional query parameter `_sModelName`. Model/domain name selector. Used by generic
+          endpoints to choose the target model.
         example: Mod
       responses:
         '0':
@@ -204,16 +162,15 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Generic/Discussions`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response schema for `/apiv11/Util/Generic/Discussions`. Field presence can
+                  vary by version, resource state, and caller context.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Generic/Discussions
                   method: GET
                   status: '0'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -226,24 +183,20 @@ paths:
                     total: 2
                 errors: []
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Generic/Discussions`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Generic/Discussions
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -256,8 +209,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -266,65 +218,47 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Util/Generic/Discussions
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Discussions` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/Generic/Discussions
       x-observed-response-format: json
   /apiv11/Util/Generic/Tags:
     get:
       operationId: v11_util_generic_tags_get
       summary: List generic tags (Util)
-      description: 'v11 `Util` endpoint. Purpose: Return tag metadata used across
-        generic content flows. Expected input: Provide required path identifiers plus
-        optional query filters where supported. Returned data: JSON payload used by
-        GameBanana clients for list, detail, or interaction views. Last verified probe
-        content-type: `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list generic tags (Util). Required path and query values are listed
+        below.
       parameters:
       - in: query
         name: _sTag
         required: true
         schema:
           type: string
-        description: Required query parameter `_sTag`. Tag filter value. Limits results
-          to entities associated with this tag.
+        description: Required query parameter `_sTag`. Tag filter value. Limits results to entities associated
+          with this tag.
         example: featured
       - in: query
         name: _idGameRow
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_idGameRow`. Game row identifier. Targets
-          operations to a specific game record.
+        description: Optional query parameter `_idGameRow`. Game row identifier. Targets operations to
+          a specific game record.
         example: 8694
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Generic/Tags`. Field
-                  presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Generic/Tags
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -337,8 +271,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -347,51 +280,30 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Util/Generic/Tags?_sTag=test
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Tags` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/Generic/Tags
       x-observed-response-format: json
   /apiv11/Util/Homepage/CommunitySpotlight:
     get:
       operationId: v11_util_homepage_community_spotlight_get
       summary: Get community spotlight content (Util)
-      description: 'v11 `Util` endpoint `Homepage / Community Spotlight`. Purpose:
-        Return spotlighted or highlighted community content for the given scope. Expected
-        input: No parameters are required for a baseline request. Returned data: typically
-        a domain-specific JSON object/collection used by GameBanana web clients and
-        integrations. Probe evidence indicates this route can sometimes return non-JSON
-        content; implement content-type checks before parsing. Last verified probe
-        content-type: `text/html; charset=UTF-8`.'
+      description: Use this endpoint to get community spotlight content (Util). No parameters are required.
+        This endpoint may return HTML, so check the response content type before parsing.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients. Probe data observed `text/html` responses on this route; clients
-            should branch parsing by content-type.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Homepage/CommunitySpotlight`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Homepage/CommunitySpotlight
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   id: 1
                   name: example
@@ -401,13 +313,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv11/Util/Homepage/CommunitySpotlight`
-                  in probe data.
-              example: <!doctype html><html><body>Observed HTML payload from GameBanana
-                endpoint.</body></html>
+                description: Raw response body.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana endpoint.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -417,53 +326,32 @@ paths:
         url: https://gamebanana.com/apiv11/Util/Homepage/CommunitySpotlight
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `CommunitySpotlight` responses to drive detail views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/Homepage/CommunitySpotlight
       x-observed-response-format: mixed
-      x-observed-response-note: 'Observed format drift: previous docs had `html`,
-        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
-        charset=UTF-8).'
+      x-observed-response-note: 'Observed format drift: previous docs had `html`, full live verification
+        on 2026-06-01T21:22:07Z returned `json` (application/json; charset=UTF-8).'
   /apiv11/Util/Homepage/Features:
     get:
       operationId: v11_util_homepage_features_get
       summary: List homepage features (Util)
-      description: 'v11 `Util` endpoint. Purpose: Return featured homepage modules/content.
-        Expected input: No parameters are required for the baseline call. Returned
-        data: JSON payload used by GameBanana clients for list, detail, or interaction
-        views. This endpoint has probe evidence of occasional non-JSON responses;
-        guard on status and content-type before decoding. Last verified probe content-type:
-        `text/html; charset=UTF-8`.'
+      description: Use this endpoint to list homepage features (Util). No parameters are required. This
+        endpoint may return HTML, so check the response content type before parsing.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients. Probe data observed `text/html` responses on this route; clients
-            should branch parsing by content-type.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Homepage/Features`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Homepage/Features
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -478,13 +366,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv11/Util/Homepage/Features`
-                  in probe data.
-              example: <!doctype html><html><body>Observed HTML payload from GameBanana
-                endpoint.</body></html>
+                description: Raw response body.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana endpoint.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -494,86 +379,64 @@ paths:
         url: https://gamebanana.com/apiv11/Util/Homepage/Features
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Features` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/Homepage/Features
       x-observed-response-format: mixed
-      x-observed-response-note: 'Observed format drift: previous docs had `html`,
-        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
-        charset=UTF-8).'
+      x-observed-response-note: 'Observed format drift: previous docs had `html`, full live verification
+        on 2026-06-01T21:22:07Z returned `json` (application/json; charset=UTF-8).'
   /apiv11/Util/Homepage/Submissions:
     get:
       operationId: v11_util_homepage_submissions_get
       summary: List submissions (Util)
-      description: 'v11 `Util` endpoint `Homepage / Submissions`. Purpose: Return
-        submission records associated with the domain or parent entity. Expected input:
-        Provide required path identifiers and optional query filters as documented
-        below. Returned data: typically a domain-specific JSON object/collection used
-        by GameBanana web clients and integrations. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to list submissions (Util). No parameters are required.
       parameters:
       - in: query
         name: _bFilterBySubscribedGames
         required: false
         schema:
           type: boolean
-        description: Optional query parameter `_bFilterBySubscribedGames`. Endpoint-specific
-          query parameter. Use only values accepted by this route; unsupported values
-          may be ignored.
+        description: Optional query parameter `_bFilterBySubscribedGames`. Endpoint-specific query parameter.
+          Use only values accepted by this route; unsupported values may be ignored.
         example: example
       - in: query
         name: _nPage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPage`. 1-based page index for paginated
-          results. Use `1` for the first page and increment for subsequent pages.
+        description: Optional query parameter `_nPage`. 1-based page index for paginated results. Use
+          `1` for the first page and increment for subsequent pages.
         example: 1
       - in: query
         name: _nPerpage
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_nPerpage`. Maximum items to return
-          per page. Tune this for payload size vs. request count tradeoffs.
+        description: Optional query parameter `_nPerpage`. Maximum items to return per page. Tune this
+          for payload size vs. request count tradeoffs.
         example: 15
       - in: query
         name: _sSort
         required: false
         schema:
           type: string
-        description: Optional query parameter `_sSort`. Sort mode key used by the
-          endpoint. Use server-supported values from `ListFilterConfig` where available.
+        description: Optional query parameter `_sSort`. Sort mode key used by the endpoint. Use server-supported
+          values from `ListFilterConfig` where available.
         example: newest
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Homepage/Submissions`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Homepage/Submissions
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -586,8 +449,7 @@ paths:
                     total: 2
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -596,50 +458,30 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Util/Homepage/Submissions
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Submissions` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/Homepage/Submissions
       x-observed-response-format: json
   /apiv11/Util/Homepage/TopGames:
     get:
       operationId: v11_util_homepage_top_games_get
       summary: List top games (Util)
-      description: 'v11 `Util` endpoint. Purpose: Return ranked top-game entries for
-        homepage surfaces. Expected input: No parameters are required for the baseline
-        call. Returned data: JSON payload used by GameBanana clients for list, detail,
-        or interaction views. This endpoint has probe evidence of occasional non-JSON
-        responses; guard on status and content-type before decoding. Last verified
-        probe content-type: `text/html; charset=UTF-8`.'
+      description: Use this endpoint to list top games (Util). No parameters are required. This endpoint
+        may return HTML, so check the response content type before parsing.
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients. Probe data observed `text/html` responses on this route; clients
-            should branch parsing by content-type.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/Homepage/TopGames`.
-                  Field presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/Homepage/TopGames
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -654,13 +496,10 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv11/Util/Homepage/TopGames`
-                  in probe data.
-              example: <!doctype html><html><body>Observed HTML payload from GameBanana
-                endpoint.</body></html>
+                description: Raw response body.
+              example: <!doctype html><html><body>Observed HTML payload from GameBanana endpoint.</body></html>
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -670,60 +509,40 @@ paths:
         url: https://gamebanana.com/apiv11/Util/Homepage/TopGames
         contentType: text/html; charset=UTF-8
       x-curation-note: 'uncertain: probe content-type is not JSON'
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `TopGames` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/Homepage/TopGames
       x-observed-response-format: mixed
-      x-observed-response-note: 'Observed format drift: previous docs had `html`,
-        full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
-        charset=UTF-8).'
+      x-observed-response-note: 'Observed format drift: previous docs had `html`, full live verification
+        on 2026-06-01T21:22:07Z returned `json` (application/json; charset=UTF-8).'
   /apiv11/Util/RecordInfo:
     get:
       operationId: v11_util_record_info_get
       summary: Get record info (Util)
-      description: 'v11 `Util` endpoint. Purpose: Return metadata describing a requested
-        record reference. Expected input: Provide required path identifiers plus optional
-        query filters where supported. Returned data: JSON payload used by GameBanana
-        clients for list, detail, or interaction views. Last verified probe content-type:
-        `application/json; charset=UTF-8`.'
+      description: Use this endpoint to get record info (Util). No parameters are required.
       parameters:
       - in: query
         name: s
         required: false
         schema:
           type: string
-        description: Optional query parameter `s`. Endpoint-specific query parameter.
-          Use only values accepted by this route; unsupported values may be ignored.
+        description: Optional query parameter `s`. Endpoint-specific query parameter. Use only values
+          accepted by this route; unsupported values may be ignored.
         example: example
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv11/Util/RecordInfo`. Field
-                  presence can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv11/Util/RecordInfo
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   id: 1
                   name: example
@@ -731,8 +550,7 @@ paths:
                     status: active
                 errors: []
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v11: Util'
       x-last-test:
@@ -741,16 +559,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv11/Util/RecordInfo
         contentType: application/json; charset=UTF-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `RecordInfo` responses to drive detail views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv11/Util/RecordInfo
       x-observed-response-format: json

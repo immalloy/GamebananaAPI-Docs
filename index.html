@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GamebananaAPI Docs</title>
+  <meta name="description" content="Unofficial GameBanana API reference." />
   <link rel="icon" href="./assets/icons/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/gaybanana-16.png" />
   <link rel="icon" type="image/png" sizes="35x35" href="./assets/icons/gaybanana-35.png" />
@@ -25,7 +26,31 @@
   <script>
     Scalar.createApiReference("#app", {
       url: "./spec/openapi.yaml",
-      persistAuth: true
+      layout: "modern",
+      theme: "default",
+      darkMode: false,
+      hideDarkModeToggle: false,
+      hideDownloadButton: false,
+      hideModels: false,
+      hideSearch: false,
+      hideTestRequestButton: false,
+      showOperationId: false,
+      showSidebar: true,
+      defaultOpenAllTags: false,
+      expandAllModelSections: false,
+      expandAllResponses: false,
+      orderRequiredPropertiesFirst: true,
+      documentDownloadType: "yaml",
+      operationTitleSource: "summary",
+      persistAuth: true,
+      searchHotKey: "k",
+      proxyUrl: "https://proxy.scalar.com",
+      metaData: {
+        title: "GamebananaAPI Docs",
+        description: "Unofficial GameBanana API reference.",
+        ogTitle: "GamebananaAPI Docs",
+        ogDescription: "Unofficial GameBanana API reference."
+      }
     });
   </script>
 </body>

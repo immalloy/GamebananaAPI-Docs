@@ -2,9 +2,8 @@ openapi: 3.1.0
 info:
   title: GameBanana APIs (Unofficial Documentation)
   version: 0.2.0
-  description: A simple API reference made by ImMalloy. You can use this however you
-    like. Most endpoints were discovered by crawling/extraction tools, validated by
-    automated tests, and then manually reviewed by me.
+  description: Unofficial GameBanana API reference. Use the version groups in the sidebar, choose an endpoint,
+    fill any path or query parameters, and check the response content type before parsing.
 servers:
 - url: https://gamebanana.com
   description: GameBanana main host
@@ -16,223 +15,223 @@ servers:
   description: GameBanana development API host
 tags:
 - name: 'v3: Mod'
-  x-displayName: 'Mod'
+  x-displayName: Mod
 - name: 'v3: ModCategory'
-  x-displayName: 'ModCategory'
+  x-displayName: ModCategory
 - name: 'v3: Tool'
-  x-displayName: 'Tool'
+  x-displayName: Tool
 - name: 'v4: Mod'
-  x-displayName: 'Mod'
+  x-displayName: Mod
 - name: 'v5: Mod'
-  x-displayName: 'Mod'
+  x-displayName: Mod
 - name: 'v6: Gamefile'
-  x-displayName: 'Gamefile'
+  x-displayName: Gamefile
 - name: 'v6: Mod'
-  x-displayName: 'Mod'
+  x-displayName: Mod
 - name: 'v7: Mod'
-  x-displayName: 'Mod'
+  x-displayName: Mod
 - name: 'v8: Mod'
-  x-displayName: 'Mod'
+  x-displayName: Mod
 - name: 'v8: Util'
-  x-displayName: 'Util'
+  x-displayName: Util
 - name: 'v11: App'
-  x-displayName: 'App'
+  x-displayName: App
 - name: 'v11: Collection'
-  x-displayName: 'Collection'
+  x-displayName: Collection
 - name: 'v11: Contest'
-  x-displayName: 'Contest'
+  x-displayName: Contest
 - name: 'v11: File'
-  x-displayName: 'File'
+  x-displayName: File
 - name: 'v11: Game'
-  x-displayName: 'Game'
+  x-displayName: Game
 - name: 'v11: Idea'
-  x-displayName: 'Idea'
+  x-displayName: Idea
 - name: 'v11: Jam'
-  x-displayName: 'Jam'
+  x-displayName: Jam
 - name: 'v11: Member'
-  x-displayName: 'Member'
+  x-displayName: Member
 - name: 'v11: Mod'
-  x-displayName: 'Mod'
+  x-displayName: Mod
 - name: 'v11: ModCategory'
-  x-displayName: 'ModCategory'
+  x-displayName: ModCategory
 - name: 'v11: Mods'
-  x-displayName: 'Mods'
+  x-displayName: Mods
 - name: 'v11: Poll'
-  x-displayName: 'Poll'
+  x-displayName: Poll
 - name: 'v11: Post'
-  x-displayName: 'Post'
+  x-displayName: Post
 - name: 'v11: RemoteInstall'
-  x-displayName: 'RemoteInstall'
+  x-displayName: RemoteInstall
 - name: 'v11: Request'
-  x-displayName: 'Request'
+  x-displayName: Request
 - name: 'v11: Ripe'
-  x-displayName: 'Ripe'
+  x-displayName: Ripe
 - name: 'v11: Support'
-  x-displayName: 'Support'
+  x-displayName: Support
 - name: 'v11: Tool'
-  x-displayName: 'Tool'
+  x-displayName: Tool
 - name: 'v11: Util'
-  x-displayName: 'Util'
+  x-displayName: Util
 - name: 'v11: Wip'
-  x-displayName: 'Wip'
+  x-displayName: Wip
 - name: 'v11: {model_name}'
   x-displayName: '{model_name}'
 - name: 'v11: {section_slug}'
   x-displayName: '{section_slug}'
 - name: 'v12: App'
-  x-displayName: 'App'
+  x-displayName: App
 - name: 'v12: Article'
-  x-displayName: 'Article'
+  x-displayName: Article
 - name: 'v12: ArticleCategory'
-  x-displayName: 'ArticleCategory'
+  x-displayName: ArticleCategory
 - name: 'v12: Bitpit'
-  x-displayName: 'Bitpit'
+  x-displayName: Bitpit
 - name: 'v12: Blog'
-  x-displayName: 'Blog'
+  x-displayName: Blog
 - name: 'v12: BlogCategory'
-  x-displayName: 'BlogCategory'
+  x-displayName: BlogCategory
 - name: 'v12: Bug'
-  x-displayName: 'Bug'
+  x-displayName: Bug
 - name: 'v12: Club'
-  x-displayName: 'Club'
+  x-displayName: Club
 - name: 'v12: Collection'
-  x-displayName: 'Collection'
+  x-displayName: Collection
 - name: 'v12: Concept'
-  x-displayName: 'Concept'
+  x-displayName: Concept
 - name: 'v12: ConceptCategory'
-  x-displayName: 'ConceptCategory'
+  x-displayName: ConceptCategory
 - name: 'v12: Contest'
-  x-displayName: 'Contest'
+  x-displayName: Contest
 - name: 'v12: ContestCategory'
-  x-displayName: 'ContestCategory'
+  x-displayName: ContestCategory
 - name: 'v12: Event'
-  x-displayName: 'Event'
+  x-displayName: Event
 - name: 'v12: EventCategory'
-  x-displayName: 'EventCategory'
+  x-displayName: EventCategory
 - name: 'v12: File'
-  x-displayName: 'File'
+  x-displayName: File
 - name: 'v12: Forum'
-  x-displayName: 'Forum'
+  x-displayName: Forum
 - name: 'v12: Game'
-  x-displayName: 'Game'
+  x-displayName: Game
 - name: 'v12: GameKey'
-  x-displayName: 'GameKey'
+  x-displayName: GameKey
 - name: 'v12: Generator'
-  x-displayName: 'Generator'
+  x-displayName: Generator
 - name: 'v12: GeneratorCategory'
-  x-displayName: 'GeneratorCategory'
+  x-displayName: GeneratorCategory
 - name: 'v12: GmApplication'
-  x-displayName: 'GmApplication'
+  x-displayName: GmApplication
 - name: 'v12: Idea'
-  x-displayName: 'Idea'
+  x-displayName: Idea
 - name: 'v12: Initiative'
-  x-displayName: 'Initiative'
+  x-displayName: Initiative
 - name: 'v12: Issue'
-  x-displayName: 'Issue'
+  x-displayName: Issue
 - name: 'v12: ItemType'
-  x-displayName: 'ItemType'
+  x-displayName: ItemType
 - name: 'v12: Jam'
-  x-displayName: 'Jam'
+  x-displayName: Jam
 - name: 'v12: JamCategory'
-  x-displayName: 'JamCategory'
+  x-displayName: JamCategory
 - name: 'v12: Medal'
-  x-displayName: 'Medal'
+  x-displayName: Medal
 - name: 'v12: Member'
-  x-displayName: 'Member'
+  x-displayName: Member
 - name: 'v12: Mod'
-  x-displayName: 'Mod'
+  x-displayName: Mod
 - name: 'v12: ModCategory'
-  x-displayName: 'ModCategory'
+  x-displayName: ModCategory
 - name: 'v12: Model'
-  x-displayName: 'Model'
+  x-displayName: Model
 - name: 'v12: ModelCategory'
-  x-displayName: 'ModelCategory'
+  x-displayName: ModelCategory
 - name: 'v12: Mods'
-  x-displayName: 'Mods'
+  x-displayName: Mods
 - name: 'v12: News'
-  x-displayName: 'News'
+  x-displayName: News
 - name: 'v12: NewsCategory'
-  x-displayName: 'NewsCategory'
+  x-displayName: NewsCategory
 - name: 'v12: Permit'
-  x-displayName: 'Permit'
+  x-displayName: Permit
 - name: 'v12: Poll'
-  x-displayName: 'Poll'
+  x-displayName: Poll
 - name: 'v12: PollCategory'
-  x-displayName: 'PollCategory'
+  x-displayName: PollCategory
 - name: 'v12: PositionAvailable'
-  x-displayName: 'PositionAvailable'
+  x-displayName: PositionAvailable
 - name: 'v12: Post'
-  x-displayName: 'Post'
+  x-displayName: Post
 - name: 'v12: Project'
-  x-displayName: 'Project'
+  x-displayName: Project
 - name: 'v12: ProjectCategory'
-  x-displayName: 'ProjectCategory'
+  x-displayName: ProjectCategory
 - name: 'v12: Question'
-  x-displayName: 'Question'
+  x-displayName: Question
 - name: 'v12: QuestionCategory'
-  x-displayName: 'QuestionCategory'
+  x-displayName: QuestionCategory
 - name: 'v12: RemoteDL'
-  x-displayName: 'RemoteDL'
+  x-displayName: RemoteDL
 - name: 'v12: RemoteInstall'
-  x-displayName: 'RemoteInstall'
+  x-displayName: RemoteInstall
 - name: 'v12: Request'
-  x-displayName: 'Request'
+  x-displayName: Request
 - name: 'v12: RequestCategory'
-  x-displayName: 'RequestCategory'
+  x-displayName: RequestCategory
 - name: 'v12: Review'
-  x-displayName: 'Review'
+  x-displayName: Review
 - name: 'v12: Ripe'
-  x-displayName: 'Ripe'
+  x-displayName: Ripe
 - name: 'v12: Script'
-  x-displayName: 'Script'
+  x-displayName: Script
 - name: 'v12: ScriptCategory'
-  x-displayName: 'ScriptCategory'
+  x-displayName: ScriptCategory
 - name: 'v12: Sound'
-  x-displayName: 'Sound'
+  x-displayName: Sound
 - name: 'v12: SoundCategory'
-  x-displayName: 'SoundCategory'
+  x-displayName: SoundCategory
 - name: 'v12: Spray'
-  x-displayName: 'Spray'
+  x-displayName: Spray
 - name: 'v12: SprayCategory'
-  x-displayName: 'SprayCategory'
+  x-displayName: SprayCategory
 - name: 'v12: StatusUpdate'
-  x-displayName: 'StatusUpdate'
+  x-displayName: StatusUpdate
 - name: 'v12: Studio'
-  x-displayName: 'Studio'
+  x-displayName: Studio
 - name: 'v12: Subscription'
-  x-displayName: 'Subscription'
+  x-displayName: Subscription
 - name: 'v12: Support'
-  x-displayName: 'Support'
+  x-displayName: Support
 - name: 'v12: Thread'
-  x-displayName: 'Thread'
+  x-displayName: Thread
 - name: 'v12: Todo'
-  x-displayName: 'Todo'
+  x-displayName: Todo
 - name: 'v12: Tool'
-  x-displayName: 'Tool'
+  x-displayName: Tool
 - name: 'v12: ToolCategory'
-  x-displayName: 'ToolCategory'
+  x-displayName: ToolCategory
 - name: 'v12: Tutorial'
-  x-displayName: 'Tutorial'
+  x-displayName: Tutorial
 - name: 'v12: TutorialCategory'
-  x-displayName: 'TutorialCategory'
+  x-displayName: TutorialCategory
 - name: 'v12: Update'
-  x-displayName: 'Update'
+  x-displayName: Update
 - name: 'v12: Util'
-  x-displayName: 'Util'
+  x-displayName: Util
 - name: 'v12: Ware'
-  x-displayName: 'Ware'
+  x-displayName: Ware
 - name: 'v12: WareCategory'
-  x-displayName: 'WareCategory'
+  x-displayName: WareCategory
 - name: 'v12: WareOrder'
-  x-displayName: 'WareOrder'
+  x-displayName: WareOrder
 - name: 'v12: Wiki'
-  x-displayName: 'Wiki'
+  x-displayName: Wiki
 - name: 'v12: WikiCategory'
-  x-displayName: 'WikiCategory'
+  x-displayName: WikiCategory
 - name: 'v12: Wip'
-  x-displayName: 'Wip'
+  x-displayName: Wip
 - name: 'v12: WipCategory'
-  x-displayName: 'WipCategory'
+  x-displayName: WipCategory
 x-tagGroups:
 - name: v12
   tags:
@@ -359,3 +358,6 @@ x-tagGroups:
   - 'v3: Mod'
   - 'v3: ModCategory'
   - 'v3: Tool'
+externalDocs:
+  description: Live documentation site
+  url: https://immalloy.github.io/GamebananaAPI-Docs/

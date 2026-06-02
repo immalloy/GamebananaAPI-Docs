@@ -3,41 +3,32 @@ paths:
     get:
       operationId: v4_mod_by_game_get
       summary: List resources by game (Mod)
-      description: 'v4 `Mod` endpoint. Purpose: Return resources filtered by game
-        identifier. Expected input: Provide required path identifiers plus optional
-        query filters where supported. Returned data: JSON payload used by GameBanana
-        clients for list, detail, or interaction views. Last verified probe content-type:
-        `application/json; charset=utf-8`.'
+      description: Use this endpoint to list resources by game (Mod). No parameters are required.
       parameters:
       - in: query
         name: _aGameRowIds[
         required: false
         schema:
           type: integer
-        description: Optional query parameter `_aGameRowIds[`. Array-style game row
-          identifier parameter. Used by legacy list endpoints that accept repeated
-          game IDs.
+        description: Optional query parameter `_aGameRowIds[`. Array-style game row identifier parameter.
+          Used by legacy list endpoints that accept repeated game IDs.
         example: 1
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv4/Mod/ByGame`. Field presence
-                  can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv4/Mod/ByGame
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -58,8 +49,7 @@ paths:
         '404':
           description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v4: Mod'
       x-last-test:
@@ -68,58 +58,38 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv4/Mod/ByGame
         contentType: application/json; charset=utf-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `ByGame` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv4/Mod/ByGame
       x-observed-response-format: json
   /apiv4/Mod/Index:
     get:
       operationId: v4_mod_index_get
       summary: List primary resources (Mod)
-      description: 'v4 `Mod` endpoint `Index`. Purpose: Retrieve the default listing
-        for this domain, usually used to populate landing pages or initial browse
-        views. Expected input: Provide required path identifiers and optional query
-        filters as documented below. Returned data: typically a domain-specific JSON
-        object/collection used by GameBanana web clients and integrations. Last verified
-        probe content-type: `application/json; charset=utf-8`.'
+      description: Use this endpoint to list primary resources (Mod). No parameters are required.
       parameters:
       - in: query
         name: help
         required: false
         schema:
           type: string
-        description: Optional query parameter `help`. Help/debug toggle parameter.
-          Returns additional endpoint guidance in some legacy routes.
+        description: Optional query parameter `help`. Help/debug toggle parameter. Returns additional
+          endpoint guidance in some legacy routes.
         example: true
       responses:
         '200':
-          description: Successful response. Payload structure depends on the endpoint
-            intent and may include nested objects, arrays, and metadata used by GameBanana
-            clients.
+          description: Successful response. Shape can vary by resource and permissions.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv4/Mod/Index`. Field presence
-                  can vary by version, resource state, and caller context.
+                description: Response body. Fields can vary by endpoint, resource state, and permissions.
               example:
                 _meta:
                   endpoint: /apiv4/Mod/Index
                   method: GET
                   status: '200'
                   content_type_hint: application/json
-                  note: Example payload based on observed endpoint behavior and naming
-                    conventions.
+                  note: Example payload based on observed endpoint behavior and naming conventions.
                 data:
                   items:
                   - id: 1
@@ -140,8 +110,7 @@ paths:
         '404':
           description: HTTP 404 response as observed for this endpoint.
         default:
-          description: Fallback response for unexpected server behavior, invalid inputs,
-            permission limitations, or upstream failures.
+          description: Unexpected error, invalid input, permission issue, or upstream failure.
       tags:
       - 'v4: Mod'
       x-last-test:
@@ -150,16 +119,5 @@ paths:
         result: ok
         url: https://gamebanana.com/apiv4/Mod/Index
         contentType: application/json; charset=utf-8
-      x-developer-notes:
-      - Implement retry with backoff and request timeouts; host behavior can differ
-        between gamebanana.com and api subdomains.
-      - Avoid strict schema locking; additive fields may appear without version bumps.
-      x-common-use-cases:
-      - Use `Index` responses to drive list views in client apps.
-      - Preload this endpoint during initial page/app hydration when latency matters.
-      x-edge-cases:
-      - Response shape can change with permissions, moderation state, or hidden/deleted
-        entities.
-      - Treat empty arrays/objects as valid outcomes, not parser errors.
       x-request-example: GET https://gamebanana.com/apiv4/Mod/Index
       x-observed-response-format: json
