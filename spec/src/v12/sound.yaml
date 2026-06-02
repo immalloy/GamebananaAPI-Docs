@@ -1,15 +1,22 @@
 paths:
-  /apiv12/Sound/1/ProfilePage:
+  /apiv12/Sound/{id}/ProfilePage:
     get:
-      operationId: v12_sound_1_profile_page_get
+      operationId: v12_sound_id_profile_page_get
       summary: Fetch profile page payload (Sound)
-      description: 'v12 `Sound` endpoint `1 / Profile Page`. Purpose: Return the full
-        profile-page data model used by GameBanana clients for a single entity. Expected
-        input: No parameters are required for a baseline request. Returned data: typically
+      description: 'v12 `Sound` endpoint `{id} / Profile Page`. Purpose: Return the full
+        profile-page data model used by GameBanana clients for a single entity. Expected input: Provide required path identifiers and optional query filters as documented below. Returned data: typically
         a domain-specific JSON object/collection used by GameBanana web clients and
         integrations. Probe evidence indicates this route can sometimes return non-JSON
         content; implement content-type checks before parsing. Last verified probe
         content-type: `text/html; charset=UTF-8`.'
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: Required path parameter id. Numeric identifier for the target entity. Use an ID from index/search endpoints or previously resolved links.
+        example: 1
       responses:
         '200':
           description: Successful response. Payload structure depends on the endpoint
@@ -21,11 +28,11 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
-                description: Response schema for `/apiv12/Sound/1/ProfilePage`. Field
+                description: Response schema for `/apiv12/Sound/{id}/ProfilePage`. Field
                   presence can vary by version, resource state, and caller context.
               example:
                 _meta:
-                  endpoint: /apiv12/Sound/1/ProfilePage
+                  endpoint: /apiv12/Sound/{id}/ProfilePage
                   method: GET
                   status: '200'
                   content_type_hint: application/json
@@ -43,7 +50,7 @@ paths:
             text/html:
               schema:
                 type: string
-                description: HTML response body observed for `/apiv12/Sound/1/ProfilePage`
+                description: HTML response body observed for `/apiv12/Sound/{id}/ProfilePage`
                   in probe data.
               example: <!doctype html><html><body>Observed HTML payload from GameBanana
                 endpoint.</body></html>
@@ -70,7 +77,7 @@ paths:
       - Response shape can change with permissions, moderation state, or hidden/deleted
         entities.
       - Treat empty arrays/objects as valid outcomes, not parser errors.
-      x-request-example: GET https://gamebanana.com/apiv12/Sound/1/ProfilePage
+      x-request-example: GET https://gamebanana.com/apiv12/Sound/{id}/ProfilePage
       x-observed-response-format: mixed
       x-observed-response-note: 'Observed format drift: previous docs had `html`,
         full live verification on 2026-06-01T21:22:07Z returned `json` (application/json;
