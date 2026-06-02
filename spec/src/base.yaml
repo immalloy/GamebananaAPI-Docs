@@ -234,52 +234,6 @@ tags:
 - name: 'v12: WipCategory'
   x-displayName: 'WipCategory'
 x-tagGroups:
-- name: v3
-  tags:
-  - 'v3: Mod'
-  - 'v3: ModCategory'
-  - 'v3: Tool'
-- name: v4
-  tags:
-  - 'v4: Mod'
-- name: v5
-  tags:
-  - 'v5: Mod'
-- name: v6
-  tags:
-  - 'v6: Gamefile'
-  - 'v6: Mod'
-- name: v7
-  tags:
-  - 'v7: Mod'
-- name: v8
-  tags:
-  - 'v8: Mod'
-  - 'v8: Util'
-- name: v11
-  tags:
-  - 'v11: App'
-  - 'v11: Collection'
-  - 'v11: Contest'
-  - 'v11: File'
-  - 'v11: Game'
-  - 'v11: Idea'
-  - 'v11: Jam'
-  - 'v11: Member'
-  - 'v11: Mod'
-  - 'v11: ModCategory'
-  - 'v11: Mods'
-  - 'v11: Poll'
-  - 'v11: Post'
-  - 'v11: RemoteInstall'
-  - 'v11: Request'
-  - 'v11: Ripe'
-  - 'v11: Support'
-  - 'v11: Tool'
-  - 'v11: Util'
-  - 'v11: Wip'
-  - 'v11: {model_name}'
-  - 'v11: {section_slug}'
 - name: v12
   tags:
   - 'v12: App'
@@ -359,3 +313,49 @@ x-tagGroups:
   - 'v12: WikiCategory'
   - 'v12: Wip'
   - 'v12: WipCategory'
+- name: v11
+  tags:
+  - 'v11: App'
+  - 'v11: Collection'
+  - 'v11: Contest'
+  - 'v11: File'
+  - 'v11: Game'
+  - 'v11: Idea'
+  - 'v11: Jam'
+  - 'v11: Member'
+  - 'v11: Mod'
+  - 'v11: ModCategory'
+  - 'v11: Mods'
+  - 'v11: Poll'
+  - 'v11: Post'
+  - 'v11: RemoteInstall'
+  - 'v11: Request'
+  - 'v11: Ripe'
+  - 'v11: Support'
+  - 'v11: Tool'
+  - 'v11: Util'
+  - 'v11: Wip'
+  - 'v11: {model_name}'
+  - 'v11: {section_slug}'
+- name: v8
+  tags:
+  - 'v8: Mod'
+  - 'v8: Util'
+- name: v7
+  tags:
+  - 'v7: Mod'
+- name: v6
+  tags:
+  - 'v6: Gamefile'
+  - 'v6: Mod'
+- name: v5
+  tags:
+  - 'v5: Mod'
+- name: v4
+  tags:
+  - 'v4: Mod'
+- name: v3
+  tags:
+  - 'v3: Mod'
+  - 'v3: ModCategory'
+  - 'v3: Tool'
